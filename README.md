@@ -30,5 +30,5 @@ GitHub Pages : Hébergement du site sur GitHub pour un accès facile et rapide.
 
 
 Le site est disponible à l'adresse suivante :
-👉 [Site le BON GOÛT : ](https://safidial.github.io/Projet-site-web-d-un-fast-food-/)
+ [Cique ici c'est le Site le BON GOÛT 👌](https://safidial.github.io/Projet-site-web-d-un-fast-food-/)
 
