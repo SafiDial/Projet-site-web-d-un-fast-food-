@@ -1,1 +1,401 @@
-"" 
+/* ************************** Styles généraux **************************************** */
+body {
+    font-family: 'Inria Serif', 'Inter', sans-serif;
+    background-color: #FFFDD0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ************************** Barre de navigation **************************************** */
+.navbar {
+    background-color: #19274D;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand, .nav-link {
+    color: #FFFDD0 !important;
+}
+
+.navbar-brand-subtitle {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #FFFDD0;
+    text-align: center;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28%255, %255, %2088, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Liens de navigation alignés à droite */
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-link {
+    color: #FFFDD0;
+    font-size: 1rem;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+    border-color: #FFD700;
+    box-shadow: 0 0 15px #FFD700;
+    transform: scale(1.1);
+}
+
+.nav-link:hover {
+    color: #FFD700;
+}
+
+.navbar .nav-link i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #FFD700;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover i {
+    color: #ffd9d0;
+}
+
+/* ************************** Carrousel **************************************** */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #FFFDD0;
+    text-align: left;
+    width: 50%;
+}
+
+.carousel-caption h1 {
+    color: #000000;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
+    line-height: 1.2;
+}
+
+.carousel-caption .description {
+    color: #FFFDD0;
+    font-size: 1.2em;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.carousel-caption .btn-custom {
+    background-color: #FFD700;
+    border: 2px solid #FFD700;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel-caption .btn-custom:hover {
+    background-color: #FFFDD0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ************************** Icône d'appel **************************************** */
+.call-icon {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 1.5em;
+    z-index: 2;
+    background-color: rgba(255, 193, 7, 0.7);
+    border-radius: 20%;
+    padding: 10px;
+    animation: zoomInOut 2s infinite ease-in-out;
+}
+
+.call-icon i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.call-icon p {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 0;
+}
+
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* ************************** Carrousel navigation **************************************** */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #FFFDD0;
+}
+
+/* ************************** Section À propos **************************************** */
+
+
+
+
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #FFFDD0;
+    flex-wrap: wrap;
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+    max-width: 40%;
+}
+
+.about-rectangle {
+    background-color: #BEC100;
+    width: 230px;
+    height: 60vh;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.about-image {
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+    left: 10%;
+    top: 10%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 120%;
+}
+
+.address-box {
+    margin-top: 20px; 
+    padding: 10px;
+    font-size: 0.9rem; 
+    color: #333; 
+    background-color: #FFD700; 
+    border: 20px solid #EEE632; 
+    border-radius: 5px; 
+    max-width: 200px; 
+    text-align: left;
+    line-height: 1.4; 
+}
+
+
+
+
+
+
+
+
+
+
+
+.about-content {
+    width: 60%;
+    padding-left: 50px;
+    color: #333;
+    max-width: 60%;
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.small-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #BEC100;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background-color: #BEC100;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-family: 'Inria Serif', serif;
+    font-weight: normal;
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-right: 50px;
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+    
+}
+
+
+.discover-button {
+    margin-top: 50px; 
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333; /* Couleur du texte */
+    background-color: #FFFDD0; /* Couleur d'intérieur du bouton */
+    border: 7px solid #EEE632; /* Bordure de couleur */
+    border-radius: 30px; /* Coins arrondis */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+.discover-button:hover {
+    background-color: #EEE632; 
+    border-color: #FFFDD0; 
+}
+
+
+
+
+
+
+
+/* *********************** Responsive Adjustments ****************************** */
+
+@media (max-width: 768px) {
+    .about-left, .about-content {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .about-rectangle {
+        width: 180px;
+        height: 50vh;
+    }
+
+    .about-image {
+        left: 0%;
+        top: 10%;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .main-title {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 12px 0;
+    }
+
+    .call-icon {
+        bottom: 5%;
+        right: 5%;
+        font-size: 1.2em;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Pour les très petits écrans (smartphones verticaux) */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 30px 10px;
+    }
+
+    .small-title, .main-title, .description {
+        font-size: 1em;
+    }
+
+    .about-rectangle {
+        width: 150px;
+        height: 45vh;
+    }
+
+    .about-left, .about-content {
+        padding-left: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
