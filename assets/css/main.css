@@ -393,9 +393,291 @@ body {
 
 
 
+.menu-section {
+    background-color: #000;
+    color: #F5F5F5;
+    padding: 50px 20px 80px; 
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;  /* S'assure que le menu occupe toute la largeur de l'écran */
+    max-width: 1450px; /* Limite la largeur du menu à 1200px */
+    margin-left: auto;  /* Centre le menu horizontalement */
+    margin-right: auto; /* Centre le menu horizontalement */
+}
+
+
+
+.menu-header h3 {
+    font-size: 1em;
+    font-weight: bold;
+    color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line {
+    display: inline-block;
+    height: 2px;
+    width: 60px;
+    background-color: #BEC100;
+}
+
+.menu-description {
+    font-size: 1.1em;
+    margin-top: 10px;
+    max-width: 600px;
+    margin: 10px auto;
+    color: #F5F5F5;
+}
+
+.btn-download {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #BEC100;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu-categories {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+.category {
+    cursor: pointer;
+    color: #F5F5F5;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.category.active, .category:hover {
+    color: #BEC100;
+    text-decoration: underline;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.menu-items {
+    text-align: left;
+    padding: 20px;
+    color: #F5F5F5;
+    width: 50%;
+    font-size: 1.1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-image-left,
+.menu-image-right {
+    width: 15%;
+    max-width: 200px;
+    height: auto;
+}
+
+.menu-image-left {
+    margin-right: 10px;
+}
+
+.menu-image-right {
+    margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        width: 90%;
+    }
+
+    .menu-image-left,
+    .menu-image-right {
+        display: none;
+    }
+}
+
+/* Style principal pour le bouton */
+.download-menu {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-download-main {
+    padding: 8px 15px;
+    background-color: #BEC100;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-download-main:hover {
+    background-color: #FFD700;
+}
+
+/* Menu déroulant caché */
+.download-options {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positionne le menu sous le bouton */
+    left: 0;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+.download-options a {
+    color: #FFF;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    background-color: #333;
+    border-bottom: 1px solid #BEC100;
+    transition: background-color 0.3s;
+}
+
+.download-options a:hover {
+    background-color: #444;
+}
+
+.download-options a:last-child {
+    border-bottom: none;
+}
+
+
+
+/* Style for each menu section */
+.menu-items {
+    margin: 20px 0;
+}
+
+/* Aligning the menu items using flexbox */
+.menu-items h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    margin: 10px 0;
+    padding-right: 20px; /* To give some space on the right of the item text */
+}
+
+/* Optional: Style the descriptions if needed */
+.menu-items p {
+    font-size: 14px;
+    color: #777;
+    margin-left: 20px;
+}
+
+/* Making sure the layout works on all screen sizes */
+@media screen and (max-width: 768px) {
+    .menu-items h3 {
+        font-size: 16px; /* Adjust font size on smaller screens */
+    }
+}
 
 
 
 
 
 
+
+
+/* ************************** Section Galerie **************************************** */
+/* Style général du carrousel */
+#carrousel2 {
+    text-align: center;
+    padding: 40px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container du carrousel */
+.carousel2-container2 {
+    position: relative;
+    max-width: 900px; /* Largeur ajustée pour afficher 3 images */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Style des images dans le carrousel */
+.carousel2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel2-slide {
+    display: flex;
+    min-width: 100%; /* Une ligne d'images prendra 100% de la largeur */
+    box-sizing: border-box;
+}
+
+.carousel2-image {
+    width: 33.33%; /* Chaque image prend 33.33% de la largeur du carrousel */
+    height: 300px; /* Fixe une hauteur pour toutes les images */
+    object-fit: cover; /* L'image se redimensionne pour remplir l'espace sans déformation */
+    border-radius: 8px; /* Ajoute des bords arrondis pour un aspect plus esthétique */
+}
+
+/* Style des flèches gauche et droite */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 100%;
+    }
+
+    .carousel-image {
+        width: 100%; /* Sur mobile, une seule image est visible */
+        height: auto; /* Laisser l'image ajuster la hauteur pour ne pas déformer */
+    }
+}

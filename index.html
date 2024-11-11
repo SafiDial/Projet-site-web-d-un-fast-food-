@@ -125,22 +125,89 @@
 
 
 
+<section class="menu-section">
+    <div class="menu-header">
+        <h2>
+            <span class="line"></span>
+            Explorez notre menu </menu>
+            <span class="line"></span>
+        </h2>
+        <p class="menu-description">
+            Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine.
+            <!-- Bouton de téléchargement avec menu déroulant -->
+        <div class="download-menu">
+            <button class="btn-download-main" onclick="toggleDownloadOptions()">Télécharger le Menu</button>
+            <div class="download-options">
+                <a href="menu.pdf" download>PDF</a>
+                <a href="menu-image.jpg" download>Image</a>
+            </div>
+        </div>
 
+    <div class="menu-categories">
+        <span class="category active" data-category="special">MENU SPÉCIAL</span>
+        <span class="category" data-category="boissons">BOISSONS</span>
+        <span class="category" data-category="mer">PRODUITS DE LA MER</span>
+        <span class="category" data-category="desserts">DESSERTS</span>
+    </div>
 
+    <div class="menu-content">
+        <img src="assets/images/menu33.webp" class="menu-image-left" alt="Left image">
+        
+        <!-- Menu Spécial -->
+        <div class="menu-items" id="special-menu">
+            <h3>Burger Méditerranéen .......................................................  12€</h3>
+            <p>(Un burger juteux garni de feta, d'olive et de sauce tzatziki)</p>
+            <h3>Assiette Kebab Gourmet ..................................................  10€</h3>
+            <p>(Viande grillée servie avec des légumes frais et une sauce maison)</p>
+            <h3>Wrap Méditerranéen .........................................................  9€</h3>
+            <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
+        </div>
 
+        <!-- Boissons -->
+        <div class="menu-items hidden" id="boissons-menu">
+            <h3>Thé Glacé Maison ...........................................................  3€</h3>
+            <p>(Préparé avec des infusions de fruits frais)</p>
+            <h3>Limonade Artisanale au Citron ......................................  2.5€</h3>
+            <p>(Faites maison, pétillante et rafraîchissante)</p>
+            <h3>Jus d'Orange Pressé .....................................................  3.5€</h3>
+            <p>(Frais et naturel)</p>
+    
+        </div>
 
+        <!-- Produits de la Mer -->
+        <div class="menu-items hidden" id="mer-menu">
+            <h3>Saumon Grillé au Citron ................................................  15€</h3>
+            <p>(Filet de saumon grillé servi avec une sauce au citron)</p>
+            <h3>Crevettes Marinées .........................................................  13€</h3>
+            <p>(Crevettes sautées à l'ail et aux herbes)</p>
+            <h3>Calamars Frits ................................................................  12€</h3>
+            <p>(Calamars en beignet servis avec une sauce piquante)</p>
+        </div>
 
+        <!-- Desserts -->
+        <div class="menu-items hidden" id="desserts-menu">
+            <h3>Fondant au Chocolat ........................................................  6€</h3>
+            <p>(Gâteau au chocolat avec un cœur fondant)</p>
+            <h3>Cheesecake Maison ........................................................  5.5€</h3>
+            <p>(Cheesecake crémeux avec une base croquante)</p>
+            <h3>Tarte au Citron Meringuée ..................................................  5€</h3>
+            <p>(Tarte au citron garnie de meringue légère)</p>
+        </div>
 
-
-
-
-
-
-
-<!-- **************************Section Menu****************************************** -->
-<section id="menu">
-    <!-- Contenu de la section Menu -->
+        <img src="assets/images/desert_cheesecake.png" class="menu-image-right" alt="Right image">
+    </div>
 </section>
+
+
+
+<!-- **************************Galerie_image****************************************** -->
+
+
+<section id="Galerie">
+    
+</section>
+
+
 
 <!-- **************************Section Réservations****************************************** -->
 <section id="reservations">
@@ -164,6 +231,7 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
