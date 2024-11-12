@@ -7,6 +7,14 @@ body {
     padding: 0;
 }
 
+  
+  /* Utilisation de Inria Sans pour les titres */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700; /* Bold */
+  }
+  
+
 /* ************************** Barre de navigation **************************************** */
 .navbar {
     background-color: #19274D;
@@ -389,41 +397,42 @@ body {
 
 
 
-
-
-
-
+/* Section de menu principale */
 .menu-section {
     background-color: #000;
     color: #F5F5F5;
-    padding: 50px 20px 80px; 
+    padding: 50px 20px 80px;
     text-align: center;
     margin-bottom: 50px;
-    width: 100%;  /* S'assure que le menu occupe toute la largeur de l'écran */
-    max-width: 1450px; /* Limite la largeur du menu à 1200px */
-    margin-left: auto;  /* Centre le menu horizontalement */
-    margin-right: auto; /* Centre le menu horizontalement */
+    width: 100%;
+    max-width: 1450px; /* Limite la largeur à 1450px */
+    margin-left: auto;  /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tous les éléments à l'intérieur horizontalement */
+    justify-content: center; /* Centre tous les éléments verticalement */
 }
 
-
-
-.menu-header h3 {
-    font-size: 1em;
+/* Centrer le contenu dans la section menu */
+.menu-header h2 {
+    font-size: 2em;
     font-weight: bold;
     color: #F5F5F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    margin-bottom: 30px; /* Augmenter l'espace sous le texte */
+    position: relative;
 }
 
+/* Les lignes décoratives autour du titre */
 .line {
     display: inline-block;
     height: 2px;
     width: 60px;
     background-color: #BEC100;
+    margin-bottom: 10px; /* Ajoutez un peu de marge en dessous pour les abaisser */
 }
 
+/* Description du menu */
 .menu-description {
     font-size: 1.1em;
     margin-top: 10px;
@@ -432,86 +441,7 @@ body {
     color: #F5F5F5;
 }
 
-.btn-download {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background-color: #BEC100;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-.menu-categories {
-    margin: 30px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 1.2em;
-}
-
-.category {
-    cursor: pointer;
-    color: #F5F5F5;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.category.active, .category:hover {
-    color: #BEC100;
-    text-decoration: underline;
-}
-
-.menu-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-wrap: wrap;
-}
-
-.menu-items {
-    text-align: left;
-    padding: 20px;
-    color: #F5F5F5;
-    width: 50%;
-    font-size: 1.1em;
-}
-
-.hidden {
-    display: none;
-}
-
-.menu-image-left,
-.menu-image-right {
-    width: 15%;
-    max-width: 200px;
-    height: auto;
-}
-
-.menu-image-left {
-    margin-right: 10px;
-}
-
-.menu-image-right {
-    margin-left: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .menu-content {
-        flex-direction: column;
-    }
-
-    .menu-items {
-        width: 90%;
-    }
-
-    .menu-image-left,
-    .menu-image-right {
-        display: none;
-    }
-}
 
 /* Style principal pour le bouton */
 .download-menu {
@@ -568,116 +498,344 @@ body {
 
 
 
-/* Style for each menu section */
-.menu-items {
-    margin: 20px 0;
+/* Menu Categories */
+.menu-categories {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2em;
 }
 
-/* Aligning the menu items using flexbox */
+.category {
+    cursor: pointer;
+    color: #F5F5F5;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.category.active, .category:hover {
+    color: #BEC100;
+    text-decoration: underline;
+}
+
+/* Contenu du menu */
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer le contenu à l'intérieur */
+    align-items: center; /* Alignement vertical des éléments */
+    position: relative;
+    width: 100%;
+}
+
+/* Style pour chaque élément du menu */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Assure que le texte et les points sont séparés */
+    margin-bottom: 5px; /* Un petit espace sous chaque produit */
+}
+
+.dots {
+    display: inline-block;
+    flex-grow: 1; /* Permet aux points d'occuper tout l'espace restant */
+    text-align: center;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Masque tout texte qui dépasse */
+}
+
+.dots::before {
+    content: "   ..................................................."; /* Ajustez la longueur des points */
+    display: inline-block;
+}
+
+.price {
+    margin-left: 5px; /* Un petit espace à gauche du prix */
+    font-weight: bold; /* Met en gras le prix */
+    color: #BEC100;
+}
+
+/* Masquer les éléments du menu initialement */
+.hidden {
+    display: none;
+}
+
+/* Images dans le menu */
+.menu-image-left,
+.menu-image-right {
+    width: 15%;
+    max-width: 200px;
+    height: auto;
+}
+
+.menu-image-left {
+    margin-right: 10px;
+}
+
+.menu-image-right {
+    margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        width: 90%;
+    }
+
+    .menu-image-left,
+    .menu-image-right {
+        display: none; /* Cache les images sur les petits écrans */
+    }
+
+    /* Ajustements pour le texte sur petits écrans */
+    .menu-items h3 {
+        font-size: 16px; /* Ajuste la taille du texte */
+    }
+
+    .menu-description {
+        font-size: 1em;
+        max-width: 90%;
+    }
+}
+
+/* Style pour chaque section de menu */
 .menu-items h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 23px;
     margin: 10px 0;
-    padding-right: 20px; /* To give some space on the right of the item text */
+    padding-right: 20px;
 }
 
-/* Optional: Style the descriptions if needed */
+/* Description des articles */
 .menu-items p {
     font-size: 14px;
     color: #777;
     margin-left: 20px;
 }
 
-/* Making sure the layout works on all screen sizes */
+/* Responsiveness sur petits écrans */
 @media screen and (max-width: 768px) {
     .menu-items h3 {
-        font-size: 16px; /* Adjust font size on smaller screens */
+        font-size: 16px; /* Ajuste la taille du texte */
     }
 }
-
-
-
-
 
 
 
 
 /* ************************** Section Galerie **************************************** */
-/* Style général du carrousel */
-#carrousel2 {
+
+/* Styles pour le titre h2 de la galerie */
+#galerie h2 {
+    font-family: 'Inria Serif', serif;
+    font-weight: normal;
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 20px;/
+  }
+  
+  #galerie h2::after {
+    content: "";               /* Pseudo-élément pour la ligne décorative */
+    display: block;
+    width: 90px;               /* Largeur de la ligne */
+    height: 4px;               /* Épaisseur de la ligne */
+    background-color: #e63946; /* Couleur de la ligne (par exemple, rouge) */
+    margin: 8px auto 0;        /* Centré sous le texte */
+    border-radius: 2px;        /* Coins arrondis pour un effet plus doux */
+  }
+  
+
+#galerie .gallery-item {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #galerie .gallery-item img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 190px; /* Hauteur fixe pour toutes les images */
+  }
+  
+  #galerie .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  #galerie .gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
     text-align: center;
-    padding: 40px;
+  }
+  
+  #galerie .gallery-item:hover .caption {
+    opacity: 1;
+  }
+  
+
+
+/* ************************** Section Horaire d'ouverture **************************************** */
+
+
+/* Section générale */
+section#horaireOuverture {
+    background-color: #fcf9b9; /* Fond de section */
+    padding: 60px 0; /* Espacement généreux */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 60px;
 }
 
-h2 {
-    font-size: 2em;
-    color: #333;
+/* Container */
+#horaireOuverture .container {
+    max-width: 1140px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer le container */
+}
+
+/* Image */
+#horaireOuverture img {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Titre principal */
+h3 {
+    font-size: 2.5rem; /* Taille du titre */
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #4e4e4e; /* Gris foncé */
+    text-transform: uppercase; /* Majuscules */
+    margin-bottom: 30px;
+}
+
+/* Sections horaires */
+#horaireOuverture h4 {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #4e4e4e;
+    margin-bottom: 10px;
+}
+
+/* Détail des horaires */
+#horaireOuverture p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6c6c6c; /* Gris clair */
+    margin-bottom: 5px;
+    white-space: nowrap; /* Empêche le texte de se couper */
+}
+
+/* Colonnes (Image + Horaires) */
+#horaireOuverture .row {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+}
+
+#horaireOuverture .col-md-6 {
+    padding: 15px;
+}
+
+/* Colonnes alignées horizontalement */
+#horaireOuverture .d-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap; /* Assure l'alignement sur une ligne */
+}
+
+#horaireOuverture .d-flex > div {
+    width: 48%; /* Largeur de chaque section */
+    min-width: 250px; /* Largeur minimale */
+}
+
+/* Effet au survol */
+#horaireOuverture .text-start:hover,
+#horaireOuverture .text-end:hover {
+    background-color: #f7ffcb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive - Petits écrans */
+@media (max-width: 767px) {
+    /* Centrage du texte */
+    #horaireOuverture .text-center {
+        text-align: center;
+    }
+
+    /* Colonnes en stack pour petits écrans */
+    #horaireOuverture .d-flex {
+        flex-direction: column;
+        gap: 20px; /* Espacement réduit */
+    }
+
+    #horaireOuverture .d-flex > div {
+        width: 100%; /* Prendre toute la largeur */
+    }
+}
+
+
+
+
+
+/* Ajout du fond d'image et du fond noir transparent pour la section */
+#contactez-nous {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    background-image: url('https://via.placeholder.com/1920x1080'); /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir transparent */
+    border-radius: 8px;
+    width: 100%;
+   
+    margin: auto;
+    color: white; /* Texte en blanc pour contraster avec l'image */
+}
+
+.contact-header h1 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Container du carrousel */
-.carousel2-container2 {
-    position: relative;
-    max-width: 900px; /* Largeur ajustée pour afficher 3 images */
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Style des images dans le carrousel */
-.carousel2 {
+.contact-details {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.carousel2-slide {
-    display: flex;
-    min-width: 100%; /* Une ligne d'images prendra 100% de la largeur */
-    box-sizing: border-box;
+.contact-item {
+    width: 45%;
+    text-align: left;
 }
 
-.carousel2-image {
-    width: 33.33%; /* Chaque image prend 33.33% de la largeur du carrousel */
-    height: 300px; /* Fixe une hauteur pour toutes les images */
-    object-fit: cover; /* L'image se redimensionne pour remplir l'espace sans déformation */
-    border-radius: 8px; /* Ajoute des bords arrondis pour un aspect plus esthétique */
+.contact-item h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-/* Style des flèches gauche et droite */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
+.contact-item p {
+    margin: 5px 0;
 }
 
-.carousel-button.left {
-    left: 10px;
-}
-
-.carousel-button.right {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Adaptation mobile */
-@media (max-width: 768px) {
-    .carousel-container {
-        max-width: 100%;
-    }
-
-    .carousel-image {
-        width: 100%; /* Sur mobile, une seule image est visible */
-        height: auto; /* Laisser l'image ajuster la hauteur pour ne pas déformer */
-    }
+.response-time, .availability {
+    font-size: 12px;
+    color: #bbb;
 }
