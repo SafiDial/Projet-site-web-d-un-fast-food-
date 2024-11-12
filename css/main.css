@@ -1,19 +1,16 @@
 /* ************************** Styles généraux **************************************** */
 body {
-    font-family: 'Inria Serif', 'Inter', sans-serif;
+    font-family: 'Inria Serif';
     background-color: #FFFDD0;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-  
-
-
 /* ************************** Barre de navigation **************************************** */
 .navbar {
     background-color: #19274D;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
 }
 
 .navbar-brand, .nav-link {
@@ -21,14 +18,10 @@ body {
 }
 
 .navbar-brand-subtitle {
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 200;
     color: #FFFDD0;
     text-align: center;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28%255, %255, %2088, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Liens de navigation alignés à droite */
@@ -40,7 +33,7 @@ body {
 
 .nav-link {
     color: #FFFDD0;
-    font-size: 1rem;
+    font-size: 16px;
     padding: 10px 15px;
     position: relative;
     transition: color 0.3s ease;
@@ -82,6 +75,27 @@ body {
     color: #ffd9d0;
 }
 
+.navbar-toggler {
+    border: 1px solid #FFFDD0;
+    background-color: #FFFDD0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.navbar-toggler span.material-symbols-outlined {
+    font-size: 32px;
+    color: #4A4A4A;
+}
+
+.navbar-toggler:hover {
+    background-color: #4A4A4A;
+    border-color: #FFFDD0;
+}
+
+.navbar-toggler:hover span.material-symbols-outlined {
+    color: #FFFDD0;
+}
+
 /* ************************** Carrousel **************************************** */
 .carousel-caption {
     position: absolute;
@@ -95,7 +109,7 @@ body {
 
 .carousel-caption h1 {
     color: #000000;
-    font-size: 2.5em;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -106,7 +120,7 @@ body {
 
 .carousel-caption .description {
     color: #FFFDD0;
-    font-size: 1.2em;
+    font-size: 19px;
     font-weight: 300;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -120,7 +134,7 @@ body {
     border: 2px solid #FFD700;
     color: #000;
     padding: 12px 25px;
-    font-size: 1.1em;
+    font-size: 18px;
     text-transform: uppercase;
     border-radius: 30px;
     font-weight: bold;
@@ -134,6 +148,14 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
 /* ************************** Icône d'appel **************************************** */
 .call-icon {
     position: absolute;
@@ -143,7 +165,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #000000;
-    font-size: 1.5em;
+    font-size: 24px;
     z-index: 2;
     background-color: rgba(255, 193, 7, 0.7);
     border-radius: 20%;
@@ -152,13 +174,13 @@ body {
 }
 
 .call-icon i {
-    font-size: 2em;
+    font-size: 32px;
     margin-right: 10px;
 }
 
 .call-icon p {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 19px;
     color: #ffffff;
     margin: 0;
 }
@@ -168,7 +190,6 @@ body {
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
-
 /* ************************** Carrousel navigation **************************************** */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -176,10 +197,6 @@ body {
 }
 
 /* ************************** Section À propos **************************************** */
-
-
-
-
 
 .about-section {
     display: flex;
@@ -235,25 +252,15 @@ body {
 .address-box {
     margin-top: 20px; 
     padding: 10px;
-    font-size: 0.9rem; 
+    font-size: 14px;
     color: #333; 
     background-color: #FFD700; 
-    border: 20px solid #EEE632; 
+    border: 20px solid #EEE632;
     border-radius: 5px; 
-    max-width: 200px; 
+    max-width: 200px;
     text-align: left;
-    line-height: 1.4; 
+    line-height: 1.4;
 }
-
-
-
-
-
-
-
-
-
-
 
 .about-content {
     width: 60%;
@@ -265,7 +272,7 @@ body {
 }
 
 .small-title {
-    font-size: 1.2em;
+    font-size: 19px;
     font-weight: bold;
     color: #BEC100;
     margin-bottom: 10px;
@@ -281,7 +288,7 @@ body {
 .main-title {
     font-family: 'Inria Serif', serif;
     font-weight: normal;
-    font-size: 2.5em;
+    font-size: 40px;
     color: #000;
     margin-bottom: 20px;
 }
@@ -289,23 +296,21 @@ body {
 .description {
     margin-right: 50px;
     text-align: justify;
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1.6;
     color: #333;
-    
 }
-
 
 .discover-button {
     margin-top: 50px; 
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
-    color: #333; /* Couleur du texte */
-    background-color: #FFFDD0; /* Couleur d'intérieur du bouton */
-    border: 7px solid #EEE632; /* Bordure de couleur */
-    border-radius: 30px; /* Coins arrondis */
+    color: #333;
+    background-color: #FFFDD0;
+    border: 7px solid #EEE632;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease; 
 }
@@ -314,11 +319,6 @@ body {
     background-color: #EEE632; 
     border-color: #FFFDD0; 
 }
-
-
-
-
-
 
 
 /* *********************** Responsive Adjustments ****************************** */
@@ -389,8 +389,7 @@ body {
     }
 }
 
-
-
+/* ************************** Section de Menu  **************************************** */
 
 /* Section de menu principale */
 .menu-section {
@@ -400,21 +399,21 @@ body {
     text-align: center;
     margin-bottom: 50px;
     width: 100%;
-    max-width: 1450px; /* Limite la largeur à 1450px */
-    margin-left: auto;  /* Centrer horizontalement */
-    margin-right: auto; /* Centrer horizontalement */
+    max-width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre tous les éléments à l'intérieur horizontalement */
-    justify-content: center; /* Centre tous les éléments verticalement */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Centrer le contenu dans la section menu */
 .menu-header h2 {
-    font-size: 2em;
+    font-size: 32px;
     font-weight: bold;
     color: #F5F5F5;
-    margin-bottom: 30px; /* Augmenter l'espace sous le texte */
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -424,19 +423,17 @@ body {
     height: 2px;
     width: 60px;
     background-color: #BEC100;
-    margin-bottom: 10px; /* Ajoutez un peu de marge en dessous pour les abaisser */
+    margin-bottom: 10px;
 }
 
 /* Description du menu */
 .menu-description {
-    font-size: 1.1em;
+    font-size: 17.6px;
     margin-top: 10px;
     max-width: 600px;
     margin: 10px auto;
     color: #F5F5F5;
 }
-
-
 
 /* Style principal pour le bouton */
 .download-menu {
@@ -465,7 +462,7 @@ body {
 .download-options {
     display: none;
     position: absolute;
-    top: 100%; /* Positionne le menu sous le bouton */
+    top: 100%;
     left: 0;
     background-color: #333;
     border-radius: 5px;
@@ -491,15 +488,13 @@ body {
     border-bottom: none;
 }
 
-
-
 /* Menu Categories */
 .menu-categories {
     margin: 30px 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-size: 1.2em;
+    font-size: 19.2px;
 }
 
 .category {
@@ -518,8 +513,8 @@ body {
 .menu-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrer le contenu à l'intérieur */
-    align-items: center; /* Alignement vertical des éléments */
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
 }
@@ -528,26 +523,26 @@ body {
 .menu-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Assure que le texte et les points sont séparés */
-    margin-bottom: 5px; /* Un petit espace sous chaque produit */
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .dots {
     display: inline-block;
-    flex-grow: 1; /* Permet aux points d'occuper tout l'espace restant */
+    flex-grow: 1;
     text-align: center;
-    white-space: nowrap; /* Empêche le retour à la ligne */
-    overflow: hidden; /* Masque tout texte qui dépasse */
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .dots::before {
-    content: "   ..................................................."; /* Ajustez la longueur des points */
+    content: "   ...................................................";
     display: inline-block;
 }
 
 .price {
-    margin-left: 5px; /* Un petit espace à gauche du prix */
-    font-weight: bold; /* Met en gras le prix */
+    margin-left: 5px;
+    font-weight: bold;
     color: #BEC100;
 }
 
@@ -584,16 +579,15 @@ body {
 
     .menu-image-left,
     .menu-image-right {
-        display: none; /* Cache les images sur les petits écrans */
+        display: none;
     }
 
-    /* Ajustements pour le texte sur petits écrans */
     .menu-items h3 {
-        font-size: 16px; /* Ajuste la taille du texte */
+        font-size: 16px;
     }
 
     .menu-description {
-        font-size: 1em;
+        font-size: 16px;
         max-width: 90%;
     }
 }
@@ -618,51 +612,57 @@ body {
 /* Responsiveness sur petits écrans */
 @media screen and (max-width: 768px) {
     .menu-items h3 {
-        font-size: 16px; /* Ajuste la taille du texte */
+        font-size: 16px;
     }
 }
 
 
-
-
 /* ************************** Section Galerie **************************************** */
-
 /* Styles pour le titre h2 de la galerie */
 #galerie h2 {
     font-family: 'Inria Serif', serif;
     font-weight: normal;
-    font-size: 2.5em;
+    font-size: 40px;
     color: #000;
-    margin-bottom: 20px;/
-  }
-  
-  #galerie h2::after {
-    content: "";               /* Pseudo-élément pour la ligne décorative */
-    display: block;
-    width: 90px;               /* Largeur de la ligne */
-    height: 4px;               /* Épaisseur de la ligne */
-    background-color: #e63946; /* Couleur de la ligne (par exemple, rouge) */
-    margin: 8px auto 0;        /* Centré sous le texte */
-    border-radius: 2px;        /* Coins arrondis pour un effet plus doux */
-  }
-  
+    margin-bottom: 20px;
+}
 
+#galerie h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: #e63946;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Styles pour les éléments de la galerie */
 #galerie .gallery-item {
     overflow: hidden;
     position: relative;
-  }
-  
-  #galerie .gallery-item img {
+    text-align: center;
+}
+
+#galerie .gallery-item figure {
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+#galerie .gallery-item img {
     transition: transform 0.4s ease;
     width: 100%;
-    height: 190px; /* Hauteur fixe pour toutes les images */
-  }
-  
-  #galerie .gallery-item:hover img {
+    height: 190px;
+    object-fit: cover;
+}
+
+#galerie .gallery-item:hover img {
     transform: scale(1.1);
-  }
-  
-  #galerie .gallery-item .caption {
+}
+
+/* Styles pour les légendes sous les images */
+#galerie .gallery-item figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -672,31 +672,28 @@ body {
     padding: 10px;
     opacity: 0;
     transition: opacity 0.4s ease;
-    text-align: center;
-  }
-  
-  #galerie .gallery-item:hover .caption {
+}
+
+#galerie .gallery-item:hover figcaption {
     opacity: 1;
-  }
-  
+}
 
 
 /* ************************** Section Horaire d'ouverture **************************************** */
 
-
 /* Section générale */
 section#horaireOuverture {
-    background-color: #fcf9b9; /* Fond de section */
-    padding: 60px 0; /* Espacement généreux */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    border-radius: 10px; /* Coins arrondis */
+    background-color: #fcf9b9;
+    padding: 60px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     margin-bottom: 60px;
 }
 
 /* Container */
 #horaireOuverture .container {
-    max-width: 1140px; /* Largeur maximale */
-    margin: 0 auto; /* Centrer le container */
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 /* Image */
@@ -708,17 +705,17 @@ section#horaireOuverture {
 
 /* Titre principal */
 h3 {
-    font-size: 2.5rem; /* Taille du titre */
+    font-size: 40px;
     font-family: 'Georgia', serif;
     font-weight: bold;
-    color: #4e4e4e; /* Gris foncé */
-    text-transform: uppercase; /* Majuscules */
+    color: #4e4e4e;
+    text-transform: uppercase;
     margin-bottom: 30px;
 }
 
 /* Sections horaires */
 #horaireOuverture h4 {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: 'Georgia', serif;
     font-weight: bold;
     color: #4e4e4e;
@@ -727,17 +724,17 @@ h3 {
 
 /* Détail des horaires */
 #horaireOuverture p {
-    font-size: 1.1rem;
+    font-size: 17.6px;
     line-height: 1.6;
-    color: #6c6c6c; /* Gris clair */
+    color: #6c6c6c;
     margin-bottom: 5px;
-    white-space: nowrap; /* Empêche le texte de se couper */
+    white-space: nowrap;
 }
 
 /* Colonnes (Image + Horaires) */
 #horaireOuverture .row {
     display: flex;
-    align-items: center; /* Centrer verticalement */
+    align-items: center;
 }
 
 #horaireOuverture .col-md-6 {
@@ -749,12 +746,12 @@ h3 {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: nowrap; /* Assure l'alignement sur une ligne */
+    flex-wrap: nowrap;
 }
 
 #horaireOuverture .d-flex > div {
-    width: 48%; /* Largeur de chaque section */
-    min-width: 250px; /* Largeur minimale */
+    width: 48%;
+    min-width: 250px;
 }
 
 /* Effet au survol */
@@ -768,40 +765,35 @@ h3 {
 
 /* Responsive - Petits écrans */
 @media (max-width: 767px) {
-    /* Centrage du texte */
     #horaireOuverture .text-center {
         text-align: center;
     }
 
-    /* Colonnes en stack pour petits écrans */
     #horaireOuverture .d-flex {
         flex-direction: column;
-        gap: 20px; /* Espacement réduit */
+        gap: 20px;
     }
 
     #horaireOuverture .d-flex > div {
-        width: 100%; /* Prendre toute la largeur */
+        width: 100%;
     }
 }
 
-
-
-
+/* ************************** Section Petit_cotact **************************************** */
 
 /* Ajout du fond d'image et du fond noir transparent pour la section */
 #contactez-nous {
     position: relative;
     text-align: center;
     padding: 40px;
-    background-image: url('https://via.placeholder.com/1920x1080'); /* Remplacez par l'URL de votre image */
+    background-image: url('https://via.placeholder.com/1920x1080');
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fond noir transparent */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 8px;
     width: 100%;
-   
     margin: auto;
-    color: white; /* Texte en blanc pour contraster avec l'image */
+    color: white;
 }
 
 .contact-header h1 {
@@ -834,3 +826,33 @@ h3 {
     font-size: 12px;
     color: #bbb;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
