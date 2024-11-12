@@ -8,12 +8,7 @@ body {
 }
 
   
-  /* Utilisation de Inria Sans pour les titres */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inria Sans', sans-serif;
-    font-weight: 700; /* Bold */
-  }
-  
+
 
 /* ************************** Barre de navigation **************************************** */
 .navbar {
