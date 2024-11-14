@@ -1,3 +1,90 @@
+document.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled"); // Applique la transparence au défilement
+    } else {
+        navbar.classList.remove("scrolled"); // Réinitialise à l'opacité initiale
+    }
+});
+
+
+
+
+
+// Sélectionner tous les liens de la barre de navigation
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+// Ajouter un écouteur d'événement pour chaque lien
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Si le menu est ouvert, on le ferme
+        const navbarCollapse = document.getElementById('navbarNav');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click(); // Simule un clic pour fermer le menu
+        }
+    });
+});
+
+
+
+
+
+
+
+// Fonction pour gérer l'affichage du texte en fonction de la taille de l'écran
+function handleTextDisplay() {
+    var texteLong = document.getElementById('texteLong');
+    var voirPlus = document.getElementById('voirPlus');
+
+    // Si la largeur de l'écran est petite (mobile), afficher le texte tronqué
+    if (window.innerWidth <= 576) {
+        texteLong.classList.add('texte-court');
+        texteLong.classList.remove('texte-complet');
+        voirPlus.style.display = 'inline'; // Afficher la flèche "Voir plus"
+    } else {
+        // Sur les grands écrans, afficher tout le texte sans flèche
+        texteLong.classList.add('texte-complet');
+        texteLong.classList.remove('texte-court');
+        voirPlus.style.display = 'none'; // Cacher la flèche "Voir plus"
+    }
+}
+
+// Initialisation au chargement de la page
+window.onload = handleTextDisplay;
+
+// Réagir à la redimension du navigateur
+window.onresize = handleTextDisplay;
+
+// Gérer l'événement du clic sur la flèche "Voir plus"
+document.getElementById('voirPlus').addEventListener('click', function() {
+    var texteLong = document.getElementById('texteLong');
+    var voirPlus = document.getElementById('voirPlus');
+
+    texteLong.classList.toggle('texte-court');
+    texteLong.classList.toggle('texte-complet');
+
+    if (texteLong.classList.contains('texte-court')) {
+        voirPlus.innerHTML = 'arrow_drop_down'; // Flèche vers le bas (Voir plus)
+    } else {
+        voirPlus.innerHTML = 'arrow_drop_up'; // Flèche vers le haut (Voir moins)
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const categories = document.querySelectorAll(".category");
     const menus = document.querySelectorAll(".menu-items");
@@ -35,6 +122,43 @@ window.onclick = function(event) {
         }
     }
 }
+
+
+
+
+let categories = ['special', 'boissons', 'mer', 'desserts'];
+let currentCategoryIndex = 0;
+
+function updateCategory() {
+    // Cacher tous les menus
+    document.querySelectorAll('.menu-items').forEach(item => item.classList.add('hidden'));
+    
+    // Afficher le menu de la catégorie actuelle
+    const currentCategory = categories[currentCategoryIndex];
+    document.getElementById(`${currentCategory}-menu`).classList.remove('hidden');
+    
+    // Mettre à jour le titre de la catégorie active
+    const categoryTitles = {
+        'special': 'MENU SPÉCIAL',
+        'boissons': 'BOISSONS',
+        'mer': 'PRODUITS DE LA MER',
+        'desserts': 'DESSERTS'
+    };
+    document.getElementById('category-title').textContent = categoryTitles[currentCategory];
+}
+
+document.querySelector('.prev-category').addEventListener('click', () => {
+    currentCategoryIndex = (currentCategoryIndex - 1 + categories.length) % categories.length;
+    updateCategory();
+});
+
+document.querySelector('.next-category').addEventListener('click', () => {
+    currentCategoryIndex = (currentCategoryIndex + 1) % categories.length;
+    updateCategory();
+});
+
+// Initialiser avec la première catégorie
+updateCategory();
 
 
 

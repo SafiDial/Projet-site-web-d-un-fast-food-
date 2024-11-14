@@ -9,8 +9,13 @@ body {
 
 /* ************************** Barre de navigation **************************************** */
 .navbar {
-    background-color: #19274D;
+    background-color: #19274D; /* Couleur solide au chargement */
     padding: 16px 32px;
+    transition: background-color 0.3s ease; /* Transition pour l'effet de transparence */
+}
+
+.navbar.scrolled {
+    background-color: rgba(46, 50, 61, 0.8); /* Transparence au défilement */
 }
 
 .navbar-brand, .nav-link {
@@ -64,17 +69,7 @@ body {
     color: #FFD700;
 }
 
-.navbar .nav-link i {
-    margin-right: 8px;
-    font-size: 18px;
-    color: #FFD700;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-link:hover i {
-    color: #ffd9d0;
-}
-
+/* Navbar-toggler pour mobile */
 .navbar-toggler {
     border: 1px solid #FFFDD0;
     background-color: #FFFDD0;
@@ -97,6 +92,10 @@ body {
 }
 
 /* ************************** Carrousel **************************************** */
+.carousel-container {
+    padding-top: 80px; /* Espace pour la barre de navigation */
+}
+
 .carousel-caption {
     position: absolute;
     top: 50%;
@@ -118,6 +117,7 @@ body {
     line-height: 1.2;
 }
 
+/* Autres styles */
 .carousel-caption .description {
     color: #FFFDD0;
     font-size: 19px;
@@ -148,14 +148,6 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-}
-
 /* ************************** Icône d'appel **************************************** */
 .call-icon {
     position: absolute;
@@ -173,28 +165,18 @@ body {
     animation: zoomInOut 2s infinite ease-in-out;
 }
 
-.call-icon i {
-    font-size: 32px;
-    margin-right: 10px;
-}
-
-.call-icon p {
-    font-weight: bold;
-    font-size: 19px;
-    color: #ffffff;
-    margin: 0;
-}
-
 @keyframes zoomInOut {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
-/* ************************** Carrousel navigation **************************************** */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #FFFDD0;
-}
+
+
+
+
+
+
+
 
 /* ************************** Section À propos **************************************** */
 
@@ -302,23 +284,60 @@ body {
     color: #333;
 }
 
-.discover-button {
-    margin-top: 50px; 
-    padding: 10px 20px;
+.btn-secondary {
+    margin-top: 50px;
     font-size: 16px;
+    height: 50px;               
+    width: 200px;               
     font-weight: bold;
-    color: #333;
-    background-color: #FFFDD0;
-    border: 7px solid #EEE632;
-    border-radius: 30px;
+    color: #333;               
+    background-color: #FFFDD0;  
+    border: 7px solid #EEE632;  
+    border-radius: 30px;        
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease; 
 }
 
-.discover-button:hover {
-    background-color: #EEE632; 
-    border-color: #FFFDD0; 
+/* Effet au survol */
+.btn-secondary:hover {
+    background-color: #EEE632;  
+    border-color: #FFFDD0;      
 }
+
+
+
+
+
+.texte-court {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Affiche 3 lignes de texte sur mobile */
+    -webkit-box-orient: vertical;
+}
+/* Pour_Afficher tout le texte quand il n'est plus limité */
+.texte-complet {
+    -webkit-line-clamp: unset; 
+}
+
+/* Style pour la flèche "Voir plus" */
+.voir-plus {
+    font-size: 50px;           
+    cursor: pointer;           
+    display: inline-block;    
+    color: #fff200;             
+    transition: color 0.3s, text-shadow 0.3s; 
+    text-shadow: 0 0 8px #fff200; 
+}
+
+.voir-plus:hover {
+    color: #767200;            
+    text-shadow: 0 0 4px #fff93c; 
+}
+
+
+
+
 
 
 /* *********************** Responsive Adjustments ****************************** */
@@ -615,6 +634,62 @@ body {
         font-size: 16px;
     }
 }
+
+
+
+/* Les catégories visibles uniquement sur grand écran */
+.category {
+    cursor: pointer;
+    color: #F5F5F5;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Style de la catégorie active ou en hover */
+.category.active, .category:hover {
+    color: #BEC100;
+}
+
+/* Cache les menus autres que celui actif */
+.menu-items {
+    display: block;
+}
+
+/* Style spécifique pour les catégories sur petits écrans */
+@media (max-width: 768px) {
+    .menu-categories {
+        display: none; /* Masquer les catégories sur petits écrans */
+    }
+
+    .category-nav {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .category-nav .prev-category, .category-nav .next-category {
+        cursor: pointer;
+        font-size: 30px;
+        color: #BEC100;
+        margin: 0 15px;
+    }
+}
+
+/* Section active de la catégorie */
+.active-category-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Masquer les éléments non actifs */
+.hidden {
+    display: none;
+}
+
+
+
+
+
 
 
 /* ************************** Section Galerie **************************************** */
