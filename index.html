@@ -44,32 +44,40 @@
   
 
 <!-- ************************** Carrousel Accueil ****************************************** -->
+
 <section id="carousel" class="carousel-container container-fluid px-0">
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <!-- Carrousel -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="css/images/Acceuil.jpg" class="d-block w-100 img-fluid" alt="Image 1">
-                <div class="carousel-caption d-none d-md-block text-start">
-                    <h1 class="display-4 display-md-3 display-lg-1">LE BON GOUT – LE FAST-FOOD</h1>
+                <div class="carousel-caption text-start">
+                    <!-- Titre toujours visible mais plus petit sur petits écrans -->
+                    <h1 class="display-4 d-none d-md-block display-md-3 display-lg-1">LE BON GOUT – LE FAST-FOOD</h1>
+                    
+                    <!-- Description visible uniquement sur écrans moyens et plus larges -->
                     <p class="description lead d-none d-md-block">Chez LE BON GOUT, c’est une expérience culinaire rapide et authentique, avec des plats préparés à partir d'ingrédients frais et des recettes inspirées d'Europe.</p>
-                    <a href="#menu" class="btn btn-custom mt-3">Découvrez notre Menu</a>
+                    
+                    <a href="#menu" class="btn btn-custom fs-4 fs-md-5 fs-lg-6 mt-3">Découvrez notre Menu</a>
+
                 </div>
             </div>
+            
             <div class="carousel-item">
                 <img src="css/images/Acceuil.jpg" class="d-block w-100 img-fluid" alt="Image 2">
-                <div class="carousel-caption d-none d-md-block text-start">
-                    <h1 class="display-4 display-md-3 display-lg-1">LE BON GOUT – LE FAST-FOOD</h1>
+                <div class="carousel-caption text-start">
+                    <h1 class="display-4 d-none d-md-block display-md-3 display-lg-1">LE BON GOUT – LE FAST-FOOD</h1>
                     <p class="description lead d-none d-md-block">Chez LE BON GOUT, c’est une expérience culinaire rapide et authentique, avec des plats préparés à partir d'ingrédients frais et des recettes inspirées d'Europe.</p>
-                    <a href="#menu" class="btn btn-custom mt-3">Découvrez notre Menu</a>
+                    <a href="#menu" class="btn btn-custom btn-sm fs-4 fs-md-5 fs-lg-6 mt-3 d-none d-md-block">Découvrez notre Menu</a>
+            
                 </div>
             </div>
         </div>
 
-        <!-- Informations de contact et icône -->
-        <div class="call-icon text-start my-3">
-            <i class="bi bi-phone fs-4"></i>
-            <p>01 23 45 67 89</p>
+         <!-- Informations de contact avec icône et numéro de téléphone redimensionnés -->
+         <div class="call-icon text-start my-3 d-flex align-items-center">
+            <i class="bi bi-phone fs-6 fs-md-4 me-2"></i> <!-- Petite icône sur petits écrans -->
+            <p class="fs-7 fs-md-5 mb-0">01 23 45 67 89</p> <!-- Texte de taille plus petite sur petits écrans -->
         </div>
 
         <!-- Contrôles du carrousel -->
@@ -81,6 +89,7 @@
         </button>
     </div>
 </section>
+
 
 <!-- ************************** Contenu de la section À propos ****************************************** -->
 

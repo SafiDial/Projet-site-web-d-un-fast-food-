@@ -129,24 +129,30 @@ body {
     margin-bottom: 20px;
 }
 
-.carousel-caption .btn-custom {
-    background-color: #FFD700;
-    border: 2px solid #FFD700;
-    color: #000;
-    padding: 12px 25px;
-    font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.carousel-caption .btn-custom:hover {
-    background-color: #FFFDD0;
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+
+.btn-custom {
+    background-color: #FFD700; /* Couleur dorée */
+    color: black; /* Couleur du texte */
+    transform: scale(1.05); /* Agrandissement léger */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    border: none; /* Pas de bordure */
+    padding: 8px 16px; /* Ajuster l'espacement intérieur pour un bouton plus petit */
+    transition: all 0.3s ease; /* Transition douce */
+    width: auto; /* Largeur automatique pour ajuster au texte */
+    max-width: 250px; /* Largeur maximale pour empêcher le bouton de devenir trop large */
+  }
+  
+  .btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0); /* Fond transparent lors du survol */
+    transform: scale(1.1); /* Agrandissement du bouton au survol */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Ombre plus marquée au survol */
+  }
+  
+
+
+
+
 
 /* ************************** Icône d'appel **************************************** */
 .call-icon {
