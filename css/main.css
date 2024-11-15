@@ -157,24 +157,36 @@ body {
 /* ************************** Icône d'appel **************************************** */
 .call-icon {
     position: absolute;
-    bottom: 10%;
-    right: 5%;
+    bottom: 10%; /* Position verticale sur l'écran */
+    right: 5%; /* Position horizontale sur l'écran */
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000000;
     font-size: 24px;
     z-index: 2;
-    background-color: rgba(255, 193, 7, 0.7);
+    background-color: rgba(255, 193, 7, 0.7); /* Fond légèrement transparent */
     border-radius: 20%;
     padding: 10px;
     animation: zoomInOut 2s infinite ease-in-out;
 }
 
+/* Animation du zoom */
 @keyframes zoomInOut {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
+}
+
+/* Centrer l'élément sur les petits écrans (moins de 768px) */
+@media (max-width: 767px) {
+    .call-icon {
+        position: fixed; /* Utiliser fixed pour positionner l'élément de manière fixe sur l'écran */
+        bottom: 10%; /* Ajuster la distance par rapport au bas de l'écran */
+        right: 50%; /* Centrer horizontalement */
+        transform: translateX(50%); /* Correction pour centrer précisément */
+        background-color: rgba(249, 221, 136, 0.5); /* Réduire l'opacité du fond sur les petits écrans */
+    }
 }
 
 
@@ -313,17 +325,18 @@ body {
 
 
 
-
 .texte-court {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* Affiche 3 lignes de texte sur mobile */
+    line-clamp: 3; 
     -webkit-box-orient: vertical;
 }
-/* Pour_Afficher tout le texte quand il n'est plus limité */
+
 .texte-complet {
-    -webkit-line-clamp: unset; 
+    -webkit-line-clamp: unset;
+    line-clamp: unset; /* Pour enlever la limite de ligne */
 }
 
 /* Style pour la flèche "Voir plus" */
@@ -340,8 +353,6 @@ body {
     color: #767200;            
     text-shadow: 0 0 4px #fff93c; 
 }
-
-
 
 
 
@@ -691,9 +702,112 @@ body {
 .hidden {
     display: none;
 }
+.material-symbols-outlined {
+    font-variation-settings: 
+      'FILL' 0, 
+      'wght' 400, 
+      'GRAD' 0, 
+      'opsz' 24; 
+  }
+
+  .prev-category, .next-category {
+    font-size: 30px; 
+    margin: 0 10px; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+  }
+
+  
+  .prev-category:hover, .next-category:hover {
+    color: #c4c100b8; 
+    text-shadow: 0 0 10px rgb(4, 255, 20), 0 0 20px rgb(255, 255, 255); 
+    transform: scale(1.1); 
+  }
+
+  .prev-category:hover .material-symbols-outlined, 
+  .next-category:hover .material-symbols-outlined {
+    filter: brightness(1.3);
+  }
 
 
+  /* Style  du modal (pour_le_menu)*/
 
+  .modal-content {
+      background-color: #FFFDD0; /* Fond beige clair, douce et chaleureuse */
+      border-radius: 15px; /* Coins arrondis pour un effet plus doux */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre légère et douce */
+      padding: 20px;
+      max-height: 80vh;
+      overflow-y: auto;
+  }
+  
+  /* En-tête du modal */
+  .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: hsl(60, 20%, 86%); /* Jaune doré léger pour un aspect lumineux et dynamique */
+      border-bottom: 2px solid #FFEB3B; /* Ligne fine et subtile en jaune vif */
+      border-radius: 10px;
+  }
+  
+  /* Titre du modal */
+  .modal-title {
+      font-size: 1.8rem;
+      color: #333; /* Un gris foncé pour le titre, plus doux que le noir */
+      font-weight: 600;
+  }
+  
+  /* Responsivité sur petit écran */
+  @media (max-width: 768px) {
+      .modal-dialog {
+          max-width: 100%;
+          margin: 10px;
+      }
+  
+      .modal-body {
+          padding: 10px;
+      }
+  
+      .modal-title {
+          font-size: 1.5rem;
+      }
+  
+      .modal-body article h3 {
+          font-size: 1.4rem;
+      }
+  
+      .modal-body article p {
+          font-size: 1rem;
+      }
+  
+  }
+  
+  .modal-body article button {
+          font-size: 1rem;
+          padding: 10px 20px;
+          background-color: #FF6F00; /* Orange doux pour les boutons */
+          color: #FFF;
+          border: none;
+          border-radius: 5px;
+      }
+  
+  /* Limite la hauteur du modal pour petits écrans */
+  @media (max-width: 576px) {
+      .modal-content {
+          max-height: 70vh;
+      }
+  }
+  
+  
+  button:hover {
+      background-color: #FF8F00; /* Légère variation de couleur au survol */
+  }
+  
+  
+  
+  
 
 
 

@@ -126,6 +126,7 @@ window.onclick = function(event) {
 
 
 
+
 let categories = ['special', 'boissons', 'mer', 'desserts'];
 let currentCategoryIndex = 0;
 
@@ -160,6 +161,60 @@ document.querySelector('.next-category').addEventListener('click', () => {
 // Initialiser avec la première catégorie
 updateCategory();
 
+
+
+
+
+
+
+
+
+
+// Variable pour suivre l'index de l'élément affiché
+let currentIndex = null;
+
+// Sélectionner les éléments du modal et du menu
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalImage = document.getElementById('modal-image');
+const menuItems = document.querySelectorAll('.menu-item');
+const menuModalLabel = document.getElementById('menuModalLabel');
+
+// Fonction pour mettre à jour le contenu du modal avec les informations du plat
+function updateModalContent(index) {
+    const item = menuItems[index]; // Obtenez l'élément du tableau basé sur l'index
+    modalTitle.textContent = item.dataset.name;
+    modalDescription.textContent = item.dataset.description;
+    modalImage.src = item.dataset.image;
+    modalImage.alt = `Image de ${item.dataset.name}`;
+    menuModalLabel.textContent = `${item.dataset.name} - ${item.dataset.price}`;
+    currentIndex = index;
+}
+
+// Ajoutez un écouteur d'événements pour chaque élément du menu
+menuItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+        updateModalContent(index); // Mettre à jour le contenu du modal avec le plat sélectionné
+        const modal = new bootstrap.Modal(document.getElementById('menuModal'));
+        modal.show(); // Afficher le modal
+    });
+});
+
+// Gérer le clic sur la flèche précédente
+document.getElementById('prev-btn').addEventListener('click', function() {
+    if (currentIndex > 0) {
+        currentIndex--; // Descendre l'index
+        updateModalContent(currentIndex); // Mettre à jour le contenu du modal
+    }
+});
+
+// Gérer le clic sur la flèche suivante
+document.getElementById('next-btn').addEventListener('click', function() {
+    if (currentIndex < menuItems.length - 1) {
+        currentIndex++; // Augmenter l'index
+        updateModalContent(currentIndex); // Mettre à jour le contenu du modal
+    }
+});
 
 
 
