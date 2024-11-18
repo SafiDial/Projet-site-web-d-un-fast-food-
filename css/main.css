@@ -95,6 +95,9 @@ body {
 .navbar-toggler:hover span.material-symbols-outlined {
     color: #FFFDD0;
 }
+.navbar.fixed-top {
+    z-index: 1030; /* Assure que la barre de navigation reste au-dessus des autres éléments */
+}
 
 /* ************************** Carrousel **************************************** */
 .carousel-container {
@@ -1057,7 +1060,47 @@ h3 {
 
 
 
-
+        /* Custom styles */
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+        }
+        .about-text {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .about-image {
+            flex: 1;
+            max-width: 45%;
+        }
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .highlight {
+            color: #FF0000;
+            font-size: 14px;
+        }
+        .highlight-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .center-text {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        .sub-title {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            opacity: 0.8;
+            text-align: center;
+            margin-top: 20px;
+        }
+   
 
 
 
