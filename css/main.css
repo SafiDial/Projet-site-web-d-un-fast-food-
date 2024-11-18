@@ -457,7 +457,6 @@ body {
     justify-content: center;
 }
 
-/* Centrer le contenu dans la section menu */
 .menu-header h2 {
     font-size: 32px;
     font-weight: bold;
@@ -466,7 +465,6 @@ body {
     position: relative;
 }
 
-/* Les lignes décoratives autour du titre */
 .line {
     display: inline-block;
     height: 2px;
@@ -475,7 +473,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Description du menu */
 .menu-description {
     font-size: 17.6px;
     margin-top: 10px;
@@ -484,7 +481,6 @@ body {
     color: #F5F5F5;
 }
 
-/* Style principal pour le bouton */
 .download-menu {
     position: relative;
     display: inline-block;
