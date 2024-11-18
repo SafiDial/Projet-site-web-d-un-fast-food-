@@ -1,3 +1,6 @@
+// **************** la transparence au défilement la barre de navigation ********************//
+
+
 document.addEventListener("scroll", function() {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
@@ -9,19 +12,20 @@ document.addEventListener("scroll", function() {
 
 
 
+// **************** Pour le menu burger afin de le fermer si un lien est cliqué ********************//
 
 
 // Sélectionner tous les liens de la barre de navigation
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-// Ajouter un écouteur d'événement pour chaque lien
+// un écouteur d'événement pour chaque lien
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         // Si le menu est ouvert, on le ferme
         const navbarCollapse = document.getElementById('navbarNav');
         const navbarToggler = document.querySelector('.navbar-toggler');
         if (navbarCollapse.classList.contains('show')) {
-            navbarToggler.click(); // Simule un clic pour fermer le menu
+            navbarToggler.click(); 
         }
     });
 });
@@ -30,9 +34,8 @@ navLinks.forEach(link => {
 
 
 
+// *********************la fleche pour aprops qui apparait en fonction le taille de l'ecran ********************//
 
-
-// Fonction pour gérer l'affichage du texte en fonction de la taille de l'écran
 function handleTextDisplay() {
     var texteLong = document.getElementById('texteLong');
     var voirPlus = document.getElementById('voirPlus');
@@ -65,9 +68,9 @@ document.getElementById('voirPlus').addEventListener('click', function() {
     texteLong.classList.toggle('texte-complet');
 
     if (texteLong.classList.contains('texte-court')) {
-        voirPlus.innerHTML = 'arrow_drop_down'; // Flèche vers le bas (Voir plus)
+        voirPlus.innerHTML = 'arrow_drop_down'; // Flèche (Voir plus)
     } else {
-        voirPlus.innerHTML = 'arrow_drop_up'; // Flèche vers le haut (Voir moins)
+        voirPlus.innerHTML = 'arrow_drop_up'; // Flèche (Voir moins)
     }
 });
 
@@ -76,13 +79,7 @@ document.getElementById('voirPlus').addEventListener('click', function() {
 
 
 
-
-
-
-
-
-
-
+// **************** Menu affichage en fonction de la categorie cliquer ********************//
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -123,9 +120,7 @@ window.onclick = function(event) {
     }
 }
 
-
-
-
+// **************** Menu affichage en fonction de la categorie cliquer (pas tout les_categories_visibles en mm temps) ********************//
 
 let categories = ['special', 'boissons', 'mer', 'desserts'];
 let currentCategoryIndex = 0;
@@ -163,11 +158,7 @@ updateCategory();
 
 
 
-
-
-
-
-
+// **************** Pour afficher le modal du repas selectionne ********************//
 
 
 // Variable pour suivre l'index de l'élément affiché
@@ -182,7 +173,7 @@ const menuModalLabel = document.getElementById('menuModalLabel');
 
 // Fonction pour mettre à jour le contenu du modal avec les informations du plat
 function updateModalContent(index) {
-    const item = menuItems[index]; // Obtenez l'élément du tableau basé sur l'index
+    const item = menuItems[index]; 
     modalTitle.textContent = item.dataset.name;
     modalDescription.textContent = item.dataset.description;
     modalImage.src = item.dataset.image;
@@ -220,45 +211,62 @@ document.getElementById('next-btn').addEventListener('click', function() {
 
 
 
+// **************** Pour les images dans a propos.html ********************//
 
 
+    // Définition des images pour chaque catégorie
+    var images = {
+        poulet: [
+            "../css/images/dessert.png",
+            "../css/images/fastfood1.png",
+            "../css/images/desert_cheesecake.png"
+        ],
+        pizza: [
+            "../css/images/chefouverture.png",
+            "../css/images/Apropos.png",
+            "../css/images/Aceuil2.jpg"
+        ],
+        burger: [
+            "../css/images/fastfood1.png",
+            "../css/images/fastfood1.png",
+            "../css/images/chefouverture.png"
+        ]
+    };
 
+    // Fonction pour changer les images
+    function changeImages(type) {
+        var selectedImages = images[type]; // Obtenir les images correspondantes
 
+        // Mettre à jour les images
+        document.getElementById('image1').src = selectedImages[0];
+        document.getElementById('image2').src = selectedImages[1];
+        document.getElementById('image3').src = selectedImages[2];
 
+        // Réinitialiser les classes des boutons
+        resetButtons();
 
-
-
-
-let currentSlide = 0;
-const slides = document.querySelectorAll(".carousel2-slide");
-const totalSlides = slides.length;
-const carousel = document.querySelector(".carousel2");
-
-// Fonction pour déplacer le carrousel
-function moveSlide(direction) {
-    currentSlide += direction;
-
-    // Si on atteint la fin des slides, revenir au début
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    } else if (currentSlide >= totalSlides) {
-        currentSlide = 0;
+        // Activer le bouton correspondant
+        var selectedButton = document.getElementById('btn' + capitalizeFirstLetter(type));
+        selectedButton.classList.add('active');
+        selectedButton.classList.remove('inactive');
     }
 
-    // Déplacement du carrousel
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
+    // Réinitialiser les boutons
+    function resetButtons() {
+        var buttons = document.querySelectorAll('.food-button');
+        buttons.forEach(function(button) {
+            button.classList.add('inactive');
+            button.classList.remove('active');
+        });
+    }
 
-// Défilement automatique toutes les 3 secondes (par exemple)
-let autoSlide = setInterval(() => moveSlide(1), 3000);
+    // Capitaliser la première lettre pour lier l'id du bouton
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
-// Réinitialiser l'intervalle du défilement automatique après un clic sur les flèches
-document.querySelector(".carousel2-button.left").addEventListener("click", () => {
-    clearInterval(autoSlide); // Arrête le défilement automatique
-    autoSlide = setInterval(() => moveSlide(1), 3000); // Redémarre le défilement automatique après 3 secondes
-});
+    // Initialiser avec "Poulet" actif
+    document.addEventListener('DOMContentLoaded', function() {
+        changeImages('poulet');
+    });
 
-document.querySelector(".carousel2-button.right").addEventListener("click", () => {
-    clearInterval(autoSlide); // Arrête le défilement automatique
-    autoSlide = setInterval(() => moveSlide(1), 3000); // Redémarre le défilement automatique après 3 secondes
-});
