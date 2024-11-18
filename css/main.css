@@ -27,6 +27,11 @@ body {
     color: #FFFDD0 !important;
 }
 
+.navbar-brand {
+    font-weight: bold;  
+    font-size: 28px;    
+}
+
 .navbar-brand-subtitle {
     font-size: 12px;
     font-weight: 200;
