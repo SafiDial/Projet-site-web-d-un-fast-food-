@@ -14,13 +14,13 @@ body {
 
 /* ************************** Barre de navigation **************************************** */
 .navbar {
-    background-color: #19274D; /* Couleur solide au chargement */
+    background-color: #D32F2F; /* Couleur solide au chargement */
     padding: 16px 32px;
     transition: background-color 0.3s ease; /* Transition pour l'effet de transparence */
 }
 
 .navbar.scrolled {
-    background-color: rgba(46, 50, 61, 0.8); /* Transparence au défilement */
+    background-color: rgba(211, 47, 47, 0.5); /* Transparence au défilement */
 }
 
 .navbar-brand, .nav-link {
@@ -634,6 +634,7 @@ body {
 }
 
 /* Style pour chaque section de menu */
+
 .menu-items h3 {
     display: flex;
     justify-content: space-between;
@@ -641,7 +642,8 @@ body {
     font-size: 23px;
     margin: 10px 0;
     padding-right: 20px;
-}
+    
+  }
 
 /* Description des articles */
 .menu-items p {
