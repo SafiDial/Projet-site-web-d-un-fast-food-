@@ -633,7 +633,6 @@ body {
     }
 }
 
-/* Style pour chaque section de menu */
 
 .menu-items h3 {
     display: flex;
@@ -642,8 +641,16 @@ body {
     font-size: 23px;
     margin: 10px 0;
     padding-right: 20px;
-    
-  }
+    cursor: pointer;
+    color: #eed612;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.menu-items h3:hover {
+    color: #ff5733; 
+    transform: scale(1.05); 
+}
+
 
 /* Description des articles */
 .menu-items p {
