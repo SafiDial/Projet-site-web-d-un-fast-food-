@@ -768,7 +768,7 @@ body {
   
   /* Titre du modal */
   .modal-title {
-      font-size: 1.8rem;
+      font-size: 28rem;
       color: #333; /* Un gris foncé pour le titre, plus doux que le noir */
       font-weight: 600;
   }
@@ -815,9 +815,6 @@ body {
   }
   
   
-  button:hover {
-      background-color: #FF8F00; /* Légère variation de couleur au survol */
-  }
   
   
   
