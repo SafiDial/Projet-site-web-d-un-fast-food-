@@ -105,104 +105,64 @@ body {
 }
 
 /* ************************** Carrousel **************************************** */
+
 .carousel-container {
     padding-top: 80px; /* Espace pour la barre de navigation */
 }
-
 .carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    color: #FFFDD0;
-    text-align: left;
-    width: 50%;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 80px;
 }
 
-.carousel-caption h1 {
-    color: #000000;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
-    line-height: 1.2;
+.carousel-caption h5 {
+  font-size: 32px;
+  font-weight: 700;
 }
 
-/* Autres styles */
-.carousel-caption .description {
-    color: #FFFDD0;
-    font-size: 19px;
-    font-weight: 300;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 80%;
-    margin-bottom: 20px;
+.carousel-caption p {
+  font-size: 19px;
 }
 
-
-
-.btn-custom {
-    background-color: #FFD700; /* Couleur dorée */
-    color: black; /* Couleur du texte */
-    transform: scale(1.05); /* Agrandissement léger */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    border: none; /* Pas de bordure */
-    padding: 8px 16px; /* Ajuster l'espacement intérieur pour un bouton plus petit */
-    transition: all 0.3s ease; /* Transition douce */
-    width: auto; /* Largeur automatique pour ajuster au texte */
-    max-width: 250px; /* Largeur maximale pour empêcher le bouton de devenir trop large */
-  }
-  
-  .btn-custom:hover {
-    background-color: rgba(255, 255, 255, 0); /* Fond transparent lors du survol */
-    transform: scale(1.1); /* Agrandissement du bouton au survol */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Ombre plus marquée au survol */
-  }
-  
-
-
-
-
-
-/* ************************** Icône d'appel **************************************** */
-.call-icon {
-    position: absolute;
-    bottom: 10%; /* Position verticale sur l'écran */
-    right: 5%; /* Position horizontale sur l'écran */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000000;
-    font-size: 24px;
-    z-index: 2;
-    background-color: rgba(255, 193, 7, 0.7); /* Fond légèrement transparent */
-    border-radius: 20%;
-    padding: 10px;
-    animation: zoomInOut 2s infinite ease-in-out;
+.carousel-caption .btn {
+  font-size: 18px;
 }
 
-/* Animation du zoom */
-@keyframes zoomInOut {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+.carousel-item img {
+  height: 80vh;
+  object-fit: cover;
 }
 
-/* Centrer l'élément sur les petits écrans (moins de 768px) */
+.carousel-caption .btn {
+  font-size: 19px;
+  font-weight: bold;
+  padding: 12px 32px;
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+  background-color: #ff3b00;
+  transform: scale(1.1);
+}
+
 @media (max-width: 767px) {
-    .call-icon {
-        position: fixed; /* Utiliser fixed pour positionner l'élément de manière fixe sur l'écran */
-        bottom: 10%; /* Ajuster la distance par rapport au bas de l'écran */
-        right: 50%; /* Centrer horizontalement */
-        transform: translateX(50%); /* Correction pour centrer précisément */
-        background-color: rgba(249, 221, 136, 0.5); /* Réduire l'opacité du fond sur les petits écrans */
-    }
+  .btn-custom {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 }
-
-
 
 
 
@@ -211,161 +171,6 @@ body {
 
 /* ************************** Section À propos **************************************** */
 
-.about-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 0;
-    background-color: #FFFDD0;
-    flex-wrap: wrap;
-}
-
-.about-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 40%;
-    max-width: 40%;
-}
-
-.about-rectangle {
-    background-color: #BEC100;
-    width: 230px;
-    height: 60vh;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    z-index: 1;
-    transform: translateY(-50%);
-}
-
-.about-image {
-    margin-top: 30px;
-    position: relative;
-    z-index: 2;
-    left: 10%;
-    top: 10%;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    max-width: 120%;
-}
-
-.address-box {
-    margin-top: 20px; 
-    padding: 10px;
-    font-size: 14px;
-    color: #333; 
-    background-color: #FFD700; 
-    border: 20px solid #EEE632;
-    border-radius: 5px; 
-    max-width: 200px;
-    text-align: left;
-    line-height: 1.4;
-}
-
-.about-content {
-    width: 60%;
-    padding-left: 50px;
-    color: #333;
-    max-width: 60%;
-    flex-direction: column; 
-    justify-content: flex-start; 
-}
-
-.small-title {
-    font-size: 19px;
-    font-weight: bold;
-    color: #BEC100;
-    margin-bottom: 10px;
-}
-
-.line {
-    width: 50px;
-    height: 3px;
-    background-color: #BEC100;
-    margin-bottom: 20px;
-}
-
-.main-title {
-    font-family: 'Inria Serif', serif;
-    font-weight: normal;
-    font-size: 40px;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.description {
-    margin-right: 50px;
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: #333;
-}
-
-.btn-secondary {
-    margin-top: 50px;
-    font-size: 16px;
-    height: 50px;               
-    width: 200px;               
-    font-weight: bold;
-    color: #333;               
-    background-color: #FFFDD0;  
-    border: 7px solid #EEE632;  
-    border-radius: 30px;        
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease; 
-}
-
-/* Effet au survol */
-.btn-secondary:hover {
-    background-color: #EEE632;  
-    border-color: #FFFDD0;      
-}
-
-
-
-
-.texte-court {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Affiche 3 lignes de texte sur mobile */
-    line-clamp: 3; 
-    -webkit-box-orient: vertical;
-}
-
-.texte-complet {
-    -webkit-line-clamp: unset;
-    line-clamp: unset; /* Pour enlever la limite de ligne */
-}
-
-/* Style pour la flèche "Voir plus" */
-.voir-plus {
-    font-size: 50px;           
-    cursor: pointer;           
-    display: inline-block;    
-    color: #fff200;             
-    transition: color 0.3s, text-shadow 0.3s; 
-    text-shadow: 0 0 8px #fff200; 
-}
-
-.voir-plus:hover {
-    color: #767200;            
-    text-shadow: 0 0 4px #fff93c; 
-}
 
 
 

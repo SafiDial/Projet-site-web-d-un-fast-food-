@@ -120,7 +120,7 @@ window.onclick = function(event) {
     }
 }
 
-// **************** Menu affichage en fonction de la categorie cliquer (pas tout les_categories_visibles en mm temps) ********************//
+// *********Menu affichage en fonction de la categorie cliquer (pas tout les_categories_visibles en mm temps)***************//
 
 let categories = ['special', 'boissons', 'mer', 'desserts'];
 let currentCategoryIndex = 0;
