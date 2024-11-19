@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,123 +10,252 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
-    <link rel="stylesheet" href="../css/menu-de-commande.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../css/menu-de-commande.css">
 
-    
+
 </head>
+
 <body>
 
-<!-- Barre de navigation personnalisée -->
-<nav class="navbar navbar-expand-lg fixed-top py-2">
-    <div class="container">
-        <a class="navbar-brand" href="#carousel">
-            LE BON GOUT
-            <div class="navbar-brand-subtitle">Restauration Rapide</div>
-        </a> 
+    <!-- Barre de navigation personnalisée -->
+    <nav class="navbar navbar-expand-lg fixed-top py-2">
+        <div class="container">
+            <a class="navbar-brand" href="#carousel">
+                LE BON GOUT
+                <div class="navbar-brand-subtitle">Restauration Rapide</div>
+            </a>
 
-        <!-- Bouton de navigation pour petits écrans -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
+            <!-- Bouton de navigation pour petits écrans -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#reservations">Réservations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="Menu-de-navigation/apropos.html">À propos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#galerie">Galerie</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-            </ul>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#reservations">Réservations</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="Menu-de-navigation/apropos.html">À
+                            propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#galerie">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
-<!-- Contenu principal de la page -->
-<div class="container py-5" style="margin-top: 80px;"> <!-- Marge pour compenser la navbar fixe -->
-    <!-- Titre principal -->
-    <header class="text-center mb-5" id="menu">
-        <h1 class="display-4">Bienvenue au Fast-Food</h1>
-        <p class="lead">Sélectionnez vos plats préférés et commandez rapidement !</p>
-    </header>
+    <!-- Contenu principal de la page -->
+    <div class="container py-5" style="margin-top: 80px;"> <!-- Marge pour compenser la navbar fixe -->
+        <!-- Titre principal -->
+        <header class="text-center mb-5" id="menu">
+            <h1 class="display-4">Bienvenue au Fast-Food</h1>
+            <p class="lead">Sélectionnez vos plats préférés et commandez rapidement !</p>
+        </header>
 
-    <section>
-        <!-- Menu avec des cartes Bootstrap -->
-        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-            <!-- Plat 1 -->
-            <article class="col">
-                <div class="card menu-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=Burger+Classique" alt="Burger Classique">
-                    <div class="card-body">
-                        <h5 class="card-title">Burger Classique</h5>
-                        <p class="card-text">Juteux, savoureux et parfait pour les amateurs de viande.</p>
-                        <button class="btn btn-custom" data-name="Burger Classique" data-price="5.99">Ajouter au Panier</button>
+        <section>
+            <!-- Menu avec des cartes Bootstrap -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Plat 1 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Burger+Classique" alt="Burger Classique"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Classique</h5>
+                            <p class="card-text">Juteux, savoureux et parfait pour les amateurs de viande.</p>
+                            <button class="btn btn-custom" data-name="Burger Classique" data-price="5.99">Ajouter au
+                                Panier</button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Plat 2 -->
-            <article class="col">
-                <div class="card menu-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=Frites" alt="Frites">
-                    <div class="card-body">
-                        <h5 class="card-title">Frites Maison</h5>
-                        <p class="card-text">Des frites croustillantes et dorées, un classique incontournable.</p>
-                        <button class="btn btn-custom" data-name="Frites Maison" data-price="2.99">Ajouter au Panier</button>
+                <!-- Plat 2 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Frites" alt="Frites"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Frites Maison</h5>
+                            <p class="card-text">Des frites croustillantes et dorées, un classique incontournable.</p>
+                            <button class="btn btn-custom" data-name="Frites Maison" data-price="2.99">Ajouter au
+                                Panier</button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Plat 3 -->
-            <article class="col">
-                <div class="card menu-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=Salade" alt="Salade">
-                    <div class="card-body">
-                        <h5 class="card-title">Salade Fraîche</h5>
-                        <p class="card-text">Légumes frais, vinaigrette maison, un choix léger et équilibré.</p>
-                        <button class="btn btn-custom" data-name="Salade Fraîche" data-price="3.49">Ajouter au Panier</button>
+                <!-- Plat 3 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Salade" alt="Salade"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Salade Fraîche</h5>
+                            <p class="card-text">Légumes frais, vinaigrette maison, un choix léger et équilibré.</p>
+                            <button class="btn btn-custom" data-name="Salade Fraîche" data-price="3.49">Ajouter au
+                                Panier</button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Plat 4 -->
-            <article class="col">
-                <div class="card menu-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=Dessert" alt="Dessert">
-                    <div class="card-body">
-                        <h5 class="card-title">Dessert Gourmand</h5>
-                        <p class="card-text">Un dessert sucré pour finir votre repas sur une note douce.</p>
-                        <button class="btn btn-custom" data-name="Dessert Gourmand" data-price="4.49">Ajouter au Panier</button>
+                <!-- Plat 4 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Dessert" alt="Dessert"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert Gourmand</h5>
+                            <p class="card-text">Un dessert sucré pour finir votre repas sur une note douce.</p>
+                            <button class="btn btn-custom" data-name="Dessert Gourmand" data-price="4.49">Ajouter au
+                                Panier</button>
+                        </div>
                     </div>
-                </div>
-            </article>
-        </div>
-    </section>
+                </article>
+            </div>
 
-    <!-- Section Panier -->
-    <section class="mt-5" id="panier">
-        <h3 class="text-center">Votre Panier</h3>
-        <div id="panier" class="mb-3">
-            <p>Aucun article dans le panier.</p>
-        </div>
-        <div class="d-flex justify-content-between align-items-center">
-            <strong>Total: <span id="total">0.00</span> €</strong>
-            <button class="btn btn-success" id="btnCheckout">Passer à la commande</button>
-        </div>
-    </section>
-</div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Plat 5 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Poulet+Grillé" alt="Poulet Grillé"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Poulet Grillé</h5>
+                            <p class="card-text">Poulet juteux et grillé à la perfection, idéal avec une sauce épicée.
+                            </p>
+                            <button class="btn btn-custom" data-name="Poulet Grillé" data-price="6.99">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Plat 6 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Pizza" alt="Pizza" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza Margherita</h5>
+                            <p class="card-text">Une pizza classique avec sauce tomate, mozzarella et basilic frais.</p>
+                            <button class="btn btn-custom" data-name="Pizza Margherita" data-price="8.49">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Plat 7 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Hot+Dog" alt="Hot Dog"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Hot Dog</h5>
+                            <p class="card-text">Saucisse tendre dans un pain moelleux, avec de la moutarde et des
+                                oignons.</p>
+                            <button class="btn btn-custom" data-name="Hot Dog" data-price="3.79">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Plat 8 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Wrap" alt="Wrap" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Wrap au Poulet</h5>
+                            <p class="card-text">Wrap avec poulet grillé, légumes frais et sauce crémeuse.</p>
+                            <button class="btn btn-custom" data-name="Wrap au Poulet" data-price="5.49">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Plat 9 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Soupe" alt="Soupe" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Soupe du Jour</h5>
+                            <p class="card-text">Soupe maison, parfaite pour accompagner votre repas.</p>
+                            <button class="btn btn-custom" data-name="Soupe du Jour" data-price="3.99">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Plat 10 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Smoothie" alt="Smoothie"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Smoothie Tropical</h5>
+                            <p class="card-text">Un smoothie rafraîchissant avec des fruits tropicaux frais.</p>
+                            <button class="btn btn-custom" data-name="Smoothie Tropical" data-price="4.99">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Plat 11 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Milkshake" alt="Milkshake à la Vanille"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Milkshake à la Vanille</h5>
+                            <p class="card-text">Un milkshake crémeux avec une touche de vanille naturelle.</p>
+                            <button class="btn btn-custom" data-name="Milkshake à la Vanille" data-price="3.99">Ajouter
+                                au Panier</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Plat 10 -->
+                <article class="col">
+                    <div class="card menu-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Smoothie" alt="Smoothie"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Smoothie Tropical</h5>
+                            <p class="card-text">Un smoothie rafraîchissant avec des fruits tropicaux frais.</p>
+                            <button class="btn btn-custom" data-name="Smoothie Tropical" data-price="4.99">Ajouter au
+                                Panier</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Panier -->
+        <section class="mt-5" id="panier-section">
+            <h3 class="text-center" id="panier-title">Votre Panier</h3>
+            <div id="panier-content" class="mb-3">
+                <p>Aucun article dans le panier.</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center" id="panier-footer">
+                <strong>Total: <span id="total">0.00</span> €</strong>
+                <button class="btn btn-success" id="btnCheckout">Passer à la commande</button>
+            </div>
+        </section>
 
 
 
-<!-- Lien vers Bootstrap JS et Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        
 
-<script src="Apropos-et-commande.js"></script>
+
+
+        <!-- Lien vers Bootstrap JS et Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="Apropos-et-commande.js"></script>
 
 
 </body>
+
 </html>

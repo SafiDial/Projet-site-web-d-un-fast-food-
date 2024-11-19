@@ -10,22 +10,26 @@ body {
 
 /* ************************** Barre de navigation **************************************** */
 .navbar {
-    background-color: #D32F2F; /* Couleur solide au chargement */
+    background-color: #D32F2F;
+    /* Couleur solide au chargement */
     padding: 16px 32px;
-    transition: background-color 0.3s ease; /* Transition pour l'effet de transparence */
+    transition: background-color 0.3s ease;
+    /* Transition pour l'effet de transparence */
 }
 
 .navbar.scrolled {
-    background-color: rgba(211, 47, 47, 0.5); /* Transparence au défilement */
+    background-color: rgba(211, 47, 47, 0.5);
+    /* Transparence au défilement */
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
     color: #FFFDD0 !important;
 }
 
 .navbar-brand {
-    font-weight: bold;  
-    font-size: 28px;    
+    font-weight: bold;
+    font-size: 28px;
 }
 
 .navbar-brand-subtitle {
@@ -96,28 +100,222 @@ body {
 .navbar-toggler:hover span.material-symbols-outlined {
     color: #FFFDD0;
 }
+
 .navbar.fixed-top {
-    z-index: 1030; /*a barre de navigation reste au-dessus des autres éléments */
+    z-index: 1030;
+    /*a barre de navigation reste au-dessus des autres éléments */
 }
 
+/* Personnalisation générale de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Personnalisation de l'interface */
-        .menu-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .menu-item {
-            margin-bottom: 30px;
-        }
-        .container {
-            max-width: 1200px;
-        }
-        .btn-custom {
-            background-color: #f1a12f;
-            color: white;
-        }
-        .btn-custom:hover {
-            background-color: #e68a1f;
-        }
-    
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Personnalisation du titre principal */
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f1a12f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Personnalisation des cartes du menu */
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Applique une largeur et une hauteur uniforme à chaque carte */
+.card.menu-item {
+    width: 100%;
+    /* Largeur maximale du conteneur */
+    height: 400px;
+    /* Hauteur fixe pour chaque carte */
+    overflow: hidden;
+    /* Empêche les contenus de déborder */
+    border-radius: 10px;
+}
+
+/* Applique une taille uniforme aux images dans les cartes */
+.card-img-top {
+    width: 100%;
+    /* Largeur maximale pour que l'image prenne toute la largeur */
+    height: 200px;
+    /* Hauteur uniforme pour toutes les images */
+    object-fit: cover;
+    /* L'image garde ses proportions tout en remplissant le conteneur */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Ajuste les contenus du corps de la carte pour que l'espace ne soit pas déformé */
+.card-body {
+    padding: 15px;
+    height: 100%;
+    /* Prend toute la hauteur de la carte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Style personnalisé pour les boutons */
+.btn-custom {
+    background-color: #f1a12f;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #e68a1f;
+    transform: translateY(-3px);
+}
+
+.btn-custom:focus {
+    outline: none;
+}
+
+/* Effet de hover pour les cartes */
+.card:hover .btn-custom {
+    background-color: #e68a1f;
+}
+
+/* Personnalisation du panier */
+#panier {
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#panier p {
+    font-size: 1.25rem;
+    color: #666;
+    text-align: center;
+}
+
+#panier-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#panier-title {
+    font-size: 2rem;
+    color: #f1a12f;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#panier-content p {
+    font-size: 1.25rem;
+    color: #666;
+    text-align: center;
+}
+
+#panier-footer {
+    margin-top: 30px;
+    font-size: 1.25rem;
+}
+
+#panier-footer strong {
+    color: #333;
+}
+
+#panier-footer #btnCheckout {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#panier-footer #btnCheckout:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+#panier-footer #btnCheckout:focus {
+    outline: none;
+}
+
+/* Mise en page responsive */
+@media (max-width: 768px) {
+    .row-cols-md-2 {
+        row-gap: 30px;
+    }
+
+    .card-body h5 {
+        font-size: 1.1rem;
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .btn-custom {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .row-cols-1 {
+        row-gap: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}

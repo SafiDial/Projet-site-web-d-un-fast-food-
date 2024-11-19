@@ -1,7 +1,7 @@
 // **************** la transparence au défilement la barre de navigation ********************//
 
 
-document.addEventListener("scroll", function() {
+document.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled"); // Applique la transparence au défilement
@@ -25,7 +25,7 @@ navLinks.forEach(link => {
         const navbarCollapse = document.getElementById('navbarNav');
         const navbarToggler = document.querySelector('.navbar-toggler');
         if (navbarCollapse.classList.contains('show')) {
-            navbarToggler.click(); 
+            navbarToggler.click();
         }
     });
 });
@@ -60,7 +60,7 @@ window.onload = handleTextDisplay;
 window.onresize = handleTextDisplay;
 
 // Gérer l'événement du clic sur la flèche "Voir plus"
-document.getElementById('voirPlus').addEventListener('click', function() {
+document.getElementById('voirPlus').addEventListener('click', function () {
     var texteLong = document.getElementById('texteLong');
     var voirPlus = document.getElementById('voirPlus');
 
@@ -111,7 +111,7 @@ function toggleDownloadOptions() {
 }
 
 // Ferme le menu déroulant si on clique en dehors
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.btn-download-main')) {
         const dropdowns = document.querySelector('.download-options');
         if (dropdowns.style.display === 'block') {
@@ -128,11 +128,11 @@ let currentCategoryIndex = 0;
 function updateCategory() {
     // Cacher tous les menus
     document.querySelectorAll('.menu-items').forEach(item => item.classList.add('hidden'));
-    
+
     // Afficher le menu de la catégorie actuelle
     const currentCategory = categories[currentCategoryIndex];
     document.getElementById(`${currentCategory}-menu`).classList.remove('hidden');
-    
+
     // Mettre à jour le titre de la catégorie active
     const categoryTitles = {
         'special': 'MENU SPÉCIAL',
@@ -173,7 +173,7 @@ const menuModalLabel = document.getElementById('menuModalLabel');
 
 // Fonction pour mettre à jour le contenu du modal avec les informations du plat
 function updateModalContent(index) {
-    const item = menuItems[index]; 
+    const item = menuItems[index];
     modalTitle.textContent = item.dataset.name;
     modalDescription.textContent = item.dataset.description;
     modalImage.src = item.dataset.image;
@@ -184,7 +184,7 @@ function updateModalContent(index) {
 
 // Ajoutez un écouteur d'événements pour chaque élément du menu
 menuItems.forEach((item, index) => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         updateModalContent(index); // Mettre à jour le contenu du modal avec le plat sélectionné
         const modal = new bootstrap.Modal(document.getElementById('menuModal'));
         modal.show(); // Afficher le modal
@@ -192,7 +192,7 @@ menuItems.forEach((item, index) => {
 });
 
 // Gérer le clic sur la flèche précédente
-document.getElementById('prev-btn').addEventListener('click', function() {
+document.getElementById('prev-btn').addEventListener('click', function () {
     if (currentIndex > 0) {
         currentIndex--; // Descendre l'index
         updateModalContent(currentIndex); // Mettre à jour le contenu du modal
@@ -200,7 +200,7 @@ document.getElementById('prev-btn').addEventListener('click', function() {
 });
 
 // Gérer le clic sur la flèche suivante
-document.getElementById('next-btn').addEventListener('click', function() {
+document.getElementById('next-btn').addEventListener('click', function () {
     if (currentIndex < menuItems.length - 1) {
         currentIndex++; // Augmenter l'index
         updateModalContent(currentIndex); // Mettre à jour le contenu du modal
@@ -214,59 +214,59 @@ document.getElementById('next-btn').addEventListener('click', function() {
 // **************** Pour les images dans a propos.html ********************//
 
 
-    // Définition des images pour chaque catégorie
-    var images = {
-        poulet: [
-            "../css/images/dessert.png",
-            "../css/images/fastfood1.png",
-            "../css/images/desert_cheesecake.png"
-        ],
-        pizza: [
-            "../css/images/chefouverture.png",
-            "../css/images/Apropos.png",
-            "../css/images/Aceuil2.jpg"
-        ],
-        burger: [
-            "../css/images/fastfood1.png",
-            "../css/images/fastfood1.png",
-            "../css/images/chefouverture.png"
-        ]
-    };
+// Définition des images pour chaque catégorie
+var images = {
+    poulet: [
+        "../css/images/dessert.png",
+        "../css/images/fastfood1.png",
+        "../css/images/desert_cheesecake.png"
+    ],
+    pizza: [
+        "../css/images/chefouverture.png",
+        "../css/images/Apropos.png",
+        "../css/images/Aceuil2.jpg"
+    ],
+    burger: [
+        "../css/images/fastfood1.png",
+        "../css/images/fastfood1.png",
+        "../css/images/chefouverture.png"
+    ]
+};
 
-    // Fonction pour changer les images
-    function changeImages(type) {
-        var selectedImages = images[type]; // Obtenir les images correspondantes
+// Fonction pour changer les images
+function changeImages(type) {
+    var selectedImages = images[type]; // Obtenir les images correspondantes
 
-        // Mettre à jour les images
-        document.getElementById('image1').src = selectedImages[0];
-        document.getElementById('image2').src = selectedImages[1];
-        document.getElementById('image3').src = selectedImages[2];
+    // Mettre à jour les images
+    document.getElementById('image1').src = selectedImages[0];
+    document.getElementById('image2').src = selectedImages[1];
+    document.getElementById('image3').src = selectedImages[2];
 
-        // Réinitialiser les classes des boutons
-        resetButtons();
+    // Réinitialiser les classes des boutons
+    resetButtons();
 
-        // Activer le bouton correspondant
-        var selectedButton = document.getElementById('btn' + capitalizeFirstLetter(type));
-        selectedButton.classList.add('active');
-        selectedButton.classList.remove('inactive');
-    }
+    // Activer le bouton correspondant
+    var selectedButton = document.getElementById('btn' + capitalizeFirstLetter(type));
+    selectedButton.classList.add('active');
+    selectedButton.classList.remove('inactive');
+}
 
-    // Réinitialiser les boutons
-    function resetButtons() {
-        var buttons = document.querySelectorAll('.food-button');
-        buttons.forEach(function(button) {
-            button.classList.add('inactive');
-            button.classList.remove('active');
-        });
-    }
-
-    // Capitaliser la première lettre pour lier l'id du bouton
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
-    // Initialiser avec "Poulet" actif
-    document.addEventListener('DOMContentLoaded', function() {
-        changeImages('poulet');
+// Réinitialiser les boutons
+function resetButtons() {
+    var buttons = document.querySelectorAll('.food-button');
+    buttons.forEach(function (button) {
+        button.classList.add('inactive');
+        button.classList.remove('active');
     });
+}
+
+// Capitaliser la première lettre pour lier l'id du bouton
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Initialiser avec "Poulet" actif
+document.addEventListener('DOMContentLoaded', function () {
+    changeImages('poulet');
+});
 
