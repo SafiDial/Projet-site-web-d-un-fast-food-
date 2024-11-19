@@ -106,7 +106,7 @@ body {
     /*a barre de navigation reste au-dessus des autres éléments */
 }
 
-/* Personnalisation générale de la page */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -120,9 +120,8 @@ body {
     margin: 0 auto;
 }
 
-/* Personnalisation du titre principal */
 header h1 {
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: bold;
     color: #f1a12f;
     text-transform: uppercase;
@@ -131,11 +130,10 @@ header h1 {
 }
 
 header p {
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #666;
 }
 
-/* Personnalisation des cartes du menu */
 .menu-item {
     background-color: #fff;
     border-radius: 10px;
@@ -149,52 +147,41 @@ header p {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Applique une largeur et une hauteur uniforme à chaque carte */
 .card.menu-item {
     width: 100%;
-    /* Largeur maximale du conteneur */
     height: 400px;
-    /* Hauteur fixe pour chaque carte */
     overflow: hidden;
-    /* Empêche les contenus de déborder */
     border-radius: 10px;
 }
 
-/* Applique une taille uniforme aux images dans les cartes */
 .card-img-top {
     width: 100%;
-    /* Largeur maximale pour que l'image prenne toute la largeur */
     height: 200px;
-    /* Hauteur uniforme pour toutes les images */
     object-fit: cover;
-    /* L'image garde ses proportions tout en remplissant le conteneur */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-/* Ajuste les contenus du corps de la carte pour que l'espace ne soit pas déformé */
 .card-body {
     padding: 15px;
     height: 100%;
-    /* Prend toute la hauteur de la carte */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .card-body h5 {
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #333;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .card-body p {
-    font-size: 1rem;
+    font-size: 16px;
     color: #777;
 }
 
-/* Style personnalisé pour les boutons */
 .btn-custom {
     background-color: #f1a12f;
     color: white;
@@ -202,7 +189,7 @@ header p {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -215,12 +202,10 @@ header p {
     outline: none;
 }
 
-/* Effet de hover pour les cartes */
 .card:hover .btn-custom {
     background-color: #e68a1f;
 }
 
-/* Personnalisation du panier */
 #panier {
     margin-top: 50px;
     background-color: #fff;
@@ -230,7 +215,7 @@ header p {
 }
 
 #panier p {
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #666;
     text-align: center;
 }
@@ -244,7 +229,7 @@ header p {
 }
 
 #panier-title {
-    font-size: 2rem;
+    font-size: 32px;
     color: #f1a12f;
     font-weight: bold;
     margin-bottom: 20px;
@@ -253,14 +238,14 @@ header p {
 }
 
 #panier-content p {
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #666;
     text-align: center;
 }
 
 #panier-footer {
     margin-top: 30px;
-    font-size: 1.25rem;
+    font-size: 20px;
 }
 
 #panier-footer strong {
@@ -274,7 +259,7 @@ header p {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 17.6px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -287,22 +272,21 @@ header p {
     outline: none;
 }
 
-/* Mise en page responsive */
 @media (max-width: 768px) {
     .row-cols-md-2 {
         row-gap: 30px;
     }
 
     .card-body h5 {
-        font-size: 1.1rem;
+        font-size: 17.6px;
     }
 
     .card-body p {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 
     .btn-custom {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 }
 
@@ -312,10 +296,10 @@ header p {
     }
 
     header h1 {
-        font-size: 2.5rem;
+        font-size: 40px;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 16px;
     }
 }

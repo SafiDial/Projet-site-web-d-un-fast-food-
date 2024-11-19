@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,405 +10,441 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    </head>
+</head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top py-2">
         <div class="container">
-          <a class="navbar-brand" href="#carousel">
-            LE BON GOUT
-            <div class="navbar-brand-subtitle">Restauration Rapide</div>
-          </a> 
-      
-          <!-- Bouton de navigation pour petits écrans -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-      
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#reservations">Réservations</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="Menu-de-navigation/apropos.html">À propos</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#galerie">Galerie</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="#carousel">
+                LE BON GOUT
+                <div class="navbar-brand-subtitle">Restauration Rapide</div>
+            </a>
+
+            <!-- Bouton de navigation pour petits écrans -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#reservations">Réservations</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="Menu-de-navigation/apropos.html">À
+                            propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#galerie">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </nav>
-      
-      <!-- ************************** Carrousel Accueil ****************************************** -->
+    </nav>
+
+    <!-- ************************** Carrousel Accueil ****************************************** -->
 
 
-      <section id="carousel" class="carousel-container container-fluid px-0">
+    <section id="carousel" class="carousel-container container-fluid px-0">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <!-- Indicateurs du carrousel -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          </div>
-      
-          <div class="carousel-inner">
-            <!-- Premier item du carrousel -->
-            <div class="carousel-item active">
-              <img src="css/images/carou22.avif" class="d-block w-100 img-fluid" alt="Image 1">
-              <div class="carousel-caption d-block">
-                <h5 >LE BON GOUT – LE FAST-FOOD</h5>
-                <p class="d-none d-sm-block">Chez LE BON GOUT, c’est une expérience culinaire rapide et authentique, avec des plats 
-                    <br>préparés à partir d'ingrédients frais et des recettes inspirées d'Europe.</p>
-                <a href="#menu" class="btn btn-custom btn-lg mt-3">Voir le Menu</a> <!-- Bouton "Voir le Menu" -->
-              </div>
-            </div>
-          
-            <!-- Deuxième item du carrousel -->
-            <div class="carousel-item">
-              <img src="css/images/carou2.avif" class="d-block w-100 img-fluid" alt="Image 2">
-              <div class="carousel-caption d-block">
-                <h5>LE BON GOUT – LE FAST-FOOD</h5>
-                <p class="d-none d-sm-block">Chez LE BON GOUT, c’est une expérience culinaire rapide et authentique, avec des plats 
-                    <br>préparés à partir d'ingrédients frais et des recettes inspirées d'Europe.</p>
-                <a href="#menu" class="btn btn-custom btn-lg mt-3">Voir le Menu</a> <!-- Bouton "Voir le Menu" -->
-              </div>
-            </div>
-          </div>
-          <!-- Contrôles du carrousel -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-        
-      
-<!-- ************************** Contenu de la section À propos ****************************************** -->
-
-<section class="about-section">
-    <div class="container about-container"> 
-        <div class="row">
-            <div class="col-12 col-md-6 about-left d-flex flex-column align-items-center">
-                <figure class="about-image text-center">
-                    <img src="css/images/aprop11.avif" alt="Image illustrant l'ambiance du restaurant" class="w-100">
-                </figure>
-                <address class="address-box text-center mt-3">
-                    <strong>Adresse :</strong><br>
-                    86 Boulevard Paul Barre,<br>
-                    78580 Maule, France
-                </address>
+            <!-- Indicateurs du carrousel -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
             </div>
 
-            <div class="col-12 col-md-6 about-content">
-                <p class="small-title">À propos de <strong>LE BON GOÛT</strong></p>
-                <p class="line"></p>
-                <h2 class="main-title">DÉCOUVREZ L'ESSENCE DE <strong>BON GOÛT</strong></h2>
-
-                <p class="description">
-                    LE BON GOÛT est un établissement qui se spécialise dans la restauration rapide de qualité, offrant une expérience culinaire authentique inspirée des recettes européennes. 
-                    Nous mettons un point d'honneur à utiliser des ingrédients frais et de qualité pour garantir un goût exceptionnel à chaque plat. 
-                    <br><br>
-                    Depuis notre ouverture, nous avons pour mission de proposer des repas rapides mais raffinés, parfaits pour ceux qui recherchent une option savoureuse et nourrissante sur le pouce.
-                </p>
-                <a href="#" class="btn-more mt-4">En savoir plus</a> 
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section id="menu" class="menu-section">
-    <!-- Entête du menu -->
-    <div class="menu-header">
-        <h2 class="d-flex justify-content-center align-items-center">
-            <span class="line"></span>
-            Explorez notre menu
-            <span class="line"></span>
-        </h2>
-
-        <!-- Bouton de téléchargement avec menu déroulant -->
-        <div class="download-menu">
-            <button class="btn-download-main" onclick="toggleDownloadOptions()">Télécharger le Menu</button>
-            <div class="download-options">
-                <a href="menu.pdf" download aria-label="Télécharger le menu en PDF">PDF</a>
-                <a href="menu-image.jpg" download aria-label="Télécharger le menu en image">Image</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation entre catégories (visible uniquement sur petits écrans) -->
-    <div class="category-nav d-block d-sm-none" aria-label="Navigation des catégories de menu">
-        <span class="prev-category" aria-label="Catégorie précédente">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </span>
-        <span class="next-category" aria-label="Catégorie suivante">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </span>
-    </div>
-
-    <div class="active-category-title d-block d-sm-none">
-        <h2 id="category-title">MENU SPÉCIAL</h2>
-    </div>
-
-    <!-- Sections des catégories de menu (visible uniquement sur grands/moyens écrans) -->
-    <div class="menu-categories d-none d-sm-flex d-md-flex justify-content-center" role="region" aria-labelledby="category-title">
-        <span class="category active" data-category="special">MENU SPÉCIAL</span>
-        <span class="category" data-category="boissons">BOISSONS</span>
-        <span class="category" data-category="mer">PRODUITS DE LA MER</span>
-        <span class="category" data-category="desserts">DESSERTS</span>
-    </div>
-
-    <!-- Contenu des plats -->
-    <div class="menu-content">
-        <img src="css/images/menu33.webp" class="menu-image-left" alt="Illustration d'un plat méditerranéen">
-
-        <!-- Menu Spécial -->
-        <div class="menu-items" id="special-menu">
-            <h3 class="menu-item" data-name="Burger Méditerranéen" data-price="12€" data-description="Un burger juteux garni de feta, d'olive et de sauce tzatziki">
-                Burger Méditerranéen <span class="dots"></span> <span class="price">12€</span>
-            </h3>
-            <p>(Un burger juteux garni de feta, d'olive et de sauce tzatziki)</p>
-
-            <h3 class="menu-item" data-name="Assiette Kebab Gourmet" data-price="10€" data-description="Viande grillée servie avec des légumes frais et une sauce maison">
-                Assiette Kebab Gourmet <span class="dots"></span> <span class="price">10€</span>
-            </h3>
-            <p>(Viande grillée servie avec des légumes frais et une sauce maison)</p>
-
-            <h3 class="menu-item" data-name="Wrap Méditerranéen" data-price="9€" data-description="Wrap garni de poulet grillé, légumes croquants et sauce au yaourt">
-                Wrap Méditerranéen <span class="dots"></span> <span class="price">9€</span>
-            </h3>
-            <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
-        </div>
-
-        <!-- Menu Boissons -->
-        <div class="menu-items hidden" id="boissons-menu">
-            <h3 class="menu-item" data-name="Thé Glacé Maison" data-price="3€" data-description="Préparé avec des infusions de fruits frais">
-                Thé Glacé Maison <span class="dots"></span> <span class="price">3€</span>
-            </h3>
-            <p>(Préparé avec des infusions de fruits frais)</p>
-
-            <h3 class="menu-item" data-name="Limonade au Citron" data-price="2.5€" data-description="Faites maison, pétillante et rafraîchissante">
-                Limonade au Citron <span class="dots"></span> <span class="price">2.5€</span>
-            </h3>
-            <p>(Faites maison, pétillante et rafraîchissante)</p>
-
-            <h3 class="menu-item" data-name="Jus d'Orange Pressé" data-price="3.5€" data-description="Frais et naturel">
-                Jus d'Orange Pressé <span class="dots"></span> <span class="price">3.5€</span>
-            </h3>
-            <p>(Frais et naturel)</p>
-        </div>
-
-        <!-- Menu Produits de la Mer -->
-        <div class="menu-items hidden" id="mer-menu">
-            <h3 class="menu-item" data-name="Saumon Grillé" data-price="15€" data-description="Filet de saumon grillé servi avec une sauce au citron">
-                Saumon Grillé <span class="dots"></span> <span class="price">15€</span>
-            </h3>
-            <p>(Filet de saumon grillé servi avec une sauce au citron)</p>
-
-            <h3 class="menu-item" data-name="Crevettes Marinées" data-price="13€" data-description="Crevettes sautées à l'ail et aux herbes">
-                Crevettes Marinées <span class="dots"></span> <span class="price">13€</span>
-            </h3>
-            <p>(Crevettes sautées à l'ail et aux herbes)</p>
-
-            <h3 class="menu-item" data-name="Calamars Frits" data-price="12€" data-description="Calamars en beignet servis avec une sauce piquante">
-                Calamars Frits <span class="dots"></span> <span class="price">12€</span>
-            </h3>
-            <p>(Calamars en beignet servis avec une sauce piquante)</p>
-        </div>
-
-        <!-- Menu Desserts -->
-        <div class="menu-items hidden" id="desserts-menu">
-            <h3 class="menu-item" data-name="Fondant au Chocolat" data-price="6€" data-description="Gâteau au chocolat avec un cœur fondant">
-                Fondant au Chocolat <span class="dots"></span> <span class="price">6€</span>
-            </h3>
-            <p>(Gâteau au chocolat avec un cœur fondant)</p>
-
-            <h3 class="menu-item" data-name="Cheesecake Maison" data-price="5.5€" data-description="Cheesecake crémeux avec une base croquante">
-                Cheesecake Maison <span class="dots"></span> <span class="price">5.5€</span>
-            </h3>
-            <p>(Cheesecake crémeux avec une base croquante)</p>
-
-            <h3 class="menu-item" data-name="Tarte au Citron" data-price="5€" data-description="Tarte au citron garnie de meringue légère">
-                Tarte au Citron <span class="dots"></span> <span class="price">5€</span>
-            </h3>
-            <p>(Tarte au citron garnie de meringue légère)</p>
-        </div>
-
-        <img src="css/images/desert_cheesecake.png" class="menu-image-right" alt="Dessert de cheesecake crémeux avec base croquante">
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-
-            <section class="modal-header">
-                <button type="button" class="btn-close position-absolute top-0 start-0 mt-3 ms-3" data-bs-dismiss="modal" aria-label="Fermer le modal" title="Fermer le modal">
-                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                </button> 
-
-                <button type="button" class="btn btn-link" id="prev-btn" aria-label="Plat précédent">
-                    <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
-                </button>
-
-                <h5 class="modal-title" id="menuModalLabel">Titre du plat</h5>
-
-                <button type="button" class="btn btn-link" id="next-btn" aria-label="Plat suivant">
-                    <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                </button>
-            </section>
-
-            <section class="modal-body">
-                <div class="row">
-                    <article class="col-md-6">
-                        <img id="modal-image" src="" alt="Image du plat" class="img-fluid">
-                    </article>
-
-                    <article class="col-md-6">
-                        <h3 id="modal-title"></h3>
-                        <p id="modal-description"></p>
-                        <button class="btn btn-custom2">Commander</button>
-                    </article>
+            <div class="carousel-inner">
+                <!-- Premier item du carrousel -->
+                <div class="carousel-item active">
+                    <img src="css/images/carou22.avif" class="d-block w-100 img-fluid" alt="Image 1">
+                    <div class="carousel-caption d-block">
+                        <h5>LE BON GOUT – LE FAST-FOOD</h5>
+                        <p class="d-none d-sm-block">Chez LE BON GOUT, c’est une expérience culinaire rapide et
+                            authentique, avec des plats
+                            <br>préparés à partir d'ingrédients frais et des recettes inspirées d'Europe.
+                        </p>
+                        <a href="Menu-de-navigation/Menu-commmande.html"
+                            class="btn btn-custom btn-lg mt-3">Commander</a> <!-- Bouton "Voir le Menu" -->
+                    </div>
                 </div>
-            </section>
+
+                <!-- Deuxième item du carrousel -->
+                <div class="carousel-item">
+                    <img src="css/images/carou2.avif" class="d-block w-100 img-fluid" alt="Image 2">
+                    <div class="carousel-caption d-block">
+                        <h5>LE BON GOUT – LE FAST-FOOD</h5>
+                        <p class="d-none d-sm-block">Chez LE BON GOUT, c’est une expérience culinaire rapide et
+                            authentique, avec des plats
+                            <br>préparés à partir d'ingrédients frais et des recettes inspirées d'Europe.
+                        </p>
+                        <a href="Menu-de-navigation/Menu-commmande.html"
+                            class="btn btn-custom btn-lg mt-3">Commander</a> <!-- Bouton "Voir le Menu" -->
+                    </div>
+                </div>
+            </div>
+            <!-- Contrôles du carrousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- ************************** Contenu de la section À propos ****************************************** -->
+
+    <section class="about-section">
+        <div class="container about-container">
+            <div class="row">
+                <div class="col-12 col-md-6 about-left d-flex flex-column align-items-center">
+                    <figure class="about-image text-center">
+                        <img src="css/images/aprop11.avif" alt="Image illustrant l'ambiance du restaurant"
+                            class="w-100">
+                    </figure>
+                    <address class="address-box text-center mt-3">
+                        <strong>Adresse :</strong><br>
+                        86 Boulevard Paul Barre,<br>
+                        78580 Maule, France
+                    </address>
+                </div>
+
+                <div class="col-12 col-md-6 about-content">
+                    <p class="small-title">À propos de <strong>LE BON GOÛT</strong></p>
+                    <p class="line"></p>
+                    <h2 class="main-title">DÉCOUVREZ L'ESSENCE DE <strong>BON GOÛT</strong></h2>
+
+                    <p class="description">
+                        LE BON GOÛT est un établissement qui se spécialise dans la restauration rapide de qualité,
+                        offrant une expérience culinaire authentique inspirée des recettes européennes.
+                        Nous mettons un point d'honneur à utiliser des ingrédients frais et de qualité pour garantir un
+                        goût exceptionnel à chaque plat.
+                        <br><br>
+                        Depuis notre ouverture, nous avons pour mission de proposer des repas rapides mais raffinés,
+                        parfaits pour ceux qui recherchent une option savoureuse et nourrissante sur le pouce.
+                    </p>
+                    <a href="Menu-de-navigation/apropos.html" class="btn-more mt-4">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="menu" class="menu-section">
+        <!-- Entête du menu -->
+        <div class="menu-header">
+            <h2 class="d-flex justify-content-center align-items-center">
+                <span class="line"></span>
+                Explorez notre menu
+                <span class="line"></span>
+            </h2>
+
+            <!-- Bouton de téléchargement avec menu déroulant -->
+            <div class="download-menu">
+                <button class="btn-download-main" onclick="toggleDownloadOptions()">Télécharger le Menu</button>
+                <a href="Menu-de-navigation/Menu-commmande.html">
+                    <button class="btn-commander">Commander</button>
+                </a>
+                <div class="download-options">
+                    <a href="menu.pdf" download aria-label="Télécharger le menu en PDF">PDF</a>
+                    <a href="menu-image.jpg" download aria-label="Télécharger le menu en image">Image</a>
+                </div>
+            </div>
+
+
+            <!-- Navigation entre catégories (visible uniquement sur petits écrans) -->
+            <div class="category-nav d-block d-sm-none" aria-label="Navigation des catégories de menu">
+                <span class="prev-category" aria-label="Catégorie précédente">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </span>
+                <span class="next-category" aria-label="Catégorie suivante">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </span>
+            </div>
+
+            <div class="active-category-title d-block d-sm-none">
+                <h2 id="category-title">MENU SPÉCIAL</h2>
+            </div>
+
+            <!-- Sections des catégories de menu (visible uniquement sur grands/moyens écrans) -->
+            <div class="menu-categories d-none d-sm-flex d-md-flex justify-content-center" role="region"
+                aria-labelledby="category-title">
+                <span class="category active" data-category="special">MENU SPÉCIAL</span>
+                <span class="category" data-category="boissons">BOISSONS</span>
+                <span class="category" data-category="mer">PRODUITS DE LA MER</span>
+                <span class="category" data-category="desserts">DESSERTS</span>
+            </div>
+
+            <!-- Contenu des plats -->
+            <div class="menu-content">
+                <img src="css/images/menu33.webp" class="menu-image-left" alt="Illustration d'un plat méditerranéen">
+
+                <!-- Menu Spécial -->
+                <div class="menu-items" id="special-menu">
+                    <h3 class="menu-item" data-name="Burger Méditerranéen" data-price="12€"
+                        data-description="Un burger juteux garni de feta, d'olive et de sauce tzatziki">
+                        Burger Méditerranéen <span class="dots"></span> <span class="price">12€</span>
+                    </h3>
+                    <p>(Un burger juteux garni de feta, d'olive et de sauce tzatziki)</p>
+
+                    <h3 class="menu-item" data-name="Assiette Kebab Gourmet" data-price="10€"
+                        data-description="Viande grillée servie avec des légumes frais et une sauce maison">
+                        Assiette Kebab Gourmet <span class="dots"></span> <span class="price">10€</span>
+                    </h3>
+                    <p>(Viande grillée servie avec des légumes frais et une sauce maison)</p>
+
+                    <h3 class="menu-item" data-name="Wrap Méditerranéen" data-price="9€"
+                        data-description="Wrap garni de poulet grillé, légumes croquants et sauce au yaourt">
+                        Wrap Méditerranéen <span class="dots"></span> <span class="price">9€</span>
+                    </h3>
+                    <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
+                </div>
+
+                <!-- Menu Boissons -->
+                <div class="menu-items hidden" id="boissons-menu">
+                    <h3 class="menu-item" data-name="Thé Glacé Maison" data-price="3€"
+                        data-description="Préparé avec des infusions de fruits frais">
+                        Thé Glacé Maison <span class="dots"></span> <span class="price">3€</span>
+                    </h3>
+                    <p>(Préparé avec des infusions de fruits frais)</p>
+
+                    <h3 class="menu-item" data-name="Limonade au Citron" data-price="2.5€"
+                        data-description="Faites maison, pétillante et rafraîchissante">
+                        Limonade au Citron <span class="dots"></span> <span class="price">2.5€</span>
+                    </h3>
+                    <p>(Faites maison, pétillante et rafraîchissante)</p>
+
+                    <h3 class="menu-item" data-name="Jus d'Orange Pressé" data-price="3.5€"
+                        data-description="Frais et naturel">
+                        Jus d'Orange Pressé <span class="dots"></span> <span class="price">3.5€</span>
+                    </h3>
+                    <p>(Frais et naturel)</p>
+                </div>
+
+                <!-- Menu Produits de la Mer -->
+                <div class="menu-items hidden" id="mer-menu">
+                    <h3 class="menu-item" data-name="Saumon Grillé" data-price="15€"
+                        data-description="Filet de saumon grillé servi avec une sauce au citron">
+                        Saumon Grillé <span class="dots"></span> <span class="price">15€</span>
+                    </h3>
+                    <p>(Filet de saumon grillé servi avec une sauce au citron)</p>
+
+                    <h3 class="menu-item" data-name="Crevettes Marinées" data-price="13€"
+                        data-description="Crevettes sautées à l'ail et aux herbes">
+                        Crevettes Marinées <span class="dots"></span> <span class="price">13€</span>
+                    </h3>
+                    <p>(Crevettes sautées à l'ail et aux herbes)</p>
+
+                    <h3 class="menu-item" data-name="Calamars Frits" data-price="12€"
+                        data-description="Calamars en beignet servis avec une sauce piquante">
+                        Calamars Frits <span class="dots"></span> <span class="price">12€</span>
+                    </h3>
+                    <p>(Calamars en beignet servis avec une sauce piquante)</p>
+                </div>
+
+                <!-- Menu Desserts -->
+                <div class="menu-items hidden" id="desserts-menu">
+                    <h3 class="menu-item" data-name="Fondant au Chocolat" data-price="6€"
+                        data-description="Gâteau au chocolat avec un cœur fondant">
+                        Fondant au Chocolat <span class="dots"></span> <span class="price">6€</span>
+                    </h3>
+                    <p>(Gâteau au chocolat avec un cœur fondant)</p>
+
+                    <h3 class="menu-item" data-name="Cheesecake Maison" data-price="5.5€"
+                        data-description="Cheesecake crémeux avec une base croquante">
+                        Cheesecake Maison <span class="dots"></span> <span class="price">5.5€</span>
+                    </h3>
+                    <p>(Cheesecake crémeux avec une base croquante)</p>
+
+                    <h3 class="menu-item" data-name="Tarte au Citron" data-price="5€"
+                        data-description="Tarte au citron garnie de meringue légère">
+                        Tarte au Citron <span class="dots"></span> <span class="price">5€</span>
+                    </h3>
+                    <p>(Tarte au citron garnie de meringue légère)</p>
+                </div>
+
+                <img src="css/images/desert_cheesecake.png" class="menu-image-right"
+                    alt="Dessert de cheesecake crémeux avec base croquante">
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <section class="modal-header">
+                    <button type="button" class="btn-close position-absolute top-0 start-0 mt-3 ms-3"
+                        data-bs-dismiss="modal" aria-label="Fermer le modal" title="Fermer le modal">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                    </button>
+
+                    <button type="button" class="btn btn-link" id="prev-btn" aria-label="Plat précédent">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                    </button>
+
+                    <h5 class="modal-title" id="menuModalLabel">Titre du plat</h5>
+
+                    <button type="button" class="btn btn-link" id="next-btn" aria-label="Plat suivant">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </button>
+                </section>
+
+                <section class="modal-body">
+                    <div class="row">
+                        <article class="col-md-6">
+                            <img id="modal-image" src="" alt="Image du plat" class="img-fluid">
+                        </article>
+
+                        <article class="col-md-6">
+                            <h3 id="modal-title"></h3>
+                            <p id="modal-description"></p>
+                            <button class="btn btn-custom2">Commander</button>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
 
 
-<!-- **************************Galerie_image****************************************** -->
+    <!-- **************************Galerie_image****************************************** -->
 
 
-<section id="galerie">
-    <!-- Contenu de la section galerie -->
-    <div class="container py-5">
-        <h2 class="text-center mb-4">Découvrez en Images l’expérience <strong>LE BON GOUT</strong></h2>
-        <div class="row g-4">
-            <!-- Image 1 -->
-            <div class="col-6 col-md-4 col-lg-3 gallery-item">
-                <figure>
-                    <img src="css/images/menu11.png" alt="Plats du menu de LE BON GOUT" class="img-fluid rounded">
-                    <figcaption>Légende des plats du menu</figcaption>
-                </figure>
+    <section id="galerie">
+        <!-- Contenu de la section galerie -->
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Découvrez en Images l’expérience <strong>LE BON GOUT</strong></h2>
+            <div class="row g-4">
+                <!-- Image 1 -->
+                <div class="col-6 col-md-4 col-lg-3 gallery-item">
+                    <figure>
+                        <img src="css/images/menu11.png" alt="Plats du menu de LE BON GOUT" class="img-fluid rounded">
+                        <figcaption>Légende des plats du menu</figcaption>
+                    </figure>
+                </div>
+                <!-- Image 2 -->
+                <div class="col-6 col-md-4 col-lg-3 gallery-item">
+                    <figure>
+                        <img src="css/images/menu33.webp" alt="Repas servi chez LE BON GOUT" class="img-fluid rounded">
+                        <figcaption>Repas servi chez LE BON GOUT</figcaption>
+                    </figure>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-6 col-md-4 col-lg-3 gallery-item">
+                    <figure>
+                        <img src="css/images/menu11.png" alt="Un plat de notre menu rapide" class="img-fluid rounded">
+                        <figcaption>Un plat de notre menu rapide</figcaption>
+                    </figure>
+                </div>
+                <!-- Image 4 -->
+                <div class="col-6 col-md-4 col-lg-3 gallery-item">
+                    <figure>
+                        <img src="css/images/menu33.webp" alt="Un plat savoureux de notre carte"
+                            class="img-fluid rounded">
+                        <figcaption>Un plat savoureux de notre carte</figcaption>
+                    </figure>
+                </div>
+
             </div>
-            <!-- Image 2 -->
-            <div class="col-6 col-md-4 col-lg-3 gallery-item">
-                <figure>
-                    <img src="css/images/menu33.webp" alt="Repas servi chez LE BON GOUT" class="img-fluid rounded">
-                    <figcaption>Repas servi chez LE BON GOUT</figcaption>
-                </figure>
-            </div>
-            <!-- Image 3 -->
-            <div class="col-6 col-md-4 col-lg-3 gallery-item">
-                <figure>
-                    <img src="css/images/menu11.png" alt="Un plat de notre menu rapide" class="img-fluid rounded">
-                    <figcaption>Un plat de notre menu rapide</figcaption>
-                </figure>
-            </div>
-            <!-- Image 4 -->
-            <div class="col-6 col-md-4 col-lg-3 gallery-item">
-                <figure>
-                    <img src="css/images/menu33.webp" alt="Un plat savoureux de notre carte" class="img-fluid rounded">
-                    <figcaption>Un plat savoureux de notre carte</figcaption>
-                </figure>
-            </div>
-        
         </div>
-    </div>
-</section>
-
-  
+    </section>
 
 
 
 
-<!-- **************************Horaire D'Ouverture****************************************** -->
 
 
-<!-- **************************Horaire D'Ouverture****************************************** -->
-<section id="horaireOuverture" class="my-5">
-    <div class="container">
-        <div class="row align-items-start">
-            <!-- Image à gauche -->
-            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                <figure>
-                    <img src="css/images/chefouverture.png" alt="Restaurant" class="img-fluid rounded ">
-                </figure>
-            </div>
+    <!-- **************************Horaire D'Ouverture****************************************** -->
 
-            <!-- Informations horaires à droite -->
-            <div class="col-12 col-lg-6 text-center text-lg-start">
-                <header class="mb-4">
-                    <h3>Heures d'Ouverture</h3>
-                </header>
-                
-                <div class="d-flex flex-column flex-md-row justify-content-md-between mb-3">
-                    <!-- Horaires du Restaurant -->
-                    <article class="text-start mb-4 me-md-3 flex-fill">
-                        <h4><strong>Horaires du Restaurant :</strong></h4>
-                        <p><time datetime="2024-11-01T11:00">Lundi – Vendredi : 11h00 – 22h00</time></p>
+
+    <!-- **************************Horaire D'Ouverture****************************************** -->
+    <section id="horaireOuverture" class="my-5">
+        <div class="container">
+            <div class="row align-items-start">
+                <!-- Image à gauche -->
+                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    <figure>
+                        <img src="css/images/chefouverture.png" alt="Restaurant" class="img-fluid rounded ">
+                    </figure>
+                </div>
+
+                <!-- Informations horaires à droite -->
+                <div class="col-12 col-lg-6 text-center text-lg-start">
+                    <header class="mb-4">
+                        <h3>Heures d'Ouverture</h3>
+                    </header>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-md-between mb-3">
+                        <!-- Horaires du Restaurant -->
+                        <article class="text-start mb-4 me-md-3 flex-fill">
+                            <h4><strong>Horaires du Restaurant :</strong></h4>
+                            <p><time datetime="2024-11-01T11:00">Lundi – Vendredi : 11h00 – 22h00</time></p>
+                            <p><time datetime="2024-11-01T12:00">Samedi : 12h00 – 23h00</time></p>
+                            <p><time datetime="2024-11-01T12:00">Dimanche : 12h00 – 22h00</time></p>
+                            <p>Jours Fériés : Fermé</p>
+                        </article>
+
+                        <!-- Horaires du Petit-Déjeuner -->
+                        <article class="text-start mb-4 ms-md-3 flex-fill">
+                            <h4><strong>Petit-Déjeuner :</strong></h4>
+                            <p><time datetime="2024-11-01T07:00">Lundi – Vendredi : 7h00 – 11h30</time></p>
+                            <p><time datetime="2024-11-01T08:00">Samedi : 8h00 – 11h30</time></p>
+                            <p><time datetime="2024-11-01T08:00">Dimanche : 8h00 – 11h30</time></p>
+                            <p>Jours Fériés : Fermé</p>
+                        </article>
+                    </div>
+
+                    <!-- Service de Déjeuner et Dîner en dessous, centré -->
+                    <article class="text-start text-md-center mb-4">
+                        <h4><strong>Service de Déjeuner et Dîner :</strong></h4>
+                        <p><time datetime="2024-11-01T11:30">Lundi – Vendredi : 11h30 – 22h00</time></p>
                         <p><time datetime="2024-11-01T12:00">Samedi : 12h00 – 23h00</time></p>
                         <p><time datetime="2024-11-01T12:00">Dimanche : 12h00 – 22h00</time></p>
                         <p>Jours Fériés : Fermé</p>
                     </article>
-
-                    <!-- Horaires du Petit-Déjeuner -->
-                    <article class="text-start mb-4 ms-md-3 flex-fill">
-                        <h4><strong>Petit-Déjeuner :</strong></h4>
-                        <p><time datetime="2024-11-01T07:00">Lundi – Vendredi : 7h00 – 11h30</time></p>
-                        <p><time datetime="2024-11-01T08:00">Samedi : 8h00 – 11h30</time></p>
-                        <p><time datetime="2024-11-01T08:00">Dimanche : 8h00 – 11h30</time></p>
-                        <p>Jours Fériés : Fermé</p>
-                    </article>
                 </div>
-
-                <!-- Service de Déjeuner et Dîner en dessous, centré -->
-                <article class="text-start text-md-center mb-4">
-                    <h4><strong>Service de Déjeuner et Dîner :</strong></h4>
-                    <p><time datetime="2024-11-01T11:30">Lundi – Vendredi : 11h30 – 22h00</time></p>
-                    <p><time datetime="2024-11-01T12:00">Samedi : 12h00 – 23h00</time></p>
-                    <p><time datetime="2024-11-01T12:00">Dimanche : 12h00 – 22h00</time></p>
-                    <p>Jours Fériés : Fermé</p>
-                </article>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
 
 
-<!-- **************************Section avis****************************************** -->
-<section id="avis">
-    <!-- Contenu de la section Galerie -->
-</section>
+    <!-- **************************Section avis****************************************** -->
+    <section id="avis">
+        <!-- Contenu de la section Galerie -->
+    </section>
 
-<!-- **************************Section Contact****************************************** -->
-<section id="contact">
-    <!-- Contenu de la section Contact -->
-</section>
+    <!-- **************************Section Contact****************************************** -->
+    <section id="contact">
+        <!-- Contenu de la section Contact -->
+    </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>

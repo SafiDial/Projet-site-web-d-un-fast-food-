@@ -249,14 +249,14 @@ body {
     color: #F5F5F5;
 }
 
-.download-menu {
+.download-menu ,.btn-commander{
     position: relative;
     display: inline-block;
     margin-top: 15px;
     text-align: center;
 }
 
-.btn-download-main {
+.btn-download-main ,.btn-commander{
     padding: 8px 15px;
     background-color: #BEC100;
     color: #333;
@@ -267,7 +267,7 @@ body {
     transition: background-color 0.3s;
 }
 
-.btn-download-main:hover {
+.btn-download-main:hover ,.btn-commander:hover {
     background-color: #FFD700;
 }
 
