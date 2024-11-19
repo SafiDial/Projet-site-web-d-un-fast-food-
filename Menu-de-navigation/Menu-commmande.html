@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> <!-- Pour Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/menu-de-commande.css"> 
+
     
 </head>
 <body>
@@ -39,6 +41,82 @@
         </div>
     </div>
 </nav>
+
+
+<!-- Contenu principal de la page -->
+<div class="container py-5" style="margin-top: 80px;"> <!-- Marge pour compenser la navbar fixe -->
+    <!-- Titre principal -->
+    <header class="text-center mb-5" id="menu">
+        <h1 class="display-4">Bienvenue au Fast-Food</h1>
+        <p class="lead">Sélectionnez vos plats préférés et commandez rapidement !</p>
+    </header>
+
+    <section>
+        <!-- Menu avec des cartes Bootstrap -->
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- Plat 1 -->
+            <article class="col">
+                <div class="card menu-item">
+                    <img src="https://via.placeholder.com/400x300.png?text=Burger+Classique" alt="Burger Classique">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger Classique</h5>
+                        <p class="card-text">Juteux, savoureux et parfait pour les amateurs de viande.</p>
+                        <button class="btn btn-custom" data-name="Burger Classique" data-price="5.99">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Plat 2 -->
+            <article class="col">
+                <div class="card menu-item">
+                    <img src="https://via.placeholder.com/400x300.png?text=Frites" alt="Frites">
+                    <div class="card-body">
+                        <h5 class="card-title">Frites Maison</h5>
+                        <p class="card-text">Des frites croustillantes et dorées, un classique incontournable.</p>
+                        <button class="btn btn-custom" data-name="Frites Maison" data-price="2.99">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Plat 3 -->
+            <article class="col">
+                <div class="card menu-item">
+                    <img src="https://via.placeholder.com/400x300.png?text=Salade" alt="Salade">
+                    <div class="card-body">
+                        <h5 class="card-title">Salade Fraîche</h5>
+                        <p class="card-text">Légumes frais, vinaigrette maison, un choix léger et équilibré.</p>
+                        <button class="btn btn-custom" data-name="Salade Fraîche" data-price="3.49">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Plat 4 -->
+            <article class="col">
+                <div class="card menu-item">
+                    <img src="https://via.placeholder.com/400x300.png?text=Dessert" alt="Dessert">
+                    <div class="card-body">
+                        <h5 class="card-title">Dessert Gourmand</h5>
+                        <p class="card-text">Un dessert sucré pour finir votre repas sur une note douce.</p>
+                        <button class="btn btn-custom" data-name="Dessert Gourmand" data-price="4.49">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section Panier -->
+    <section class="mt-5" id="panier">
+        <h3 class="text-center">Votre Panier</h3>
+        <div id="panier" class="mb-3">
+            <p>Aucun article dans le panier.</p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <strong>Total: <span id="total">0.00</span> €</strong>
+            <button class="btn btn-success" id="btnCheckout">Passer à la commande</button>
+        </div>
+    </section>
+</div>
+
 
 
 <!-- Lien vers Bootstrap JS et Popper.js -->
