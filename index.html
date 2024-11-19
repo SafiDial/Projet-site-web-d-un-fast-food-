@@ -89,7 +89,6 @@
 <section class="about-section">
     <div class="container about-container"> 
         <div class="row">
-            <!-- Section à gauche avec l'image et l'adresse -->
             <div class="col-12 col-md-6 about-left d-flex flex-column align-items-center">
                 <figure class="about-image text-center">
                     <img src="css/images/aprop11.avif" alt="Image illustrant l'ambiance du restaurant" class="w-100">
@@ -101,7 +100,6 @@
                 </address>
             </div>
 
-            <!-- Contenu de la section À propos -->
             <div class="col-12 col-md-6 about-content">
                 <p class="small-title">À propos de <strong>LE BON GOÛT</strong></p>
                 <p class="line"></p>
@@ -113,9 +111,7 @@
                     <br><br>
                     Depuis notre ouverture, nous avons pour mission de proposer des repas rapides mais raffinés, parfaits pour ceux qui recherchent une option savoureuse et nourrissante sur le pouce.
                 </p>
-                
-                <!-- Bouton avec une marge en haut -->
-                <a href="#" class="btn-more mt-4">En savoir plus</a> <!-- Marge ajoutée en haut -->
+                <a href="#" class="btn-more mt-4">En savoir plus</a> 
             </div>
         </div>
     </div>
@@ -133,7 +129,6 @@
             Explorez notre menu
             <span class="line"></span>
         </h2>
-
 
         <!-- Bouton de téléchargement avec menu déroulant -->
         <div class="download-menu">
@@ -167,32 +162,23 @@
         <span class="category" data-category="desserts">DESSERTS</span>
     </div>
 
+    <!-- Contenu des plats -->
     <div class="menu-content">
         <img src="css/images/menu33.webp" class="menu-image-left" alt="Illustration d'un plat méditerranéen">
 
         <!-- Menu Spécial -->
         <div class="menu-items" id="special-menu">
-            <h3 class="menu-item" 
-                data-name="Burger Méditerranéen" 
-                data-price="12€" 
-                data-description="Un burger juteux garni de feta, d'olive et de sauce tzatziki" 
-                data-image="css/images/PIZZA.png">
+            <h3 class="menu-item" data-name="Burger Méditerranéen" data-price="12€" data-description="Un burger juteux garni de feta, d'olive et de sauce tzatziki">
                 Burger Méditerranéen <span class="dots"></span> <span class="price">12€</span>
             </h3>
             <p>(Un burger juteux garni de feta, d'olive et de sauce tzatziki)</p>
-            <h3 class="menu-item" 
-                data-name="Assiette Kebab Gourmet" 
-                data-price="10€" 
-                data-description="Viande grillée servie avec des légumes frais et une sauce maison" 
-                data-image="css/images/fasstfood2.png">
+
+            <h3 class="menu-item" data-name="Assiette Kebab Gourmet" data-price="10€" data-description="Viande grillée servie avec des légumes frais et une sauce maison">
                 Assiette Kebab Gourmet <span class="dots"></span> <span class="price">10€</span>
             </h3>
             <p>(Viande grillée servie avec des légumes frais et une sauce maison)</p>
-            <h3 class="menu-item" 
-                data-name="Wrap Méditerranéen" 
-                data-price="9€" 
-                data-description="Wrap garni de poulet grillé, légumes croquants et sauce au yaourt" 
-                data-image="css/images/desert_cheesecake.png">
+
+            <h3 class="menu-item" data-name="Wrap Méditerranéen" data-price="9€" data-description="Wrap garni de poulet grillé, légumes croquants et sauce au yaourt">
                 Wrap Méditerranéen <span class="dots"></span> <span class="price">9€</span>
             </h3>
             <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
@@ -200,27 +186,17 @@
 
         <!-- Menu Boissons -->
         <div class="menu-items hidden" id="boissons-menu">
-            <h3 class="menu-item" 
-                data-name="Thé Glacé Maison" 
-                data-price="3€" 
-                data-description="Préparé avec des infusions de fruits frais" 
-                data-image="css/images/desert_cheesecake.png">
+            <h3 class="menu-item" data-name="Thé Glacé Maison" data-price="3€" data-description="Préparé avec des infusions de fruits frais">
                 Thé Glacé Maison <span class="dots"></span> <span class="price">3€</span>
             </h3>
             <p>(Préparé avec des infusions de fruits frais)</p>
-            <h3 class="menu-item" 
-                data-name="Limonade au Citron" 
-                data-price="2.5€" 
-                data-description="Faites maison, pétillante et rafraîchissante" 
-                data-image="css/images/desert_cheesecake.png">
+
+            <h3 class="menu-item" data-name="Limonade au Citron" data-price="2.5€" data-description="Faites maison, pétillante et rafraîchissante">
                 Limonade au Citron <span class="dots"></span> <span class="price">2.5€</span>
             </h3>
             <p>(Faites maison, pétillante et rafraîchissante)</p>
-            <h3 class="menu-item" 
-                data-name="Jus d'Orange Pressé" 
-                data-price="3.5€" 
-                data-description="Frais et naturel" 
-                data-image="css/images/dessert.png">
+
+            <h3 class="menu-item" data-name="Jus d'Orange Pressé" data-price="3.5€" data-description="Frais et naturel">
                 Jus d'Orange Pressé <span class="dots"></span> <span class="price">3.5€</span>
             </h3>
             <p>(Frais et naturel)</p>
@@ -228,27 +204,17 @@
 
         <!-- Menu Produits de la Mer -->
         <div class="menu-items hidden" id="mer-menu">
-            <h3 class="menu-item" 
-                data-name="Saumon Grillé" 
-                data-price="15€" 
-                data-description="Filet de saumon grillé servi avec une sauce au citron" 
-                data-image="css/images/Apropos.png">
+            <h3 class="menu-item" data-name="Saumon Grillé" data-price="15€" data-description="Filet de saumon grillé servi avec une sauce au citron">
                 Saumon Grillé <span class="dots"></span> <span class="price">15€</span>
             </h3>
             <p>(Filet de saumon grillé servi avec une sauce au citron)</p>
-            <h3 class="menu-item" 
-                data-name="Crevettes Marinées" 
-                data-price="13€" 
-                data-description="Crevettes sautées à l'ail et aux herbes" 
-                data-image="css/images/menu33.webp">
+
+            <h3 class="menu-item" data-name="Crevettes Marinées" data-price="13€" data-description="Crevettes sautées à l'ail et aux herbes">
                 Crevettes Marinées <span class="dots"></span> <span class="price">13€</span>
             </h3>
             <p>(Crevettes sautées à l'ail et aux herbes)</p>
-            <h3 class="menu-item" 
-                data-name="Calamars Frits" 
-                data-price="12€" 
-                data-description="Calamars en beignet servis avec une sauce piquante" 
-                data-image="css/images/fasstfood2.png">
+
+            <h3 class="menu-item" data-name="Calamars Frits" data-price="12€" data-description="Calamars en beignet servis avec une sauce piquante">
                 Calamars Frits <span class="dots"></span> <span class="price">12€</span>
             </h3>
             <p>(Calamars en beignet servis avec une sauce piquante)</p>
@@ -256,27 +222,17 @@
 
         <!-- Menu Desserts -->
         <div class="menu-items hidden" id="desserts-menu">
-            <h3 class="menu-item" 
-                data-name="Fondant au Chocolat" 
-                data-price="6€" 
-                data-description="Gâteau au chocolat avec un cœur fondant" 
-                data-image="css/images/menu33.webp">
+            <h3 class="menu-item" data-name="Fondant au Chocolat" data-price="6€" data-description="Gâteau au chocolat avec un cœur fondant">
                 Fondant au Chocolat <span class="dots"></span> <span class="price">6€</span>
             </h3>
             <p>(Gâteau au chocolat avec un cœur fondant)</p>
-            <h3 class="menu-item" 
-                data-name="Cheesecake Maison" 
-                data-price="5.5€" 
-                data-description="Cheesecake crémeux avec une base croquante" 
-                data-image="css/images/PIZZA.png">
+
+            <h3 class="menu-item" data-name="Cheesecake Maison" data-price="5.5€" data-description="Cheesecake crémeux avec une base croquante">
                 Cheesecake Maison <span class="dots"></span> <span class="price">5.5€</span>
             </h3>
             <p>(Cheesecake crémeux avec une base croquante)</p>
-            <h3 class="menu-item" 
-                data-name="Tarte au Citron" 
-                data-price="5€" 
-                data-description="Tarte au citron garnie de meringue légère" 
-                data-image="css/images/dessert.png">
+
+            <h3 class="menu-item" data-name="Tarte au Citron" data-price="5€" data-description="Tarte au citron garnie de meringue légère">
                 Tarte au Citron <span class="dots"></span> <span class="price">5€</span>
             </h3>
             <p>(Tarte au citron garnie de meringue légère)</p>
@@ -285,6 +241,13 @@
         <img src="css/images/desert_cheesecake.png" class="menu-image-right" alt="Dessert de cheesecake crémeux avec base croquante">
     </div>
 </section>
+
+
+
+
+
+
+
 
 
 <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
@@ -323,6 +286,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 

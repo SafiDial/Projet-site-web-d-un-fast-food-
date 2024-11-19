@@ -101,7 +101,7 @@ body {
     color: #FFFDD0;
 }
 .navbar.fixed-top {
-    z-index: 1030; /* Assure que la barre de navigation reste au-dessus des autres éléments */
+    z-index: 1030; /*a barre de navigation reste au-dessus des autres éléments */
 }
 
 /* ************************** Carrousel **************************************** */
@@ -356,7 +356,6 @@ body {
     display: none;
 }
 
-/* Images dans le menu */
 .menu-image-left,
 .menu-image-right {
     width: 15%;
@@ -372,7 +371,6 @@ body {
     margin-left: 10px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .menu-content {
         flex-direction: column;
@@ -416,14 +414,12 @@ body {
 }
 
 
-/* Description des articles */
 .menu-items p {
     font-size: 14px;
     color: #777;
     margin-left: 20px;
 }
 
-/* Responsiveness sur petits écrans */
 @media screen and (max-width: 768px) {
     .menu-items h3 {
         font-size: 16px;
@@ -440,17 +436,14 @@ body {
     transition: color 0.3s;
 }
 
-/* Style de la catégorie active ou en hover */
 .category.active, .category:hover {
     color: #BEC100;
 }
 
-/* Cache les menus autres que celui actif */
 .menu-items {
     display: block;
 }
 
-/* Style spécifique pour les catégories sur petits écrans */
 @media (max-width: 768px) {
     .menu-categories {
         display: none; /* Masquer les catégories sur petits écrans */
@@ -469,7 +462,6 @@ body {
     }
 }
 
-/* Section active de la catégorie */
 .active-category-title {
     font-size: 24px;
     font-weight: bold;
@@ -508,79 +500,6 @@ body {
   }
 
 
-  /* Style  du modal (pour_le_menu)*/
-
-  .modal-content {
-      background-color: #FFFDD0; /* Fond beige clair, douce et chaleureuse */
-      border-radius: 15px; /* Coins arrondis pour un effet plus doux */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre légère et douce */
-      padding: 20px;
-      max-height: 80vh;
-      overflow-y: auto;
-  }
-  
-  /* En-tête du modal */
-  .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: hsl(60, 20%, 86%); /* Jaune doré léger pour un aspect lumineux et dynamique */
-      border-bottom: 2px solid #FFEB3B; /* Ligne fine et subtile en jaune vif */
-      border-radius: 10px;
-  }
-  
-  /* Titre du modal */
-  .modal-title {
-      font-size: 28rem;
-      color: #333; /* Un gris foncé pour le titre, plus doux que le noir */
-      font-weight: 600;
-  }
-  
-  /* Responsivité sur petit écran */
-  @media (max-width: 768px) {
-      .modal-dialog {
-          max-width: 100%;
-          margin: 10px;
-      }
-  
-      .modal-body {
-          padding: 10px;
-      }
-  
-      .modal-title {
-          font-size: 1.5rem;
-      }
-  
-      .modal-body article h3 {
-          font-size: 1.4rem;
-      }
-  
-      .modal-body article p {
-          font-size: 1rem;
-      }
-  
-  }
-  
-  .modal-body article button {
-          font-size: 1rem;
-          padding: 10px 20px;
-          background-color: #FF6F00; /* Orange doux pour les boutons */
-          color: #FFF;
-          border: none;
-          border-radius: 5px;
-      }
-  
-  /* Limite la hauteur du modal pour petits écrans */
-  @media (max-width: 576px) {
-      .modal-content {
-          max-height: 70vh;
-      }
-  }
-  
-  
-  
-  
   
   
 
