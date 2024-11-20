@@ -88,7 +88,6 @@ function ajouterAuPanier(name, price) {
         panier.push(article);
     }
 
-    // Mettre à jour l'affichage du panier
     afficherPanier();
 }
 
