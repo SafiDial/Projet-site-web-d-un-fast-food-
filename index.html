@@ -137,7 +137,6 @@
 
 
 
-
     <section id="menu" class="menu-section">
         <!-- Entête du menu -->
         <div class="menu-header">
@@ -146,21 +145,22 @@
                 Explorez notre menu
                 <span class="line"></span>
             </h2>
+    
+            
 
             <!-- Bouton de téléchargement avec menu déroulant -->
             <div class="download-menu">
                 <button class="btn-download-main" onclick="toggleDownloadOptions()">Télécharger le Menu</button>
                 <a href="Menu-de-navigation/Menu-commmande.html">
-                    <button class="btn-commander">Commander</button>
+                    <button class="btn btn-commander">Commander</button>
                 </a>
                 <div class="download-options">
                     <a href="menu.pdf" download aria-label="Télécharger le menu en PDF">PDF</a>
                     <a href="menu-image.jpg" download aria-label="Télécharger le menu en image">Image</a>
                 </div>
             </div>
-
-
-            <!-- Navigation entre catégories (visible uniquement sur petits écrans) -->
+    
+            <!-- Navigation entre catégories pour petits écrans -->
             <div class="category-nav d-block d-sm-none" aria-label="Navigation des catégories de menu">
                 <span class="prev-category" aria-label="Catégorie précédente">
                     <span class="material-symbols-outlined">arrow_back</span>
@@ -169,158 +169,192 @@
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </span>
             </div>
-
+    
+            <!-- Titre de catégorie pour petits écrans -->
             <div class="active-category-title d-block d-sm-none">
                 <h2 id="category-title">MENU SPÉCIAL</h2>
             </div>
-
-            <!-- Sections des catégories de menu (visible uniquement sur grands/moyens écrans) -->
-            <div class="menu-categories d-none d-sm-flex d-md-flex justify-content-center" role="region"
-                aria-labelledby="category-title">
-                <span class="category active" data-category="special">MENU SPÉCIAL</span>
-                <span class="category" data-category="boissons">BOISSONS</span>
-                <span class="category" data-category="mer">PRODUITS DE LA MER</span>
-                <span class="category" data-category="desserts">DESSERTS</span>
-            </div>
-
-            <!-- Contenu des plats -->
-            <div class="menu-content">
-                <img src="css/images/menu33.webp" class="menu-image-left" alt="Illustration d'un plat méditerranéen">
-
-                <!-- Menu Spécial -->
-                <div class="menu-items" id="special-menu">
-                    <h3 class="menu-item" data-name="Burger Méditerranéen" data-price="12€"
-                        data-description="Un burger juteux garni de feta, d'olive et de sauce tzatziki">
-                        Burger Méditerranéen <span class="dots"></span> <span class="price">12€</span>
-                    </h3>
-                    <p>(Un burger juteux garni de feta, d'olive et de sauce tzatziki)</p>
-
-                    <h3 class="menu-item" data-name="Assiette Kebab Gourmet" data-price="10€"
-                        data-description="Viande grillée servie avec des légumes frais et une sauce maison">
-                        Assiette Kebab Gourmet <span class="dots"></span> <span class="price">10€</span>
-                    </h3>
-                    <p>(Viande grillée servie avec des légumes frais et une sauce maison)</p>
-
-                    <h3 class="menu-item" data-name="Wrap Méditerranéen" data-price="9€"
-                        data-description="Wrap garni de poulet grillé, légumes croquants et sauce au yaourt">
-                        Wrap Méditerranéen <span class="dots"></span> <span class="price">9€</span>
-                    </h3>
-                    <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
+    
+            <!-- Sections des catégories de menu pour grands et moyens écrans -->
+             
+            <div class="menu-categories d-none d-sm-flex " role="region" aria-labelledby="category-title">
+                    <div class="col-3 category active" data-category="special">MENU SPÉCIAL</div>
+                    <div class="col-3 category" data-category="boissons">BOISSONS</div>
+                    <div class="col-3 category" data-category="mer">PRODUITS DE LA MER</div>
+                    <div class="col-3 category" data-category="desserts">DESSERTS</div>
                 </div>
-
-                <!-- Menu Boissons -->
-                <div class="menu-items hidden" id="boissons-menu">
-                    <h3 class="menu-item" data-name="Thé Glacé Maison" data-price="3€"
-                        data-description="Préparé avec des infusions de fruits frais">
-                        Thé Glacé Maison <span class="dots"></span> <span class="price">3€</span>
-                    </h3>
-                    <p>(Préparé avec des infusions de fruits frais)</p>
-
-                    <h3 class="menu-item" data-name="Limonade au Citron" data-price="2.5€"
-                        data-description="Faites maison, pétillante et rafraîchissante">
-                        Limonade au Citron <span class="dots"></span> <span class="price">2.5€</span>
-                    </h3>
-                    <p>(Faites maison, pétillante et rafraîchissante)</p>
-
-                    <h3 class="menu-item" data-name="Jus d'Orange Pressé" data-price="3.5€"
-                        data-description="Frais et naturel">
-                        Jus d'Orange Pressé <span class="dots"></span> <span class="price">3.5€</span>
-                    </h3>
-                    <p>(Frais et naturel)</p>
-                </div>
-
-                <!-- Menu Produits de la Mer -->
-                <div class="menu-items hidden" id="mer-menu">
-                    <h3 class="menu-item" data-name="Saumon Grillé" data-price="15€"
-                        data-description="Filet de saumon grillé servi avec une sauce au citron">
-                        Saumon Grillé <span class="dots"></span> <span class="price">15€</span>
-                    </h3>
-                    <p>(Filet de saumon grillé servi avec une sauce au citron)</p>
-
-                    <h3 class="menu-item" data-name="Crevettes Marinées" data-price="13€"
-                        data-description="Crevettes sautées à l'ail et aux herbes">
-                        Crevettes Marinées <span class="dots"></span> <span class="price">13€</span>
-                    </h3>
-                    <p>(Crevettes sautées à l'ail et aux herbes)</p>
-
-                    <h3 class="menu-item" data-name="Calamars Frits" data-price="12€"
-                        data-description="Calamars en beignet servis avec une sauce piquante">
-                        Calamars Frits <span class="dots"></span> <span class="price">12€</span>
-                    </h3>
-                    <p>(Calamars en beignet servis avec une sauce piquante)</p>
-                </div>
-
-                <!-- Menu Desserts -->
-                <div class="menu-items hidden" id="desserts-menu">
-                    <h3 class="menu-item" data-name="Fondant au Chocolat" data-price="6€"
-                        data-description="Gâteau au chocolat avec un cœur fondant">
-                        Fondant au Chocolat <span class="dots"></span> <span class="price">6€</span>
-                    </h3>
-                    <p>(Gâteau au chocolat avec un cœur fondant)</p>
-
-                    <h3 class="menu-item" data-name="Cheesecake Maison" data-price="5.5€"
-                        data-description="Cheesecake crémeux avec une base croquante">
-                        Cheesecake Maison <span class="dots"></span> <span class="price">5.5€</span>
-                    </h3>
-                    <p>(Cheesecake crémeux avec une base croquante)</p>
-
-                    <h3 class="menu-item" data-name="Tarte au Citron" data-price="5€"
-                        data-description="Tarte au citron garnie de meringue légère">
-                        Tarte au Citron <span class="dots"></span> <span class="price">5€</span>
-                    </h3>
-                    <p>(Tarte au citron garnie de meringue légère)</p>
-                </div>
-
-                <img src="css/images/desert_cheesecake.png" class="menu-image-right"
-                    alt="Dessert de cheesecake crémeux avec base croquante">
-            </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-
-                <section class="modal-header">
-                    <button type="button" class="btn-close position-absolute top-0 start-0 mt-3 ms-3"
-                        data-bs-dismiss="modal" aria-label="Fermer le modal" title="Fermer le modal">
-                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                    </button>
-
-                    <button type="button" class="btn btn-link" id="prev-btn" aria-label="Plat précédent">
-                        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
-                    </button>
-
-                    <h5 class="modal-title" id="menuModalLabel">Titre du plat</h5>
-
-                    <button type="button" class="btn btn-link" id="next-btn" aria-label="Plat suivant">
-                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                    </button>
-                </section>
-
-                <section class="modal-body">
-                    <div class="row">
-                        <article class="col-md-6">
-                            <img id="modal-image" src="" alt="Image du plat" class="img-fluid">
-                        </article>
-
-                        <article class="col-md-6">
-                            <h3 id="modal-title"></h3>
-                            <p id="modal-description"></p>
-                            <button class="btn btn-custom2">Commander</button>
-                        </article>
-                    </div>
-                </section>
             </div>
         </div>
-    </div>
+        
+        <!-- Contenu des plats -->
+        <div class="menu-content">
+            <img src="css/images/menu33.webp" class="menu-image-left img-fluid" alt="Illustration d'un plat méditerranéen">
+    
+            <!-- Menu Spécial -->
+            <div class="menu-items" id="special-menu">
+                <h3 class="menu-item" data-name="Burger Méditerranéen" data-price="12€" data-description="Un burger juteux garni de feta, d'olive et de sauce tzatziki">
+                    Burger Méditerranéen <span class="dots"></span> <span class="price">12€</span>
+                </h3>
+                <p>(Un burger juteux garni de feta, d'olive et de sauce tzatziki)</p>
+    
+                <h3 class="menu-item" data-name="Assiette Kebab Gourmet" data-price="10€" data-description="Viande grillée servie avec des légumes frais et une sauce maison">
+                    Assiette Kebab Gourmet <span class="dots"></span> <span class="price">10€</span>
+                </h3>
+                <p>(Viande grillée servie avec des légumes frais et une sauce maison)</p>
+    
+                <h3 class="menu-item" data-name="Wrap Méditerranéen" data-price="9€" data-description="Wrap garni de poulet grillé, légumes croquants et sauce au yaourt">
+                    Wrap Méditerranéen <span class="dots"></span> <span class="price">9€</span>
+                </h3>
+                <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
+            </div>
+    
+            <!-- Menu Boissons -->
+            <div class="menu-items hidden" id="boissons-menu">
+                <h3 class="menu-item" data-name="Thé Glacé Maison" data-price="3€" data-description="Préparé avec des infusions de fruits frais">
+                    Thé Glacé Maison <span class="dots"></span> <span class="price">3€</span>
+                </h3>
+                <p>(Préparé avec des infusions de fruits frais)</p>
+    
+                <h3 class="menu-item" data-name="Limonade au Citron" data-price="2.5€" data-description="Faites maison, pétillante et rafraîchissante">
+                    Limonade au Citron <span class="dots"></span> <span class="price">2.5€</span>
+                </h3>
+                <p>(Faites maison, pétillante et rafraîchissante)</p>
+    
+                <h3 class="menu-item" data-name="Jus d'Orange Pressé" data-price="3.5€" data-description="Frais et naturel">
+                    Jus d'Orange Pressé <span class="dots"></span> <span class="price">3.5€</span>
+                </h3>
+                <p>(Frais et naturel)</p>
+            </div>
+    
+            <!-- Menu Produits de la Mer -->
+            <div class="menu-items hidden" id="mer-menu">
+                <h3 class="menu-item" data-name="Saumon Grillé" data-price="15€" data-description="Filet de saumon grillé servi avec une sauce au citron">
+                    Saumon Grillé <span class="dots"></span> <span class="price">15€</span>
+                </h3>
+                <p>(Filet de saumon grillé servi avec une sauce au citron)</p>
+    
+                <h3 class="menu-item" data-name="Crevettes Marinées" data-price="13€" data-description="Crevettes sautées à l'ail et aux herbes">
+                    Crevettes Marinées <span class="dots"></span> <span class="price">13€</span>
+                </h3>
+                <p>(Crevettes sautées à l'ail et aux herbes)</p>
+    
+                <h3 class="menu-item" data-name="Calamars Frits" data-price="12€" data-description="Calamars en beignet servis avec une sauce piquante">
+                    Calamars Frits <span class="dots"></span> <span class="price">12€</span>
+                </h3>
+                <p>(Calamars en beignet servis avec une sauce piquante)</p>
+            </div>
+    
+            <!-- Menu Desserts -->
+            <div class="menu-items hidden" id="desserts-menu">
+                <h3 class="menu-item" data-name="Fondant au Chocolat" data-price="6€" data-description="Gâteau au chocolat avec un cœur fondant">
+                    Fondant au Chocolat <span class="dots"></span> <span class="price">6€</span>
+                </h3>
+                <p>(Gâteau au chocolat avec un cœur fondant)</p>
+    
+                <h3 class="menu-item" data-name="Cheesecake Maison" data-price="5.5€" data-description="Cheesecake crémeux avec une base croquante">
+                    Cheesecake Maison <span class="dots"></span> <span class="price">5.5€</span>
+                </h3>
+                <p>(Cheesecake crémeux avec une base croquante)</p>
+    
+                <h3 class="menu-item" data-name="Tarte au Citron" data-price="5€" data-description="Tarte au citron garnie de meringue légère">
+                    Tarte au Citron <span class="dots"></span> <span class="price">5€</span>
+                </h3>
+                <p>(Tarte au citron garnie de meringue légère)</p>
+            </div>
+    
+            <img src="css/images/desert_cheesecake.png" class="menu-image-right img-fluid" alt="Dessert de cheesecake crémeux avec base croquante">
+        </div>
+    </section>
+    
+    
+
+    
+<script>
+
+const categories = document.querySelectorAll('.category');
+const menus = document.querySelectorAll('.menu-items');
+const categoryTitle = document.getElementById('category-title');
+let currentCategoryIndex = 0;
+
+// Tableau des titres de catégories
+const categoryTitles = {
+    special: "MENU SPÉCIAL",
+    boissons: "BOISSONS",
+    mer: "PRODUITS DE LA MER",
+    desserts: "DESSERTS"
+};
+
+// Fonction pour mettre à jour l'affichage du menu
+function updateMenuDisplay() {
+    // Masquer toutes les catégories de menus
+    menus.forEach(menu => menu.classList.add('hidden'));
+
+    // Afficher la catégorie active
+    menus[currentCategoryIndex].classList.remove('hidden');
+
+    // Mettre à jour les catégories actives
+    categories.forEach((category, index) => {
+        if (index === currentCategoryIndex) {
+            category.classList.add('active');
+        } else {
+            category.classList.remove('active');
+        }
+    });
+
+    // Mettre à jour le titre de la catégorie pour les petits écrans
+    const categoryName = categories[currentCategoryIndex].getAttribute('data-category');
+    categoryTitle.textContent = categoryTitles[categoryName];
+}
+
+// Gérer le clic sur les catégories pour les écrans moyens et larges
+categories.forEach((category, index) => {
+    category.addEventListener('click', () => {
+        currentCategoryIndex = index;
+        updateMenuDisplay();
+    });
+});
+
+// Gestion des boutons "précédent" et "suivant" pour les petits écrans
+document.querySelector('.prev-category').addEventListener('click', () => {
+    if (currentCategoryIndex > 0) {
+        currentCategoryIndex--;
+        updateMenuDisplay();
+    }
+});
+
+document.querySelector('.next-category').addEventListener('click', () => {
+    if (currentCategoryIndex < categories.length - 1) {
+        currentCategoryIndex++;
+        updateMenuDisplay();
+    }
+});
+
+// Initialisation
+updateMenuDisplay();
+
+
+
+// ********************* Toggle pour le menu de téléchargement (afficher/masquer) ********************//
+
+function toggleDownloadOptions() {
+    const options = document.querySelector('.download-options');
+    options.style.display = options.style.display === 'block' ? 'none' : 'block';
+}
+
+// Ferme le menu déroulant si on clique en dehors
+window.onclick = function (event) {
+    if (!event.target.matches('.btn-download-main')) {
+        const dropdowns = document.querySelector('.download-options');
+        if (dropdowns.style.display === 'block') {
+            dropdowns.style.display = 'none';
+        }
+    }
+};
+
+
+    </script>
+
+
 
 
 

@@ -76,67 +76,66 @@ document.getElementById('voirPlus').addEventListener('click', function () {
 
 
 // ********************* Menu affichage en fonction de la catégorie cliquée ********************//
+const categories = document.querySelectorAll('.category');
+const menus = document.querySelectorAll('.menu-items');
+const categoryTitle = document.getElementById('category-title');
+let currentCategoryIndex = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-    const categories = document.querySelectorAll(".category");
-    const menus = document.querySelectorAll(".menu-items");
+// Tableau des titres de catégories
+const categoryTitles = {
+    special: "MENU SPÉCIAL",
+    boissons: "BOISSONS",
+    mer: "PRODUITS DE LA MER",
+    desserts: "DESSERTS"
+};
 
-    categories.forEach(category => {
-        category.addEventListener("click", () => {
-            // Enlève la classe 'active' des autres catégories
-            categories.forEach(cat => cat.classList.remove("active"));
-            category.classList.add("active");
+// Fonction pour mettre à jour l'affichage du menu
+function updateMenuDisplay() {
+    // Masquer toutes les catégories de menus
+    menus.forEach(menu => menu.classList.add('hidden'));
 
-            // Cache tous les menus
-            menus.forEach(menu => menu.classList.add("hidden"));
+    // Afficher la catégorie active
+    menus[currentCategoryIndex].classList.remove('hidden');
 
-            // Affiche le menu sélectionné
-            const selectedMenu = document.getElementById(`${category.dataset.category}-menu`);
-            if (selectedMenu) {
-                selectedMenu.classList.remove("hidden");
-            }
-        });
+    // Mettre à jour les catégories actives
+    categories.forEach((category, index) => {
+        if (index === currentCategoryIndex) {
+            category.classList.add('active');
+        } else {
+            category.classList.remove('active');
+        }
+    });
+
+    // Mettre à jour le titre de la catégorie pour les petits écrans
+    const categoryName = categories[currentCategoryIndex].getAttribute('data-category');
+    categoryTitle.textContent = categoryTitles[categoryName];
+}
+
+// Gérer le clic sur les catégories pour les écrans moyens et larges
+categories.forEach((category, index) => {
+    category.addEventListener('click', () => {
+        currentCategoryIndex = index;
+        updateMenuDisplay();
     });
 });
 
-
-
-// ********************* Affichage du menu en fonction de la catégorie et navigation entre catégories ********************//
-
-let categories = ['special', 'boissons', 'mer', 'desserts'];
-let currentCategoryIndex = 0;
-
-function updateCategory() {
-    // Cacher tous les menus
-    document.querySelectorAll('.menu-items').forEach(item => item.classList.add('hidden'));
-
-    // Afficher le menu de la catégorie actuelle
-    const currentCategory = categories[currentCategoryIndex];
-    document.getElementById(`${currentCategory}-menu`).classList.remove('hidden');
-
-    // Mettre à jour le titre de la catégorie active
-    const categoryTitles = {
-        'special': 'MENU SPÉCIAL',
-        'boissons': 'BOISSONS',
-        'mer': 'PRODUITS DE LA MER',
-        'desserts': 'DESSERTS'
-    };
-    document.getElementById('category-title').textContent = categoryTitles[currentCategory];
-}
-
-// Navigation entre catégories (précédent et suivant)
+// Gestion des boutons "précédent" et "suivant" pour les petits écrans
 document.querySelector('.prev-category').addEventListener('click', () => {
-    currentCategoryIndex = (currentCategoryIndex - 1 + categories.length) % categories.length;
-    updateCategory();
+    if (currentCategoryIndex > 0) {
+        currentCategoryIndex--;
+        updateMenuDisplay();
+    }
 });
 
 document.querySelector('.next-category').addEventListener('click', () => {
-    currentCategoryIndex = (currentCategoryIndex + 1) % categories.length;
-    updateCategory();
+    if (currentCategoryIndex < categories.length - 1) {
+        currentCategoryIndex++;
+        updateMenuDisplay();
+    }
 });
 
-// Initialiser avec la première catégorie
-updateCategory();
+// Initialisation
+updateMenuDisplay();
 
 
 
