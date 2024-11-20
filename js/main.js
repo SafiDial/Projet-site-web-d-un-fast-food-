@@ -33,8 +33,7 @@ navLinks.forEach(link => {
 
 
 
-
-// *********************la fleche pour aprops qui apparait en fonction le taille de l'ecran ********************//
+// ********************* La flèche pour afficher/masquer le texte long en fonction de la taille de l'écran ********************//
 
 function handleTextDisplay() {
     var texteLong = document.getElementById('texteLong');
@@ -76,11 +75,7 @@ document.getElementById('voirPlus').addEventListener('click', function () {
 
 
 
-
-
-
-// **************** Menu affichage en fonction de la categorie cliquer ********************//
-
+// ********************* Menu affichage en fonction de la catégorie cliquée ********************//
 
 document.addEventListener("DOMContentLoaded", () => {
     const categories = document.querySelectorAll(".category");
@@ -105,22 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function toggleDownloadOptions() {
-    const options = document.querySelector('.download-options');
-    options.style.display = options.style.display === 'block' ? 'none' : 'block';
-}
 
-// Ferme le menu déroulant si on clique en dehors
-window.onclick = function (event) {
-    if (!event.target.matches('.btn-download-main')) {
-        const dropdowns = document.querySelector('.download-options');
-        if (dropdowns.style.display === 'block') {
-            dropdowns.style.display = 'none';
-        }
-    }
-}
-
-// **************** Menu affichage en fonction de la categorie cliquer (pas tout les_categories_visibles en mm temps) ********************//
+// ********************* Affichage du menu en fonction de la catégorie et navigation entre catégories ********************//
 
 let categories = ['special', 'boissons', 'mer', 'desserts'];
 let currentCategoryIndex = 0;
@@ -143,6 +124,7 @@ function updateCategory() {
     document.getElementById('category-title').textContent = categoryTitles[currentCategory];
 }
 
+// Navigation entre catégories (précédent et suivant)
 document.querySelector('.prev-category').addEventListener('click', () => {
     currentCategoryIndex = (currentCategoryIndex - 1 + categories.length) % categories.length;
     updateCategory();
@@ -158,54 +140,22 @@ updateCategory();
 
 
 
-// **************** Pour afficher le modal du repas selectionne ********************//
+// ********************* Toggle pour le menu de téléchargement (afficher/masquer) ********************//
 
-
-// Variable pour suivre l'index de l'élément affiché
-let currentIndex = null;
-
-// Sélectionner les éléments du modal et du menu
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalImage = document.getElementById('modal-image');
-const menuItems = document.querySelectorAll('.menu-item');
-const menuModalLabel = document.getElementById('menuModalLabel');
-
-// Fonction pour mettre à jour le contenu du modal avec les informations du plat
-function updateModalContent(index) {
-    const item = menuItems[index];
-    modalTitle.textContent = item.dataset.name;
-    modalDescription.textContent = item.dataset.description;
-    modalImage.src = item.dataset.image;
-    modalImage.alt = `Image de ${item.dataset.name}`;
-    menuModalLabel.textContent = `${item.dataset.name} - ${item.dataset.price}`;
-    currentIndex = index;
+function toggleDownloadOptions() {
+    const options = document.querySelector('.download-options');
+    options.style.display = options.style.display === 'block' ? 'none' : 'block';
 }
 
-// Ajoutez un écouteur d'événements pour chaque élément du menu
-menuItems.forEach((item, index) => {
-    item.addEventListener('click', function () {
-        updateModalContent(index); // Mettre à jour le contenu du modal avec le plat sélectionné
-        const modal = new bootstrap.Modal(document.getElementById('menuModal'));
-        modal.show(); // Afficher le modal
-    });
-});
-
-// Gérer le clic sur la flèche précédente
-document.getElementById('prev-btn').addEventListener('click', function () {
-    if (currentIndex > 0) {
-        currentIndex--; // Descendre l'index
-        updateModalContent(currentIndex); // Mettre à jour le contenu du modal
+// Ferme le menu déroulant si on clique en dehors
+window.onclick = function (event) {
+    if (!event.target.matches('.btn-download-main')) {
+        const dropdowns = document.querySelector('.download-options');
+        if (dropdowns.style.display === 'block') {
+            dropdowns.style.display = 'none';
+        }
     }
-});
-
-// Gérer le clic sur la flèche suivante
-document.getElementById('next-btn').addEventListener('click', function () {
-    if (currentIndex < menuItems.length - 1) {
-        currentIndex++; // Augmenter l'index
-        updateModalContent(currentIndex); // Mettre à jour le contenu du modal
-    }
-});
+};
 
 
 
