@@ -110,12 +110,65 @@ body {
 /* TItre principale */
 
 .titre_reserv_container {
-    height: 400px;
-    margin-top: 80px;
     background-image: url('../css/images/M1.jpg');
-    background-size: 100% auto; 
-    background-position: center; 
-  }
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.titre_reserv_container h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.titre_reserv_container p {
+    font-size: 28px;
+    color: #000000;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+@media (max-width: 768px) {
+    .titre_reserv_container h1 {
+        font-size: 40px;
+    }
+
+    .titre_reserv_container p {
+        font-size: 16px;
+    }
+}
+.btn-primary {
+    background-color: #ff8400;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #eeff005d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
 
 
 /* Section principale */
@@ -141,26 +194,24 @@ body {
     color: #000000;
 }
 
-/* Cibler les éléments de la liste dans la classe list-group */
 ul.list-group {
-    list-style-type: none; /* Supprimer les puces classiques */
-    padding-left: 20px; /* Ajouter un peu d'espace avant les puces */
+    list-style-type: none; 
+    padding-left: 20px; 
 }
 
 ul.list-group li {
     position: relative;
-    padding-left: 25px; /* Ajouter un espace pour les puces personnalisées */
+    padding-left: 25px;
 }
 
-/* Changer la couleur des puces */
 ul.list-group li::before {
-    content: "\2022"; /* Le symbole de la puce (point) */
-    color: red; /* Remplacer 'red' par la couleur de votre choix */
-    font-size: 60px; /* Ajuster la taille de la puce */
+    content: "\2022"; 
+    color: red; 
+    font-size: 60px; 
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%); /* Centrer verticalement */
+    transform: translateY(-50%); 
 }
 
 
@@ -302,16 +353,17 @@ select.form-select:focus {
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-reserve:hover {
-    background-color: rgb(230, 140, 22);
-    color: white;
+    background-color: #ff6200f1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.btn-reserve:hover::after {
-    transform: scaleY(1);
-}
+
 
 .list-group-item {
     background-color: transparent;
