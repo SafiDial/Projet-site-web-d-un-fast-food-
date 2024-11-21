@@ -110,10 +110,9 @@ body {
 /* TItre principale */
 
 .titre_reserv_container {
-    background-image: url('../css/images/M1.jpg');
+    background-image: url('../css/images/RESEVE.jpg');
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
     color: white;
 }
 
@@ -128,8 +127,9 @@ body {
 }
 
 .titre_reserv_container p {
+    background-color: #0000006c;
     font-size: 28px;
-    color: #000000;
+    color: #ffffff;
     line-height: 1.5;
     max-width: 800px;
     margin: 0 auto 20px;
@@ -144,8 +144,10 @@ body {
         font-size: 16px;
     }
 }
-.btn-primary {
+
+.btn-secondary {
     background-color: #ff8400;
+    border: none;
     color: white;
     border: none;
     padding: 15px 40px;
@@ -156,18 +158,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-primary:hover {
+.btn-secondary:hover {
     background-color: #eeff005d;
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-
-
-
 
 
 
