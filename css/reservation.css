@@ -108,32 +108,53 @@ body {
 
 
 
-
 /* Section principale */
 .section {
-    background-color: #ffffff;
+    background-color: #f6ffe4aa;
     padding: 20px;
     min-height: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .titre {
-margin-top: 40px;
+    margin-top: 40px;
     text-transform: uppercase;
     color: #ff0000;
     text-align: center;
-
 }
 
 .list-group {
-    padding-left: 50px; 
-
+    padding-left: 50px;
 }
 
 .list-group li {
-    color: #000000;  
+    color: #000000;
 }
+
+/* Cibler les éléments de la liste dans la classe list-group */
+ul.list-group {
+    list-style-type: none; /* Supprimer les puces classiques */
+    padding-left: 20px; /* Ajouter un peu d'espace avant les puces */
+}
+
+ul.list-group li {
+    position: relative;
+    padding-left: 25px; /* Ajouter un espace pour les puces personnalisées */
+}
+
+/* Changer la couleur des puces */
+ul.list-group li::before {
+    content: "\2022"; /* Le symbole de la puce (point) */
+    color: red; /* Remplacer 'red' par la couleur de votre choix */
+    font-size: 60px; /* Ajuster la taille de la puce */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centrer verticalement */
+}
+
+
+
 
 
 @media (max-width: 768px) {
@@ -147,7 +168,6 @@ margin-top: 40px;
         font-size: 15px;
     }
 }
-
 
 
 
