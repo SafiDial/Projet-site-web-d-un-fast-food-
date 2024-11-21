@@ -110,10 +110,11 @@ body {
 /* TItre principale */
 
 .titre_reserv_container {
+    height: 400px;
     margin-top: 80px;
     background-image: url('../css/images/M1.jpg');
-    background-size: 100% auto; /* Étend l'image sur toute la largeur, tout en conservant le ratio pour la hauteur */
-    background-position: center; /* Centre l'image horizontalement */
+    background-size: 100% auto; 
+    background-position: center; 
   }
 
 
