@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Inria Serif', serif;
-    background-color: #f8f4a5;
+    background-color: #ffffff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -195,8 +195,9 @@ body {
 
 .contact-item i {
     font-size: 48px;
-    color: orange;
+    color: #ff8400;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .contact-item h5 {
@@ -268,7 +269,7 @@ body {
 }
 
 .btn-contact:hover {
-    background-color: #ff0000af;
+    background-color: #000000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
