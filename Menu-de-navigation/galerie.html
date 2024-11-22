@@ -6,6 +6,8 @@
     <title>Galerie Filtrée</title>
     <!-- Lien vers Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
     <link rel="stylesheet" href="../css/galerie.css">
     <style>
         /* Définir une taille fixe pour toutes les images */
@@ -72,31 +74,31 @@
         <div class="container">
             <!-- Filtre central -->
             <div class="text-center mb-4">
+                <button class="btnfiltre " data-filter="all">Tout afficher</button>
                 <button class="btnfiltre " data-filter="boisson">Boissons</button>
                 <button class="btnfiltre  " data-filter="pizza">Pizzas</button>
                 <button class="btnfiltre " data-filter="burger">Burgers</button>
-                <button class="btnfiltre " data-filter="all">Tout afficher</button>
             </div>
 
             <!-- Galerie d'images -->
             <div class="row gallery">
                 <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
-                    <img src="../css/images/M6.avif" alt="Boisson 1">
+                    <img src="../css/images/bois1.jpg" alt="Boisson 1">
                     <div class="item-title">Boisson Exotique</div>
                     <div class="item-description">Une boisson fraîche et tropicale parfaite pour l'été.</div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
-                    <img src="../css/images/M1.jpg" alt="Boisson 2">
+                    <img src="../css/images/fanta.jpg" alt="Boisson 2">
                     <div class="item-title">Cocktail Fruité</div>
                     <div class="item-description">Un mélange pétillant de saveurs fruitées.</div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
-                    <img src="../css/images/Acceuil.jpg" alt="Pizza 1">
+                    <img src="../css/images/piza.jpg" alt="Pizza 1">
                     <div class="item-title">Pizza Margherita</div>
                     <div class="item-description">Une pizza classique avec des ingrédients frais.</div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
-                    <img src="../css/images/aprop11.avif" alt="Pizza 2">
+                    <img src="../css/images/pizza2.jpg" alt="Pizza 2">
                     <div class="item-title">Pizza Pepperoni</div>
                     <div class="item-description">Un favori épicé avec des tranches généreuses de pepperoni.</div>
                 </div>
@@ -117,14 +119,14 @@
      <div id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://via.placeholder.com/800x400.png?text=Promo+Burgers" class="d-block w-100" alt="Promo 1">
+                <img src="../css/images/PROMO.jpg" class="d-block w-100" alt="Promo 1">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Promo Burger</h5>
                     <p>Profitez de 20% de réduction sur tous les burgers!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://via.placeholder.com/800x400.png?text=Combo+Menu" class="d-block w-100" alt="Promo 2">
+                <img src="../css/images/pizzapromo2.png" class="d-block w-100" alt="Promo 2">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Menu Combo</h5>
                     <p>Obtenez un menu combo avec frites et boisson.</p>
@@ -140,22 +142,6 @@
             <span class="visually-hidden">Suivant</span>
         </button>
     </div>
-
-    <style>
-       
-
-        .carousel-inner img {
-            height: 350px;
-            object-fit: cover;
-        }
-
-        .carousel-caption {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-        }
-
-        
-    </style>
 
 
 

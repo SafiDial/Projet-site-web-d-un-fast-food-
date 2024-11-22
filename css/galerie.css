@@ -138,7 +138,7 @@ body {
 
 /************************************ TITRE PRINCIPALE GALERIE *******************************************/
 .titre_galerie_container {
-    background-image: url('../css/images/RESEVE.jpg');
+    background-image: url('../css/images/galerie1.jpg');
     background-size: cover;
     background-position: center center;
     color: white;
