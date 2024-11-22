@@ -115,7 +115,53 @@ body {
     color: white;
 }
 
+.btncomande {
+    background-color: #ff8400;
+    text-decoration: none;
+    border: none;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btncomande:hover {
+    background-color: #eeff005d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 /************************************ POUR LES IMAGES DE LA GALERIE *******************************************/
+
+
+
+.btnfiltre {
+    background-color: #fff874;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btnfiltre:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+
+
+
+
 
 .gallery-item {
     position: relative;
