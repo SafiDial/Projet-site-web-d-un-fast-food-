@@ -168,3 +168,4 @@ document.getElementById("btnCheckout").addEventListener("click", () => {
         afficherPanier();
     }
 });
+
