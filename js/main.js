@@ -34,6 +34,9 @@ navLinks.forEach(link => {
 
 
 // ********************* Menu affichage en fonction de la catégorie cliquée ********************//
+
+
+
 const categories = document.querySelectorAll('.category');
 const menus = document.querySelectorAll('.menu-items');
 const categoryTitle = document.getElementById('category-title');
@@ -113,7 +116,6 @@ window.onclick = function (event) {
         }
     }
 };
-
 
 
 
