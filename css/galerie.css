@@ -144,6 +144,26 @@ body {
     color: white;
 }
 
+
+.titre_galerie_container h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.titre_galerie_container p {
+    background-color: #0000006c;
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
 .btncomande {
     background-color: #ff8400;
     text-decoration: none;
