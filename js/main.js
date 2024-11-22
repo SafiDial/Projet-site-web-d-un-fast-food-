@@ -33,48 +33,6 @@ navLinks.forEach(link => {
 
 
 
-// ********************* La flèche pour afficher/masquer le texte long en fonction de la taille de l'écran ********************//
-
-function handleTextDisplay() {
-    var texteLong = document.getElementById('texteLong');
-    var voirPlus = document.getElementById('voirPlus');
-
-    // Si la largeur de l'écran est petite (mobile), afficher le texte tronqué
-    if (window.innerWidth <= 576) {
-        texteLong.classList.add('texte-court');
-        texteLong.classList.remove('texte-complet');
-        voirPlus.style.display = 'inline'; // Afficher la flèche "Voir plus"
-    } else {
-        // Sur les grands écrans, afficher tout le texte sans flèche
-        texteLong.classList.add('texte-complet');
-        texteLong.classList.remove('texte-court');
-        voirPlus.style.display = 'none'; // Cacher la flèche "Voir plus"
-    }
-}
-
-// Initialisation au chargement de la page
-window.onload = handleTextDisplay;
-
-// Réagir à la redimension du navigateur
-window.onresize = handleTextDisplay;
-
-// Gérer l'événement du clic sur la flèche "Voir plus"
-document.getElementById('voirPlus').addEventListener('click', function () {
-    var texteLong = document.getElementById('texteLong');
-    var voirPlus = document.getElementById('voirPlus');
-
-    texteLong.classList.toggle('texte-court');
-    texteLong.classList.toggle('texte-complet');
-
-    if (texteLong.classList.contains('texte-court')) {
-        voirPlus.innerHTML = 'arrow_drop_down'; // Flèche (Voir plus)
-    } else {
-        voirPlus.innerHTML = 'arrow_drop_up'; // Flèche (Voir moins)
-    }
-});
-
-
-
 // ********************* Menu affichage en fonction de la catégorie cliquée ********************//
 const categories = document.querySelectorAll('.category');
 const menus = document.querySelectorAll('.menu-items');
