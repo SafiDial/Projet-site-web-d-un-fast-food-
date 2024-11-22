@@ -6,6 +6,7 @@
     <title>Galerie Filtrée</title>
     <!-- Lien vers Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/galerie.css">
     <style>
         /* Définir une taille fixe pour toutes les images */
         .gallery img {
@@ -54,14 +55,19 @@
 
 
 
-
-
-
+      <div class="titre_galerie_container py-5" style="margin-top: 80px;">
+        <header class="text-center mb-5" id="menu">
+            <h1 class="display-4">Galerie du Bon Goût</h1>
+            <p>Découvrez notre collection exquise de plats et boissons. Laissez-vous séduire par notre sélection !</p>
+            <a href="#menu" class="btn btn-secondary mt-4">Voir notre menu</a>
+        </header>
+    </div>
+    
 
 
 
     <!-- Section de la galerie -->
-    <section class="my-5 py-5" style="margin-top: 80px;">
+    <section class="my-5 ">
         <div class="container">
             <!-- Filtre central -->
             <div class="text-center mb-4">
@@ -73,27 +79,48 @@
 
             <!-- Galerie d'images -->
             <div class="row gallery">
-                <div class="col-lg-4 col-md-6 col-12 filter boisson">
+                <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
                     <img src="../css/images/M6.avif" alt="Boisson 1">
+                    <div class="item-title">Boisson Exotique</div>
+                    <div class="item-description">Une boisson fraîche et tropicale parfaite pour l'été.</div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter boisson">
+                <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
                     <img src="../css/images/M1.jpg" alt="Boisson 2">
+                    <div class="item-title">Cocktail Fruité</div>
+                    <div class="item-description">Un mélange pétillant de saveurs fruitées.</div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter pizza">
+                <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
                     <img src="../css/images/Acceuil.jpg" alt="Pizza 1">
+                    <div class="item-title">Pizza Margherita</div>
+                    <div class="item-description">Une pizza classique avec des ingrédients frais.</div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter pizza">
+                <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
                     <img src="../css/images/aprop11.avif" alt="Pizza 2">
+                    <div class="item-title">Pizza Pepperoni</div>
+                    <div class="item-description">Un favori épicé avec des tranches généreuses de pepperoni.</div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter burger">
+                <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
                     <img src="../css/images/carou22.avif" alt="Burger 1">
+                    <div class="item-title">Burger Classique</div>
+                    <div class="item-description">Un burger savoureux avec des ingrédients de qualité.</div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter burger">
-                    <img src="../css/images/fastfood1.png" alt="Burger 2">
+                <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
+                    <img src="../css/images/M13.jpg" alt="Burger 2">
+                    <div class="item-title">Burger Gourmet</div>
+                    <div class="item-description">Une expérience culinaire avec des saveurs raffinées.</div>
                 </div>
             </div>
-        </div>
+            
     </section>
+
+
+
+<style>
+/* Galerie - Effet de zoom sur l'image */
+    
+    </style>
+
+
 
     <!-- Lien vers le script Bootstrap 5.3 -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

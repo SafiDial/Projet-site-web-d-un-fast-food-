@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+    font-family: 'Inria Serif', serif;
+    background-color: #FFFDD0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ************************** Barre de navigation **************************************** */
+.navbar {
+    background-color: #D32F2F;
+    /* Couleur solide au chargement */
+    padding: 16px 32px;
+    transition: background-color 0.3s ease;
+    /* Transition pour l'effet de transparence */
+}
+
+.navbar.scrolled {
+    background-color: rgba(211, 47, 47, 0.5);
+    /* Transparence au défilement */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #FFFDD0 !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.navbar-brand-subtitle {
+    font-size: 12px;
+    font-weight: 200;
+    color: #FFFDD0;
+    text-align: center;
+}
+
+/* Liens de navigation alignés à droite */
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-link {
+    color: #FFFDD0;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+    border-color: #FFD700;
+    box-shadow: 0 0 15px #FFD700;
+    transform: scale(1.1);
+}
+
+.nav-link:hover {
+    color: #FFD700;
+}
+
+/* Navbar-toggler pour mobile */
+.navbar-toggler {
+    border: 1px solid #FFFDD0;
+    background-color: #FFFDD0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.navbar-toggler span.material-symbols-outlined {
+    font-size: 32px;
+    color: #4A4A4A;
+}
+
+.navbar-toggler:hover {
+    background-color: #4A4A4A;
+    border-color: #FFFDD0;
+}
+
+.navbar-toggler:hover span.material-symbols-outlined {
+    color: #FFFDD0;
+}
+
+.navbar.fixed-top {
+    z-index: 1030;
+}
+
+
+/************************************ TITRE PRINCIPALE GALERIE *******************************************/
+.titre_galerie_container {
+    background-image: url('../css/images/RESEVE.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+/************************************ POUR LES IMAGES DE LA GALERIE *******************************************/
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/************* Titre de l'élément *********/
+.item-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+/************* Description de l'élément ********/
+.item-description {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/*opacité sur les textes lors du survol */
+.gallery-item:hover .item-title,
+.gallery-item:hover .item-description {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Par défaut, textes légèrement masqués */
+.item-title,
+.item-description {
+    opacity: 0.8;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .item-title {
+        font-size: 1.1rem;
+        padding: 5px;
+    }
+
+    .item-description {
+        font-size: 0.8rem;
+        padding: 4px;
+    }
+}
