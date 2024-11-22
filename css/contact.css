@@ -82,8 +82,6 @@ body {
 .nav-link:hover {
     color: #FFD700;
 }
-
-/* Navbar-toggler pour mobile */
 .navbar-toggler {
     border: 1px solid #FFFDD0;
     background-color: #FFFDD0;
@@ -107,53 +105,126 @@ body {
 
 .navbar.fixed-top {
     z-index: 1030;
-    /*a barre de navigation reste au-dessus des autres éléments */
 }
 
 
 
-
-form {
-    background-color: #FFFDD0;
-    border: px solid #000000;
-    padding: 6px;
-    border-radius: 8px;
+/***************************  SECTION POUR LE CONTACT  *******************************/
+.titre_contact_container {
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
-
-}
-
-form input,
-form select,
-form textarea {
-    background-color: #FFFFFF;
-    border: 10px solid #FFBF00;
-    color: #000000;
-    padding: 10px;
-    border-radius: 4px;
+    margin-top: 80px;
+    background-image: url('../css/images/M9.jpg');
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    margin-bottom: 15px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.titre_contact_container h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 
 
-form button[type="submit"] {
-    background-color: #FFBF00;
-    color: #000000;
+.btn-secondary {
+    background-color: #ff8400;
     border: none;
-    padding: 15px;
-    font-size: 16px;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form button[type="submit"]:hover {
-    background-color: #FF9900;
+.btn-secondary:hover {
+    background-color: #eeff005d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+    .titre_contact_container h1 {
+        font-size: 40px;
+    }
+
+   
+}
+
+/************************************* POUR LA CARTE  ******************************/
 #map {
-    width: 100%;  
-    height: 400px;  
-    margin-top: 20px;
+    width: 80%; 
+    height: 400px;
+    margin: 40px auto; 
 }
+
+
+/*********************** SECTION POUR LES INFOS DE CONTACT ET TELEPHONE ***************/
+
+
+    .contact-section {
+        text-align: center;
+    }
+    .contact-title {
+        font-size: 32px; 
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .contact-item i {
+        font-size: 48px;
+        color: orange;
+        margin-bottom: 10px;
+    }
+    .contact-item h5 {
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    .divider-horizontal {
+        width: 100%;
+        height: 2px;
+        background-color: #ddd;
+        margin-top: 20px;
+    }
+    .divider-vertical {
+        border-left: 2px solid #ddd;
+        height: auto;
+    }
+    .contact-row {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .contact-column {
+        flex: 1;
+        padding: 10px;
+    }
+    @media (max-width: 767px) {
+        .divider-vertical {
+            display: none;
+        }
+        .contact-row {
+            flex-direction: column;
+        }
+    }
+    
+
+
+
