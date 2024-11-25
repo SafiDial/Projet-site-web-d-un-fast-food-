@@ -107,14 +107,23 @@ body {
 
 .navbar.fixed-top {
     z-index: 1030;
-    /*a barre de navigation reste au-dessus des autres éléments */
+    /*pour que l barre de navigation reste au-dessus des autres éléments */
 }
+
+
+
+
+
+
+
+
+
+
 
 /* ************************** Carrousel **************************************** */
 
 .carousel-container {
     padding-top: 80px;
-    /* Espace pour la barre de navigation */
 }
 
 .carousel-caption {
@@ -201,7 +210,6 @@ body {
 
 
 
-/* *********************** Responsive Adjustments ****************************** */
 
 /* ********************************* Menu Items ********************************* */
 
@@ -544,64 +552,164 @@ body {
 
 
 /* ************************** Section Galerie **************************************** */
-/* Styles pour le titre h2 de la galerie */
-#galerie h2 {
-    font-family: 'Inria Serif', serif;
-    font-weight: normal;
-    font-size: 40px;
-    color: #000;
-    margin-bottom: 20px;
+.image-item {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
 }
 
-#galerie h2::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 4px;
-    background-color: #e63946;
-    margin: 8px auto 0;
-    border-radius: 2px;
+.image-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
 }
 
-/* Styles pour les éléments de la galerie */
-#galerie .gallery-item {
-    overflow: hidden;
-    position: relative;
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.combined-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.burst-gallery, .tray-gallery {
+    flex: 0 1 32%;
     text-align: center;
 }
 
-#galerie .gallery-item figure {
-    margin: 0;
+.burst-container {
     position: relative;
-    width: 100%;
+    display: inline-block;
 }
 
-#galerie .gallery-item img {
-    transition: transform 0.4s ease;
+.burst-main {
     width: 100%;
-    height: 190px;
-    object-fit: cover;
+    max-width: 300px;
+    border-radius: 20px;
 }
 
-#galerie .gallery-item:hover img {
+.burst-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.burst-item:nth-child(2) {
+    left: -40px;
+}
+
+.burst-item:nth-child(3) {
+    right: -40px;
+}
+
+.burst-mini {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.tray-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tray-item {
+    flex: 1 1 45%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tray-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tray-image {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tray-item:hover .tray-image {
     transform: scale(1.1);
 }
 
-/* Styles pour les légendes sous les images */
-#galerie .gallery-item figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+.view-more-btn {
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#galerie .gallery-item:hover figcaption {
-    opacity: 1;
+.view-more-btn:hover {
+    background-color: #d32f2f;
+}
+
+.burst-mini {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.burst-mini:nth-child(1) {
+    animation-name: rotate-clockwise;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.burst-mini:nth-child(2) {
+    animation-name: rotate-counterclockwise;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-counterclockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .burst-item {
+        display: none;
+    }
+
+    .tray-item {
+        margin-bottom: 8px;
+    }
+
+    .view-more-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
 
@@ -707,52 +815,6 @@ h3 {
 
 /* ************************** Section Petit_cotact **************************************** */
 
-/* Ajout du fond d'image et du fond noir transparent pour la section */
-#contactez-nous {
-    position: relative;
-    text-align: center;
-    padding: 40px;
-    background-image: url('https://via.placeholder.com/1920x1080');
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    width: 100%;
-    margin: auto;
-    color: white;
-}
-
-.contact-header h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.contact-details {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.contact-item {
-    width: 45%;
-    text-align: left;
-}
-
-.contact-item h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.contact-item p {
-    margin: 5px 0;
-}
-
-.response-time,
-.availability {
-    font-size: 12px;
-    color: #bbb;
-}
 
 
 
@@ -773,55 +835,3 @@ h3 {
 
 
 
-
-
-
-
-
-/* Custom styles */
-.about-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-}
-
-.about-text {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.about-image {
-    flex: 1;
-    max-width: 45%;
-}
-
-.about-text p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.highlight {
-    color: #FF0000;
-    font-size: 14px;
-}
-
-.highlight-icon {
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.center-text {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 30px;
-}
-
-.sub-title {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-    opacity: 0.8;
-    text-align: center;
-    margin-top: 20px;
-}
