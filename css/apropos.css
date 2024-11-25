@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Inria Serif', serif;
-    background-color: #FFFDD0;
+    background-color: #ffffff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
 }
 
 .navbar-brand, .nav-link {
-    color: #FFFDD0 !important;
+    color: #FFFDD0;
 }
 
 body, html {
@@ -39,7 +39,6 @@ body, html {
     text-align: center;
 }
 
-/* Liens de navigation alignés à droite */
 .navbar-nav {
     display: flex;
     justify-content: flex-end;
@@ -104,36 +103,9 @@ body, html {
     z-index: 1030;
 }
 
-/* ************************** Section "Qui sommes-nous ? **************************************** */
-#qui-sommes-nous {
-    background-color: rgba(0, 0, 0, 0.714);
-    color: white;
-    padding: 60px 20px;
-}
 
-#qui-sommes-nous h2 {
-    text-align: center;
-    font-size: 40px; 
-    margin-bottom: 30px;
-}
+/* ************************** Section  Acceuil **************************************** */
 
-/* ************************** Section avec image **************************************** */
-.acceuil-section {
-    background-color: #f8f9fa;
-    text-align: center;
-    position: relative;
-}
-
-.image-acceuil {
-    position: relative;
-}
-
-.main-image {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-}
 
 .texte-qui-sommes-nous {
     position: absolute;
@@ -153,18 +125,65 @@ body, html {
     margin: 0;
 }
 
+
+.acceuil-section {
+    position: relative;
+}
+.main-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+.texte-qui-sommes-nous {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.circle-container {
+    position: absolute;
+    bottom: -25%;
+    right: 10%;
+}
 .circle-image {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #fff;
-    position: relative;
-    margin-top: -90px; /* pour superposer légèrement l'image principale */
+    transition: transform 0.3s ease;
 }
-
 .circle-image:hover {
-    transform: scale(1.1); /* Effet de zoom au survol */
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .circle-container {
+        bottom: -15%;  
+        right: 5%;     
+    }
+    .circle-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-image {
+        height: 300px;
+    }
+    .texte-qui-sommes-nous {
+        font-size: 20px;
+    }
+    .circle-container {
+        display: none;  
+    }
 }
 
 
@@ -172,11 +191,7 @@ body, html {
 
 
 
-
-
-
-
-
+/* ************************** Section À propos de notre alimentation & Nos chefs ****************************** */
 
 .container {
     max-width: 900px;
@@ -218,21 +233,6 @@ body, html {
 }
 
 
-.btn-primary {
-    background-color: #ff8400;
-    color: white;
-    border-radius: 30px;
-    padding: 12px 30px;
-    font-size: 18px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #e67600;
-    color: #fff;
-}
-
 section.row {
     max-width: 1200px;
     margin: 0 auto;
@@ -258,87 +258,134 @@ section.row {
 
 
 
-/* ************************** Section avec livreur **************************************** */
+
+/* ************************** Section pour Nos chefs **************************************** */
 
 
-#section-specialite .img-livreur {
-    background-color: #FFBF00;
-    height: 300px; 
-    padding: 20px 0; 
-}
-#section-specialite{
-    background-color: #FFBF00;
-
-     
+.chef-section {
+    text-align: center;
 }
 
-.specialite-title {
-    font-size: 28px; 
-    font-weight: 600; 
-    color: #000;
-    margin-bottom: 10px;
+.chef-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.specialite-description {
-    font-size: 16px; 
-    color: #333;
-    font-weight: normal;
-    line-height: 1.6; 
-}
-
-.btn-commander {
-    font-size: 18px;
-    background-color: #FFFDD0;
-    color: #000;
-    padding: 15px 30px;
-    border: 2px solid #000;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
-    cursor: pointer;
-    transition: all 0.3s ease; 
-}
-
-.btn-commander:hover {
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3); 
-    transform: translateY(-3px); 
-}
-
-
-
-.row {
+.chef-section .row {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: center; 
 }
 
-.col-md-6 {
-    padding: 15px;
+.chef-section .col-md-3 {
+    padding: 10px;
+}
+
+.chef-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.icon-container {
+background-color: #ffcc00;
+border-radius: 50%;
+display: inline-block;
+margin-bottom: 15px; 
+}
+
+.chef-icon {
+width: 50px; 
+height: 50px;
+}
+
+h2, h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.separator-left, .separator-right {
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: #fff700; 
+    vertical-align: middle;
+}
+
+.separator-left {
+    margin-right: 10px;
+}
+
+.separator-right {
+    margin-left: 10px;
 }
 
 
-/* ************************** Section pour_les_images **************************************** */
+.text2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+}
+
+.text2:hover {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .chef-section .row {
+        flex-direction: column;
+    }
+
+    .chef-section .col-md-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .chef-section .col-md-6 {
+        width: 100%;
+    }
+
+    .chef-img {
+        width: 100%;
+    }
+}
 
 
-    .about-food-section {
-        text-align: center;
-        padding: 40px 0;
-        background-color: #f7f7f7; 
-    }
-    
-    .food-title {
-        color: red;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    
-    .food-subtitle {
-        color: black;
-        font-size: 28px;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
+
+
+
+
+
+/* ************************** Section pour_les_images poulet pizza burger **************************************** */
+
     
 .food-image {
     width: 100%;
@@ -346,7 +393,6 @@ section.row {
     object-fit: cover; 
     transition: opacity 0.3s ease;
 }
-/* Style des boutons */
 .food-button {
     font-size: 18px;
     border-radius: 5px;
@@ -367,26 +413,76 @@ section.row {
     transform: scale(1.05);
 }
 
+
 /* ************************** Section pour_les_icones **************************************** */
 
 
-.icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.custom-icon-bg {
+    background-color: #ffc107;
+    border-radius: 50%;
     width: 80px;
     height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+
 }
 
 .icon-small {
-    font-size: 1.5rem; /* Taille réduite de l'icône */
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
 }
 
 
 
 
+/* ************************** Section avec livreur **************************************** */
 
 
+.delivery-section {
+    background-color: #FFFDD0;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 50px 0;
+        color: #fff;
+    }
+    .delivery-benefits {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .delivery-benefits li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        color: #000;
+    }
+    
+    .benefit-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+    .delivery-section h2{
+        color: #000;
+        text-transform: uppercase;
+    }
+    
 
+.btn-commander {
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #fc9048;
+    color: #000;
+    padding: 8px 20px;
+    border: 2px solid #000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
 
-
+.btn-commander:hover {
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px); 
+}
