@@ -24,7 +24,9 @@ body {
     color: #FFFDD0 !important;
 }
 
-
+body, html {
+    overflow-x: hidden;
+}
 .navbar-brand {
     font-weight: bold;  
     font-size: 28px;    
@@ -116,66 +118,142 @@ body {
 }
 
 /* ************************** Section avec image **************************************** */
-section {
-    padding: 20px; 
+.acceuil-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    position: relative;
 }
 
-.image-apropo1 {
-    max-width: 70%;  
-    height: auto;    
+.image-acceuil {
+    position: relative;
 }
 
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; 
-    margin: 0 -15px; 
+.main-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
 }
 
-.col-md-6 {
-    flex: 1; 
-    padding: 15px;
+.texte-qui-sommes-nous {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.highlight {
-    font-size: 24px; 
+.texte-qui-sommes-nous h2 {
+    font-size: 36px;
     font-weight: bold;
-    color: #ff5722; 
+    text-transform: uppercase;
+    margin: 0;
 }
 
-.highlight-icon {
-    color: #ff5722;
-    margin-right: 10px;
+.circle-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: relative;
+    margin-top: -90px; /* pour superposer légèrement l'image principale */
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6; 
+.circle-image:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
 }
 
-h4 {
-    margin-top: 20px;
-    font-size: 20px; 
-    text-align: center; 
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto; 
 }
 
-/* Style des icônes */
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+.title-main {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff3c00;
 }
 
-.highlights {
-    display: flex;
-    align-items: center;
+.description {
+    font-size: 18px; 
+    line-height: 1.5;
+    padding: 0 20px; 
 }
 
-.highlight-item {
-    margin-right: 30px; /* Espace entre les éléments */
+
+@media (max-width: 576px) {
+    .title-main {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-main {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+}
+
+
+.btn-primary {
+    background-color: #ff8400;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e67600;
+    color: #fff;
+}
+
+section.row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.col-md-4 {
+    margin-bottom: 24px;
+}
+
+.icon-container {
+    padding: 12px;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-container:hover {
+    transform: translateY(-10px);
+}
+
+.icon-small {
+    font-size: 18px;
 }
 
 
@@ -188,7 +266,11 @@ h4 {
     height: 300px; 
     padding: 20px 0; 
 }
+#section-specialite{
+    background-color: #FFBF00;
 
+     
+}
 
 .specialite-title {
     font-size: 28px; 
@@ -285,8 +367,20 @@ h4 {
     transform: scale(1.05);
 }
 
+/* ************************** Section pour_les_icones **************************************** */
 
 
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+.icon-small {
+    font-size: 1.5rem; /* Taille réduite de l'icône */
+}
 
 
 

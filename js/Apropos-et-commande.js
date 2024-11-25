@@ -16,19 +16,19 @@ document.addEventListener("scroll", function () {
 // **************** Pour les images dans a propos.html ********************//
 var images = {
     poulet: [
-        "../css/images/dessert.png",
-        "../css/images/fastfood1.png",
-        "../css/images/desert_cheesecake.png"
+        "../css/images/poul1.jpg",
+        "../css/images/POUL2.jpg",
+        "../css/images/POUL3.jpeg",
     ],
     pizza: [
-        "../css/images/chefouverture.png",
-        "../css/images/Apropos.png",
-        "../css/images/Aceuil2.jpg"
+        "../css/images/pizza2.jpg",
+        "../css/images/pizza22.jpeg",
+        "../css/images/PIZZA3.jpg"
     ],
     burger: [
-        "../css/images/fastfood1.png",
-        "../css/images/fastfood1.png",
-        "../css/images/chefouverture.png"
+        "../css/images/burger11.jpg",
+        "../css/images/M9.jpg",
+        "../css/images/Aceuil2.jpg"
     ]
 };
 
