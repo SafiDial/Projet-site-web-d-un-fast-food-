@@ -10,6 +10,23 @@ document.addEventListener("scroll", function () {
     }
 });
 
+// **************** Pour le menu burger afin de le fermer si un lien est cliqué ********************//
+
+
+// Sélectionner tous les liens de la barre de navigation
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+// un écouteur d'événement pour chaque lien
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Si le menu est ouvert, on le ferme
+        const navbarCollapse = document.getElementById('navbarNav');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    });
+});
 
 
 
