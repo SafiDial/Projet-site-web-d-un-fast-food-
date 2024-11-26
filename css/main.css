@@ -297,7 +297,36 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+.address-box {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.address-icon {
+    width: 24px; 
+    height: 24px;
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+
+.address-box strong {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.address-box br {
+    margin-bottom: 8px;
+}
+
+.address-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
 
 /* ********************************* Menu Items ********************************* */
