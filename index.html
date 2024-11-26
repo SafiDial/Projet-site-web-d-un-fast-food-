@@ -9,6 +9,8 @@
     <title>LE BON GOUT - Restaurant</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
@@ -303,9 +305,9 @@
 
     <!-- **************************Galerie_image****************************************** -->
 
-    <section class="py-5 bg-light">
+    <section class="py-5 ">
         <div class="container text-center">
-            <h2 class="text-danger">Découvrez Nos Saveurs</h2>
+            <h2 class="textH2">Découvrez Nos Saveurs</h2>
             <div class="combined-gallery row">
                 <!-- Burst Gallery -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
@@ -377,70 +379,106 @@
         </div>
     </section>
 
-    
-
     <!-- **************************Horaire D'Ouverture****************************************** -->
-    <section id="horaireOuverture" class="my-5">
-        <div class="container">
-            <div class="row align-items-start">
-                <!-- Image à gauche -->
-                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <figure>
-                        <img src="css/images/chefouverture.png" alt="Restaurant" class="img-fluid rounded ">
-                    </figure>
+    <section id="horaireOuverture" class="container">
+        <h1 class="text-center mb-4">Horaires d'Ouverture</h1>
+        <div class="row text-center">
+            <div class="col-12 col-md-4 horaires left">
+                <div class="content">
+                    <h3>Horaires du Restaurant </h3>
+                    <p>Lundi – Vendredi : 11h00 – 22h00</p>
+                    <p>Samedi : 12h00 – 23h00</p>
+                    <p>Dimanche : 12h00 – 22h00</p>
+                    <p>Jours Fériés : Fermé</p>
+                </div>                
+            </div>
+                        <div class="col-12 col-md-4 horaires center" onclick="toggleSection(this)">
+                <div class="content">
+                    <h3>Petit-Déjeuner 
+                        <img src="favicon/cliquez-sur.png" alt="Icône" class="cliquable-icon">
+                    </h3>
+                    <p>Lundi – Vendredi : 7h00 – 11h30</p>
+                    <p>Samedi : 8h00 – 11h30</p>
+                    <p>Dimanche : 8h00 – 11h30</p>
+                    <p>Jours Fériés : Fermé</p>
                 </div>
-
-                <!-- Informations horaires à droite -->
-                <div class="col-12 col-lg-6 text-center text-lg-start">
-                    <header class="mb-4">
-                        <h3>Heures d'Ouverture</h3>
-                    </header>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-md-between mb-3">
-                        <!-- Horaires du Restaurant -->
-                        <article class="text-start mb-4 me-md-3 flex-fill">
-                            <h4><strong>Horaires du Restaurant :</strong></h4>
-                            <p><time datetime="2024-11-01T11:00">Lundi – Vendredi : 11h00 – 22h00</time></p>
-                            <p><time datetime="2024-11-01T12:00">Samedi : 12h00 – 23h00</time></p>
-                            <p><time datetime="2024-11-01T12:00">Dimanche : 12h00 – 22h00</time></p>
-                            <p>Jours Fériés : Fermé</p>
-                        </article>
-
-                        <!-- Horaires du Petit-Déjeuner -->
-                        <article class="text-start mb-4 ms-md-3 flex-fill">
-                            <h4><strong>Petit-Déjeuner :</strong></h4>
-                            <p><time datetime="2024-11-01T07:00">Lundi – Vendredi : 7h00 – 11h30</time></p>
-                            <p><time datetime="2024-11-01T08:00">Samedi : 8h00 – 11h30</time></p>
-                            <p><time datetime="2024-11-01T08:00">Dimanche : 8h00 – 11h30</time></p>
-                            <p>Jours Fériés : Fermé</p>
-                        </article>
-                    </div>
-
-                    <!-- Service de Déjeuner et Dîner en dessous, centré -->
-                    <article class="text-start text-md-center mb-4">
-                        <h4><strong>Service de Déjeuner et Dîner :</strong></h4>
-                        <p><time datetime="2024-11-01T11:30">Lundi – Vendredi : 11h30 – 22h00</time></p>
-                        <p><time datetime="2024-11-01T12:00">Samedi : 12h00 – 23h00</time></p>
-                        <p><time datetime="2024-11-01T12:00">Dimanche : 12h00 – 22h00</time></p>
-                        <p>Jours Fériés : Fermé</p>
-                    </article>
+            </div>
+                        <div class="col-12 col-md-4 horaires right">
+                <div class="content">
+                    <h3>Service de Déjeuner et Dîner</h3>
+                    <p>Lundi – Vendredi : 11h30 – 22h00</p>
+                    <p>Samedi : 12h00 – 23h00</p>
+                    <p>Dimanche : 12h00 – 22h00</p>
+                    <p>Jours Fériés : Fermé</p>
                 </div>
             </div>
         </div>
     </section>
+  
 
     <!-- **************************Section avis****************************************** -->
-    <section id="avis">
-        <!-- Contenu de la section Galerie -->
+    <section id="carouselSection" class="container mt-5" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <section id="formSection">
+            <h2>Laissez un avis</h2>
+    
+            <form id="reviewForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom (max 20 caractères):</label>
+                    <input type="text" id="name" name="name" maxlength="20" class="form-control" required>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Étoiles (max 5):</label>
+                    <div id="rating">
+                        <span class="star" data-value="1"><i class="far fa-star"></i></span>
+                        <span class="star" data-value="2"><i class="far fa-star"></i></span>
+                        <span class="star" data-value="3"><i class="far fa-star"></i></span>
+                        <span class="star" data-value="4"><i class="far fa-star"></i></span>
+                        <span class="star" data-value="5"><i class="far fa-star"></i></span>
+                    </div>                
+                </div>
+    
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Commentaire:</label>
+                    <textarea id="comment" name="comment" rows="4" class="form-control" required></textarea>
+                </div>
+    
+                <button type="submit" class="btn btn-success">Envoyer l'avis</button>
+            </form>
+        </section>
+    
+        <div id="carouselContainer" style="flex-grow: 1; position: relative;">
+            <div id="carousel">
+            </div>
+            
+            
+            <div class="chevron-left" id="prevReview"><<</div>
+            <div class="chevron-right" id="nextReview">>></div>
+        </div>
     </section>
-
+   
     <!-- **************************Section Contact****************************************** -->
     <section id="contact">
-        <!-- Contenu de la section Contact -->
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="path/to/your/script.js" defer></script>
+
 
 </body>
 
