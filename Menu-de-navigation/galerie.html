@@ -9,7 +9,60 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <link rel="stylesheet" href="../css/galerie.css">
-    <style>
+
+   
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#carousel">
+                LE BON GOUT
+                <div class="navbar-brand-subtitle">Restauration Rapide</div>
+            </a>
+
+            <!-- Bouton Menu Burger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <!-- Liens visibles sur grand écran -->
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Offcanvas -->
+    <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-overlay"></div>
+
+
+
+
+ <style>
         /* Définir une taille fixe pour toutes les images */
         .gallery img {
             width: 100%;
@@ -23,39 +76,6 @@
             margin-bottom: 20px; /* Espace vertical entre les lignes d'images */
         }
     </style>
-</head>
-<body>
-
-    <nav class="navbar navbar-expand-lg fixed-top py-2">
-        <div class="container">
-            <a class="navbar-brand" href="#carousel">
-                LE BON GOUT
-                <div class="navbar-brand-subtitle">Restauration Rapide</div>
-            </a> 
-          
-          <!-- Bouton de navigation pour petits écrans -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="material-symbols-outlined ">menu</span>
-          </button>
-          
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
-
-
-
-
-
 
       <div class="titre_galerie_container py-5" style="margin-top: 80px;">
         <header class="text-center mb-5" id="menu">

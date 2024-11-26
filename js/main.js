@@ -1,5 +1,4 @@
-// **************** la transparence au défilement la barre de navigation ********************//
-
+// **************** La transparence au défilement de la barre de navigation ********************
 
 document.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
@@ -10,26 +9,39 @@ document.addEventListener("scroll", function () {
     }
 });
 
+// **************** Pour le menu burger afin de le fermer si un lien est cliqué ********************
 
-
-// **************** Pour le menu burger afin de le fermer si un lien est cliqué ********************//
-
-
-// Sélectionner tous les liens de la barre de navigation
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-// un écouteur d'événement pour chaque lien
+// Ajout d'un écouteur d'événement pour chaque lien
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         // Si le menu est ouvert, on le ferme
-        const navbarCollapse = document.getElementById('navbarNav');
+        const navbarCollapse = document.getElementById('offcanvasMenu'); // Utiliser l'ID du menu
         const navbarToggler = document.querySelector('.navbar-toggler');
         if (navbarCollapse.classList.contains('show')) {
-            navbarToggler.click();
+            navbarToggler.click(); // Cela déclenche la fermeture du menu
         }
     });
 });
 
+
+
+
+// Fonction pour fermer le menu si l'écran est redimensionné
+window.addEventListener('resize', function () {
+    const offcanvas = document.getElementById('offcanvasMenu');
+    const offcanvasBackdrop = document.querySelector('.offcanvas-overlay');
+    
+    // Si la fenêtre est plus grande que 992px (taille de bureau) et que le menu est ouvert
+    if (window.innerWidth > 992) {
+        if (offcanvas.classList.contains('show')) {
+            // Ferme le menu
+            offcanvas.classList.remove('show');
+            offcanvasBackdrop.style.display = 'none'; // Enlève l'arrière-plan du menu
+        }
+    }
+});
 
 
 

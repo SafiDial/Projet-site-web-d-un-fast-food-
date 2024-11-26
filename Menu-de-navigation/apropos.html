@@ -4,32 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A propos de LE BON GOUT </title>
+    <meta name="description" content="Le Bon Goût - Restaurant raffiné avec des saveurs exquises.">
+    <meta name="keywords" content="restaurant FAST-FOOD,  Le Bon Goût">
+    <title>LE BON GOUT - Restaurant</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/apropos.css">
 </head>
 
 <body>
 
-    <!-- *********************** SECTION POUR LA NAVBAR ************************ -->
-    <nav class="navbar navbar-expand-lg fixed-top py-2">
+        <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#carousel">
+            <a class="navbar-brand text-white" href="#carousel">
                 LE BON GOUT
                 <div class="navbar-brand-subtitle">Restauration Rapide</div>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <img src="../favicon/barres.png" alt="Menu" class="img-fluid" style="width: 30px; height: 30px;">
+            <!-- Bouton Menu Burger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <span class="material-symbols-outlined">menu</span>
             </button>
 
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <!-- Liens visibles sur grand écran -->
+            <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
@@ -39,8 +43,30 @@
         </div>
     </nav>
 
+    <!-- Menu Offcanvas -->
+    <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-overlay"></div>
+
+
+  
+
     <!-- *********************** SECTION POUR L'ACCUEIL ************************ -->
-    <section class="acceuil-section">
+    <section class="acceuil-sectionpy-5" style="margin-top: 80px;">
         <div class="image-acceuil text-center position-relative">
             <img src="../css/images/carou2.avif" alt="Image d'accueil" class="img-fluid main-image">
             <div class="texte-qui-sommes-nous position-absolute">
