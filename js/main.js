@@ -45,6 +45,26 @@ window.addEventListener('resize', function () {
 
 
 
+
+
+
+
+// Ajout de la classe 'offcanvas-open' lorsque le menu est ouvert
+document.getElementById('offcanvasMenu').addEventListener('shown.bs.offcanvas', function () {
+    document.body.classList.add('offcanvas-open');
+});
+
+// Retrait de la classe 'offcanvas-open' lorsque le menu est fermé
+document.getElementById('offcanvasMenu').addEventListener('hidden.bs.offcanvas', function () {
+    document.body.classList.remove('offcanvas-open');
+});
+
+
+
+
+
+
+
 // ********************* Menu affichage en fonction de la catégorie cliquée ********************//
 
 
