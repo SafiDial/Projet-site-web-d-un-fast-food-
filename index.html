@@ -28,11 +28,8 @@
         </div>
     </div>
 
-
-    <!--**************************Le style*****************--> 
     <style>
-        body,
-        html {
+        body, html {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -164,24 +161,18 @@
 
         /* Animations */
         @keyframes bounce {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-30px);
             }
         }
 
         @keyframes bounceWord {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-15px);
                 color: #ffe600;
@@ -190,24 +181,18 @@
         }
 
         @keyframes ring {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: scale(1);
             }
-
             50% {
                 transform: scale(1.5);
             }
         }
 
         @keyframes fadeIn {
-
-            0%,
-            100% {
+            0%, 100% {
                 opacity: 1;
             }
-
             50% {
                 opacity: 0.5;
             }
@@ -215,18 +200,10 @@
     </style>
 
     <script>
-        window.addEventListener('load', function () {
-            setTimeout(() => {
-                document.querySelector('.portal').classList.add('open');
-                setTimeout(() => {
-                    document.querySelector('.main-content').classList.add('show');
-                }, 100);
-            }, 100);
-        });
-
+        // Rediriger après 2 secondes
         setTimeout(() => {
-            window.location.href = "https://safidial.github.io/Projet-site-web-d-un-fast-food-/";
-        }, 2000); 
+            window.location.href = "menu-de-navigation/index.html"; 
+        }, 2000);
     </script>
 </body>
 
