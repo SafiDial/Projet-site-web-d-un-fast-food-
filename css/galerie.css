@@ -215,38 +215,8 @@ body {
 
 
 
-
-
 /************************************ TITRE PRINCIPALE GALERIE *******************************************/
-.titre_galerie_container {
-    background-image: url('../css/images/RESEVE.jpg');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-}
 
-.btncomande {
-    background-color: #ff8400;
-    text-decoration: none;
-    border: none;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btncomande:hover {
-    background-color: #eeff007c;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-
-/************************************ TITRE PRINCIPALE GALERIE *******************************************/
 .titre_galerie_container {
     background-image: url('../css/images/galerie1.jpg');
     background-size: cover;
@@ -254,8 +224,7 @@ body {
     color: white;
 }
 
-
-.titre_galerie_container h1 {
+.titre_galerie_containe h1 {
     font-size: 60px;
     font-weight: bold;
     color: #fff;
@@ -265,7 +234,8 @@ body {
     text-transform: uppercase;
 }
 
-.titre_galerie_container p {
+
+.titre_galerie_containe p {
     background-color: #0000006c;
     font-size: 28px;
     color: #ffffff;
@@ -273,6 +243,19 @@ body {
     max-width: 800px;
     margin: 0 auto 20px;
 }
+
+@media (max-width: 768px) {
+    
+.titre_galerie_containe h1 {
+        font-size: 40px;
+    }
+
+    
+    .titre_galerie_containe p {
+        font-size: 16px;
+    }
+}
+
 
 .btncomande {
     background-color: #ff8400;
