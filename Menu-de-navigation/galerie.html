@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <link rel="stylesheet" href="../css/galerie.css">
-
-   
 </head>
 <body>
 
@@ -29,8 +27,8 @@
             <!-- Liens visibles sur grand écran -->
             <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
@@ -60,23 +58,6 @@
     <div class="offcanvas-overlay"></div>
 
 
-
-
- <style>
-        /* Définir une taille fixe pour toutes les images */
-        .gallery img {
-            width: 100%;
-            height: 250px; /* Vous pouvez ajuster cette valeur selon vos besoins */
-            object-fit: cover; /* Cette propriété permet de couvrir l'espace sans déformer l'image */
-            border-radius: 8px;
-        }
-
-        /* Ajouter de l'espace entre les lignes de la galerie */
-        .gallery .col-12 {
-            margin-bottom: 20px; /* Espace vertical entre les lignes d'images */
-        }
-    </style>
-
       <div class="titre_galerie_container py-5" style="margin-top: 80px;">
         <header class="text-center mb-5" id="menu">
             <h1 class="display-4">Galerie du Bon Goût</h1>
@@ -89,18 +70,14 @@
     <div class="container my-5">
         <h1 class="text-center mb-4">Notre Galerie</h1>
 
-    <!-- Section de la galerie -->
-    <section class="my-5 ">
+        <section class="my-5 ">
         <div class="container">
-            <!-- Filtre central -->
             <div class="text-center mb-4">
                 <button class="btnfiltre " data-filter="all">Tout afficher</button>
                 <button class="btnfiltre " data-filter="boisson">Boissons</button>
                 <button class="btnfiltre  " data-filter="pizza">Pizzas</button>
                 <button class="btnfiltre " data-filter="burger">Burgers</button>
             </div>
-
-            <!-- Galerie d'images -->
             <div class="row gallery">
                 <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
                     <img src="../css/images/bois1.jpg" alt="Boisson 1">
@@ -133,8 +110,8 @@
                     <div class="item-description">Une expérience culinaire avec des saveurs raffinées.</div>
                 </div>
             </div>
-            
-    </section>
+      </section>
+      
      <!-- Carrousel des promotions -->
      <div id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -163,34 +140,9 @@
         </button>
     </div>
 
-
-
-
-
-    <!-- Lien vers le script Bootstrap 5.3 -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script>
-        // Fonction de filtrage des images
-        const buttons = document.querySelectorAll('button[data-filter]');
-        const items = document.querySelectorAll('.filter');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filterValue = button.getAttribute('data-filter');
-                
-                items.forEach(item => {
-                    if (filterValue === 'all') {
-                        item.style.display = 'block';
-                    } else if (item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+   <script src="../js/galerie.js"></script>
 </body>
 </html>
 

@@ -336,6 +336,7 @@ body {
     z-index: 2;
 }
 
+
 /************* Description de l'élément ********/
 .item-description {
     position: absolute;
@@ -385,4 +386,14 @@ body {
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
+}
+ .gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.gallery .col-12 {
+    margin-bottom: 20px;
 }
