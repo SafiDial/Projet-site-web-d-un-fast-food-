@@ -34,6 +34,14 @@ body {
     color: #FFFDD0;
     text-align: center;
 }
+.navbar-brand:hover {
+    color: #f0ad4e;
+    transform: scale(1.05);
+}
+
+.navbar-brand:hover .navbar-brand-subtitle {
+    color: #f0ad4e;
+}
 .navbar-toggler {
     border: none;
     background-color: #FFD700;
