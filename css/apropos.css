@@ -296,10 +296,6 @@ body {
     }
 }
 
-
-
-
-
 /* ************************** Section À propos de notre alimentation & Nos chefs ****************************** */
 
 .container {
@@ -595,6 +591,155 @@ p {
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3); 
     transform: translateY(-3px); 
 }
+
+
+        /********************** Style général pour la section du footer ****************/
+       
+        .footer {
+            background-color: #000000; /* Fond sombre */
+            color: #fff; /* Texte blanc */
+            padding: 40px 0;
+            margin-top: 30px;
+            position: relative;
+            min-height: 200px;
+        
+            background-image: radial-gradient(circle, transparent 95%, rgba(255, 166, 0, 0.6) 96%, transparent 98%);
+            background-size: 40px 40px; /* Taille des cercles */
+        }
+        
+    
+          .footer-title ,.footer-title_icone {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #FFD700; 
+          }
+          .footer-title_icone {
+            
+            text-align: center;
+          }
+          
+          /* Image du logo dans le footer */
+          .footer-logo {
+            width: 150px; 
+            height: 150px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+          }
+          
+          /* Description et bouton */
+          .footer p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #ddd; 
+          }
+          
+          .footer .btn-warning {
+            background-color: #FFD700;
+            border: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+          }
+          
+          .footer .btn-warning:hover {
+            background-color: #ffcc00;
+          }
+          
+          /* Icônes sociales */
+          .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
+            text-align: center; 
+          }
+          
+          .social-icon {
+            font-size: 24px;
+            color: #fff;
+            transition: color 0.3s;
+          }
+          
+          .social-icon:hover {
+            color: #FFD700; 
+          }
+          
+          .footer-bottom {
+            background-color: rgba(255, 166, 0, 0.6);    
+            padding: 10px 0;
+            color: #aaa;
+            position: absolute; 
+            bottom: 0;
+            width: 100%; 
+          }
+          
+          .footer-bottom p {
+            margin: 0;
+          }
+          
+          /* Responsivité pour les petits écrans */
+          @media (max-width: 768px) {
+            .footer {
+              padding: 20px 0;
+            }
+            .footer-title {
+              font-size: 18px;
+            }
+            .social-icons {
+              gap: 10px;
+            }
+            .footer-logo {
+              width: 100px; 
+              height: 100px; 
+            }
+          }
+        /* Icônes sociales */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
+            text-align: center; 
+          }
+          
+          .social-icon {
+            display: inline-block;
+            width: 40px; 
+            height: 40px; 
+          }
+          
+          .social-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            transition: opacity 0.3s ease; 
+          }
+          
+          .social-icon-img:hover {
+            opacity: 0.8;
+          }
+          
+          @media (max-width: 768px) {
+            .social-icons {
+              gap: 10px;
+            }
+          }
+          
+
+
+
+
+
+
+
+
+
 
 
 

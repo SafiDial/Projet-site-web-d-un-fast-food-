@@ -70,20 +70,16 @@
     </div>
 
 
-    <div class="container my-5">
-        <h1 class="text-center mb-4">Notre Galerie</h1>
-
         <!-- Section de la galerie -->
         <section class="my-5 ">
             <div class="container">
-                <!-- Filtre central -->
+                <h1 class="text-center mb-4">Notre Galerie</h1>
                 <div class="text-center mb-4">
                     <button class="btnfiltre " data-filter="all">Tout afficher</button>
                     <button class="btnfiltre " data-filter="boisson">Boissons</button>
                     <button class="btnfiltre  " data-filter="pizza">Pizzas</button>
                     <button class="btnfiltre " data-filter="burger">Burgers</button>
                 </div>
-
                 <!-- Galerie d'images -->
                 <div class="row gallery">
                     <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
@@ -119,64 +115,88 @@
                 </div>
 
         </section>
-        <!-- Carrousel des promotions -->
-        <div id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../css/images/PROMO.jpg" class="d-block w-100" alt="Promo 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Promo Burger</h5>
-                        <p>Profitez de 20% de réduction sur tous les burgers!</p>
+
+
+
+        <!--**************************** Carrousel des promotions **********************-->
+
+<section id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-10 position-relative">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../css/images/PROMO.jpg" class="d-block w-100" alt="Promo 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Promo Burger</h5>
+                            <p>Profitez de 20% de réduction sur tous les burgers!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../css/images/pizzapromo2.png" class="d-block w-100" alt="Promo 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Menu Combo</h5>
+                            <p>Obtenez un menu combo avec frites et boisson.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="../css/images/pizzapromo2.png" class="d-block w-100" alt="Promo 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Menu Combo</h5>
-                        <p>Obtenez un menu combo avec frites et boisson.</p>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#promotionCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#promotionCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#promotionCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Précédent</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#promotionCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Suivant</span>
-            </button>
         </div>
+    </div>
+</section>
+      
+
+  <!--*************************************** Section pour le footer ***************************-->
+  <footer class="footer">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
+        </div>
+          <div class="col-md-6 col-lg-4">
+          <h5 class="footer-title">Fast-Food Le Bon Goût</h5>
+          <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander maintenant !</p>
+          <a href="Menu-commmande.html" class="btn btn-warning mb-5">Commander</a> <!-- Lien du bouton à ajuster -->
+        </div>
+          <div class="col-md-12 col-lg-4">
+          <h5 class="footer-title_icone">Suivez-nous</h5>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../favicon/instagram (1).png" alt="Instagram" class="social-icon-img">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bas text-center"> <br><br>
+        <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
+      </div>
+  </footer>
 
 
 
 
+  
 
-        <!-- Lien vers le script Bootstrap 5.3 -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-        <script>
-            // Fonction de filtrage des images
-            const buttons = document.querySelectorAll('button[data-filter]');
-            const items = document.querySelectorAll('.filter');
-
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filterValue = button.getAttribute('data-filter');
-
-                    items.forEach(item => {
-                        if (filterValue === 'all') {
-                            item.style.display = 'block';
-                        } else if (item.classList.contains(filterValue)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="../js/galerie.js"></script>
 </body>
-
 </html>
