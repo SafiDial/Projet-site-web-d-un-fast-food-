@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,14 @@
 
     <link rel="stylesheet" href="../css/galerie.css">
 
-   
+
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand text-white" href="#carousel">
+            <a class="navbar-brand text-white" href="../index.html">
                 LE BON GOUT
                 <div class="navbar-brand-subtitle">Restauration Rapide</div>
             </a>
@@ -29,8 +31,8 @@
             <!-- Liens visibles sur grand écran -->
             <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
@@ -44,12 +46,13 @@
     <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
             <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#carousel">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
@@ -58,149 +61,122 @@
         </div>
     </div>
     <div class="offcanvas-overlay"></div>
-
-
-
-
- <style>
-        /* Définir une taille fixe pour toutes les images */
-        .gallery img {
-            width: 100%;
-            height: 250px; /* Vous pouvez ajuster cette valeur selon vos besoins */
-            object-fit: cover; /* Cette propriété permet de couvrir l'espace sans déformer l'image */
-            border-radius: 8px;
-        }
-
-        /* Ajouter de l'espace entre les lignes de la galerie */
-        .gallery .col-12 {
-            margin-bottom: 20px; /* Espace vertical entre les lignes d'images */
-        }
-    </style>
-
-      <div class="titre_galerie_container py-5" style="margin-top: 80px;">
+    <div class="titre_galerie_container py-5" style="margin-top: 80px;">
         <header class="text-center mb-5" id="menu">
             <h1 class="display-4">Galerie du Bon Goût</h1>
             <p>Découvrez notre collection exquise de plats et boissons. Laissez-vous séduire par notre sélection !</p>
             <a href="Menu-commmande.html" class="btncomande mt-4">commander</a>
         </header>
     </div>
-    
+
 
     <div class="container my-5">
         <h1 class="text-center mb-4">Notre Galerie</h1>
 
-    <!-- Section de la galerie -->
-    <section class="my-5 ">
-        <div class="container">
-            <!-- Filtre central -->
-            <div class="text-center mb-4">
-                <button class="btnfiltre " data-filter="all">Tout afficher</button>
-                <button class="btnfiltre " data-filter="boisson">Boissons</button>
-                <button class="btnfiltre  " data-filter="pizza">Pizzas</button>
-                <button class="btnfiltre " data-filter="burger">Burgers</button>
-            </div>
+        <!-- Section de la galerie -->
+        <section class="my-5 ">
+            <div class="container">
+                <!-- Filtre central -->
+                <div class="text-center mb-4">
+                    <button class="btnfiltre " data-filter="all">Tout afficher</button>
+                    <button class="btnfiltre " data-filter="boisson">Boissons</button>
+                    <button class="btnfiltre  " data-filter="pizza">Pizzas</button>
+                    <button class="btnfiltre " data-filter="burger">Burgers</button>
+                </div>
 
-            <!-- Galerie d'images -->
-            <div class="row gallery">
-                <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
-                    <img src="../css/images/bois1.jpg" alt="Boisson 1">
-                    <div class="item-title">Boisson Exotique</div>
-                    <div class="item-description">Une boisson fraîche et tropicale parfaite pour l'été.</div>
+                <!-- Galerie d'images -->
+                <div class="row gallery">
+                    <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
+                        <img src="../css/images/bois1.jpg" alt="Boisson 1">
+                        <div class="item-title">Boisson Exotique</div>
+                        <div class="item-description">Une boisson fraîche et tropicale parfaite pour l'été.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
+                        <img src="../css/images/fanta.jpg" alt="Boisson 2">
+                        <div class="item-title">Cocktail Fruité</div>
+                        <div class="item-description">Un mélange pétillant de saveurs fruitées.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
+                        <img src="../css/images/piza.jpg" alt="Pizza 1">
+                        <div class="item-title">Pizza Margherita</div>
+                        <div class="item-description">Une pizza classique avec des ingrédients frais.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
+                        <img src="../css/images/pizza2.jpg" alt="Pizza 2">
+                        <div class="item-title">Pizza Pepperoni</div>
+                        <div class="item-description">Un favori épicé avec des tranches généreuses de pepperoni.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
+                        <img src="../css/images/carou22.avif" alt="Burger 1">
+                        <div class="item-title">Burger Classique</div>
+                        <div class="item-description">Un burger savoureux avec des ingrédients de qualité.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
+                        <img src="../css/images/carous1.avif" alt="Burger 2">
+                        <div class="item-title">Burger Gourmet</div>
+                        <div class="item-description">Une expérience culinaire avec des saveurs raffinées.</div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
-                    <img src="../css/images/fanta.jpg" alt="Boisson 2">
-                    <div class="item-title">Cocktail Fruité</div>
-                    <div class="item-description">Un mélange pétillant de saveurs fruitées.</div>
+
+        </section>
+        <!-- Carrousel des promotions -->
+        <div id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../css/images/PROMO.jpg" class="d-block w-100" alt="Promo 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Promo Burger</h5>
+                        <p>Profitez de 20% de réduction sur tous les burgers!</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
-                    <img src="../css/images/piza.jpg" alt="Pizza 1">
-                    <div class="item-title">Pizza Margherita</div>
-                    <div class="item-description">Une pizza classique avec des ingrédients frais.</div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
-                    <img src="../css/images/pizza2.jpg" alt="Pizza 2">
-                    <div class="item-title">Pizza Pepperoni</div>
-                    <div class="item-description">Un favori épicé avec des tranches généreuses de pepperoni.</div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
-                    <img src="../css/images/carou22.avif" alt="Burger 1">
-                    <div class="item-title">Burger Classique</div>
-                    <div class="item-description">Un burger savoureux avec des ingrédients de qualité.</div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
-                    <img src="../css/images/carous1.avif" alt="Burger 2">
-                    <div class="item-title">Burger Gourmet</div>
-                    <div class="item-description">Une expérience culinaire avec des saveurs raffinées.</div>
+                <div class="carousel-item">
+                    <img src="../css/images/pizzapromo2.png" class="d-block w-100" alt="Promo 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Menu Combo</h5>
+                        <p>Obtenez un menu combo avec frites et boisson.</p>
+                    </div>
                 </div>
             </div>
-            
-    </section>
-     <!-- Carrousel des promotions -->
-     <div id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../css/images/PROMO.jpg" class="d-block w-100" alt="Promo 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Promo Burger</h5>
-                    <p>Profitez de 20% de réduction sur tous les burgers!</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../css/images/pizzapromo2.png" class="d-block w-100" alt="Promo 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Menu Combo</h5>
-                    <p>Obtenez un menu combo avec frites et boisson.</p>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promotionCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promotionCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#promotionCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Précédent</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#promotionCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Suivant</span>
-        </button>
-    </div>
 
 
 
 
 
-    <!-- Lien vers le script Bootstrap 5.3 -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script>
-        // Fonction de filtrage des images
-        const buttons = document.querySelectorAll('button[data-filter]');
-        const items = document.querySelectorAll('.filter');
+        <!-- Lien vers le script Bootstrap 5.3 -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script>
+            // Fonction de filtrage des images
+            const buttons = document.querySelectorAll('button[data-filter]');
+            const items = document.querySelectorAll('.filter');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filterValue = button.getAttribute('data-filter');
-                
-                items.forEach(item => {
-                    if (filterValue === 'all') {
-                        item.style.display = 'block';
-                    } else if (item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filterValue = button.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                        } else if (item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
                 });
             });
-        });
-    </script>
+        </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-

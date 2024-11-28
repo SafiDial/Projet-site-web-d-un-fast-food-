@@ -1,15 +1,15 @@
-// **************** La transparence au défilement de la barre de navigation ********************
+// ************* La transparence au défilement de la barre de navigation *****************/
 
 document.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
-        navbar.classList.add("scrolled"); 
+        navbar.classList.add("scrolled");
     } else {
-        navbar.classList.remove("scrolled"); 
+        navbar.classList.remove("scrolled");
     }
 });
 
-// **************** Pour le menu burger afin de le fermer si un lien est cliqué ********************
+// ************** Pour le menu burger afin de le fermer si un lien est cliqué ******************/
 
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
@@ -25,10 +25,11 @@ navLinks.forEach(link => {
     });
 });
 
-// ************************* Fonction pour fermer le menu si l'écran est redimensionné ******************
+// ************** Fonction pour fermer le menu si l'écran est redimensionné **********************/
+
 window.addEventListener('resize', function () {
     const offcanvas = document.getElementById('offcanvasMenu');
-    const offcanvasBackdrop = document.querySelector('.offcanvas-overlay'); 
+    const offcanvasBackdrop = document.querySelector('.offcanvas-overlay');
     // Si la fenêtre est plus grande que 992px (taille de bureau) et que le menu est ouvert
     if (window.innerWidth > 992) {
         if (offcanvas.classList.contains('show')) {
@@ -51,7 +52,7 @@ document.getElementById('offcanvasMenu').addEventListener('hidden.bs.offcanvas',
 
 
 
-// ********************* Menu affichage en fonction de la catégorie cliquée ********************//
+// **************** Menu affichage en fonction de la catégorie cliquée ********************//
 
 
 
@@ -76,7 +77,7 @@ function updateMenuDisplay() {
     // Afficher la catégorie active
     menus[currentCategoryIndex].classList.remove('hidden');
 
-    // Mettre à jour les catégories actives
+    // Met à jour les catégories actives
     categories.forEach((category, index) => {
         if (index === currentCategoryIndex) {
             category.classList.add('active');
@@ -85,12 +86,12 @@ function updateMenuDisplay() {
         }
     });
 
-    // Mettre à jour le titre de la catégorie pour les petits écrans
+    // Met à jour le titre de la catégorie pour les petits écrans
     const categoryName = categories[currentCategoryIndex].getAttribute('data-category');
     categoryTitle.textContent = categoryTitles[categoryName];
 }
 
-// Gérer le clic sur les catégories pour les écrans moyens et larges
+// Géres le clic sur les catégories pour les écrans moyens et larges
 categories.forEach((category, index) => {
     category.addEventListener('click', () => {
         currentCategoryIndex = index;
@@ -118,7 +119,7 @@ updateMenuDisplay();
 
 
 
-// ********************* Toggle pour le menu de téléchargement (afficher/masquer) ********************//
+// **************** Toggle pour le menu de téléchargement (afficher/masquer) ********************//
 
 function toggleDownloadOptions() {
     const options = document.querySelector('.download-options');
@@ -135,7 +136,8 @@ window.onclick = function (event) {
     }
 };
 
-//****************************************** Sélectionner la section centrale pour l'affichage des_horraires masques *************
+//****************** Sélectionner la section centrale pour l'affichage des_horraires masques **************/
+
 function toggleSection(divElement) {
     var center = divElement;
     var left = document.querySelector('.horaires.left');
@@ -149,7 +151,7 @@ function toggleSection(divElement) {
         center.classList.remove('open');
         left.classList.remove('open');
         right.classList.remove('open');
-    } 
+    }
     // Si fermée, on ouvre la section centrale et les autres
     else {
         center.classList.add('open');
@@ -159,64 +161,108 @@ function toggleSection(divElement) {
 }
 
 
-    //*******************scrypt pour les avis ********************* */
+//*********************** scrypt pour les avis **************************************** */
 
+document.addEventListener('DOMContentLoaded', () => {
+    let note = 0;
 
+    // Gestion des étoiles (survol, clic)
+    const etoiles = document.querySelectorAll('.avisUtilisateurs_etoile');
+    etoiles.forEach((etoile) => {
+        etoile.addEventListener('mouseover', () => {
+            const valeur = etoile.getAttribute('data-note');
+            mettreAJourEtoiles(valeur); // Met à jour les étoiles au survol
+        });
+
+        etoile.addEventListener('mouseout', () => {
+            mettreAJourEtoiles(note); // Reme l'état basé sur la note actuelle
+        });
+
+        etoile.addEventListener('click', () => {
+            note = etoile.getAttribute('data-note');
+            mettreAJourEtoiles(note); // Fixe la note
+        });
+    });
+
+    function mettreAJourEtoiles(valeur) {
+        etoiles.forEach((etoile) => {
+            if (etoile.getAttribute('data-note') <= valeur) {
+                etoile.classList.add('filled'); // Ajoute la classe pour étoile pleine
+            } else {
+                etoile.classList.remove('filled'); // Supprime la classe pour étoile vide
+            }
+        });
+    }
+
+    // Gestion de l'envoi du formulaire
+    const formulaireAvis = document.getElementById('avisUtilisateurs_form');
+    formulaireAvis.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nom = document.getElementById('avisUtilisateurs_nom').value;
+        const commentaire = document.getElementById('avisUtilisateurs_commentaire').value;
+
+        if (!nom || note === 0) {
+            alert('Veuillez fournir un nom et une note.');
+            return;
+        }
+        // Crée un objet d'avis
+        const avis = {
+            nom,
+            note,
+            commentaire: commentaire || 'Aucun commentaire.'
+        };
+
+        // Récupére les avis existants dans le localStorage
+        let avisListe = JSON.parse(localStorage.getItem('avisUtilisateurs')) || [];
+        avisListe.unshift(avis); // l'avis au début de la liste
+        localStorage.setItem('avisUtilisateurs', JSON.stringify(avisListe));
+
+        // Réinitialiser le formulaire
+        formulaireAvis.reset();
+        note = 0;
+        mettreAJourEtoiles(0); // Réinitialiser les étoiles
+
+        chargerAvis(); // Mettre à jour le carrousel
+    });
+
+    // Charge les avis dans le carrousel
+    function chargerAvis() {
+        const avisListe = JSON.parse(localStorage.getItem('avisUtilisateurs')) || [];
+        const carouselInner = document.getElementById('avisUtilisateurs_carouselCommentaires');
+        carouselInner.innerHTML = ''; // pour_Vide le contenu actuel
+
+        if (avisListe.length === 0) {
+            carouselInner.innerHTML = `
+                <div class="carousel-item active">
+                    <div class="avisUtilisateurs_comment-box">
+                        <p class="lead">Aucun avis pour le moment.</p>
+                    </div>
+                </div>`;
+            return;
+        }
+
+        avisListe.forEach((avis, index) => {
+            const item = document.createElement('div');
+            item.classList.add('carousel-item');
+            if (index === 0) item.classList.add('active'); // Le premier élément est actif
+
+            item.innerHTML = `
+                <div class="avisUtilisateurs_comment-box">
+                    <h5>${avis.nom}</h5>
+                    <div class="avisUtilisateurs_etoiles">
+                        ${'★'.repeat(avis.note)}${'☆'.repeat(5 - avis.note)}
+                    </div>
+                    <p>${avis.commentaire}</p>
+                </div>`;
+
+            carouselInner.appendChild(item);
+        });
+    }
+
+    // Charge les avis au démarrage
+    chargerAvis();
+});
 
 // **************** Pour les images dans a propos.html ********************//
-
-
-// Définition des images pour chaque catégorie
-var images = {
-    poulet: [
-        "../css/images/dessert.png",
-        "../css/images/fastfood1.png",
-        "../css/images/desert_cheesecake.png"
-    ],
-    pizza: [
-        "../css/images/chefouverture.png",
-        "../css/images/Apropos.png",
-        "../css/images/Aceuil2.jpg"
-    ],
-    burger: [
-        "../css/images/fastfood1.png",
-        "../css/images/fastfood1.png",
-        "../css/images/chefouverture.png"
-    ]
-};
-
-// Fonction pour changer les images
-function changeImages(type) {
-    var selectedImages = images[type]; // Obtenir les images correspondantes
-
-    // Mettre à jour les images
-    document.getElementById('image1').src = selectedImages[0];
-    document.getElementById('image2').src = selectedImages[1];
-    document.getElementById('image3').src = selectedImages[2];
-    resetButtons();
-
-    // Activer le bouton correspondant
-    var selectedButton = document.getElementById('btn' + capitalizeFirstLetter(type));
-    selectedButton.classList.add('active');
-    selectedButton.classList.remove('inactive');
-}
-
-// Réinitialiser les boutons
-function resetButtons() {
-    var buttons = document.querySelectorAll('.food-button');
-    buttons.forEach(function (button) {
-        button.classList.add('inactive');
-        button.classList.remove('active');
-    });
-}
-
-// Capitaliser la première lettre pour lier l'id du bouton
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-// Initialiser avec "Poulet" actif
-document.addEventListener('DOMContentLoaded', function () {
-    changeImages('poulet');
-});
 

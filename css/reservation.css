@@ -361,11 +361,12 @@ ul.list-group li::before {
 
 @media (max-width: 768px) {
     .reservation-form-container {
-        width: 95%;
+        width: 100%;
     }
 
     .reservation-section {
         height: auto;
+        
     }
 }
 

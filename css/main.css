@@ -19,6 +19,7 @@ body {
     padding: 16px 32px;
     transition: background-color 0.3s ease;
 }
+
 .navbar-brand,
 .nav-link {
     color: #FFFDD0 !important;
@@ -35,6 +36,7 @@ body {
     color: #FFFDD0;
     text-align: center;
 }
+
 .navbar-brand:hover {
     color: #f0ad4e;
     transform: scale(1.05);
@@ -43,6 +45,7 @@ body {
 .navbar-brand:hover .navbar-brand-subtitle {
     color: #f0ad4e;
 }
+
 .navbar-toggler {
     border: none;
     background-color: #FFD700;
@@ -129,7 +132,7 @@ body {
     display: none;
 }
 
-.offcanvas.show + .offcanvas-overlay {
+.offcanvas.show+.offcanvas-overlay {
     display: block;
 }
 
@@ -207,8 +210,9 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(211, 47, 47, 0.541); 
+    background-color: rgba(211, 47, 47, 0.541);
 }
+
 .navbar.fixed-top {
     z-index: 1030;
 }
@@ -284,9 +288,9 @@ body {
 
 
 /* ************************** Section À propos **************************************** */
-.about-section .line{
+.about-section .line {
 
-   background: #ffc400;
+    background: #ffc400;
 
 }
 
@@ -304,7 +308,7 @@ body {
 }
 
 .btn-more:hover {
-    color: #ff0000; 
+    color: #ff0000;
     background-color: rgba(255, 255, 255, 0);
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -322,10 +326,10 @@ body {
 }
 
 .address-icon {
-    width: 24px; 
+    width: 24px;
     height: 24px;
-    margin-right: 10px; 
-    vertical-align: middle; 
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .address-box strong {
@@ -432,11 +436,10 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 6px 12px rgba(255, 0, 0, 0.3);
-    border-radius: 15px; 
+    border-radius: 15px;
 
 
 }
-
 
 
 /* Menu Header */
@@ -474,7 +477,7 @@ body {
 
 .btn-download-main,
 .btn-commander {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background-color: #BEC100;
     text-decoration: none;
     color: #333;
@@ -483,10 +486,11 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 16px; 
-    display: inline-block; 
-    text-align: center; 
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
 }
+
 .btn-download-main:hover,
 .btn-commander:hover {
     background-color: #FFD700;
@@ -637,6 +641,7 @@ body {
     color: #777;
     margin-left: 20px;
 }
+
 @media screen and (max-width: 768px) {
     .menu-items h3 {
         font-size: 16px;
@@ -694,7 +699,8 @@ figcaption {
     justify-content: center;
 }
 
-.burst-gallery, .tray-gallery {
+.burst-gallery,
+.tray-gallery {
     flex: 0 1 32%;
     text-align: center;
 }
@@ -800,6 +806,7 @@ figcaption {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -809,6 +816,7 @@ figcaption {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
@@ -852,24 +860,24 @@ h1::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50%; 
-    transform: translateX(-50%) scaleX(0); 
-    width: 50%; 
-    height: 3px; 
-    background-color: #e74c3c; 
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 50%;
+    height: 3px;
+    background-color: #e74c3c;
     transform-origin: center;
     transition: transform 0.4s ease;
 }
 
 h1:hover::after {
-    transform: translateX(-50%) scaleX(1); 
+    transform: translateX(-50%) scaleX(1);
 }
 
 
 .horaires {
     position: relative;
     padding: 20px;
-    background-color: #FFFDD0; 
+    background-color: #FFFDD0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -878,44 +886,48 @@ h1:hover::after {
 .horaires.center {
     background-color: #ffffff;
     z-index: 10;
-    border: 2px solid #e74c3c;  
+    border: 2px solid #e74c3c;
 }
 
-.horaires.left, .horaires.right {
+.horaires.left,
+.horaires.right {
     opacity: 0;
     transform: scaleX(0);
     transform-origin: center;
     transition: opacity 0.5s ease, transform 0.5s ease;
     background-color: #fdfdfd;
-    border: 2px solid #f39c12;  
+    border: 2px solid #f39c12;
 }
 
-.horaires.open.left, .horaires.open.right {
+.horaires.open.left,
+.horaires.open.right {
     opacity: 1;
     transform: scaleX(1);
 }
 
 .horaires h3 {
-    color: #e74c3c; 
+    color: #e74c3c;
     margin-bottom: 15px;
     font-family: 'Arial', sans-serif;
 }
 
 .horaires p {
     font-size: 14px;
-    color: #333; 
+    color: #333;
 }
 
 .horaires.center:hover {
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #ffebcc; 
+    background-color: #ffebcc;
 }
 
-.horaires.left:hover, .horaires.right:hover {
-    background-color: #ffe5b4; 
-    border-color: #e67e22;  
+.horaires.left:hover,
+.horaires.right:hover {
+    background-color: #ffe5b4;
+    border-color: #e67e22;
 }
+
 .content {
     position: relative;
     padding: 15px;
@@ -959,7 +971,9 @@ h1:hover::after {
 }
 
 @media (max-width: 767px) {
-    .horaires.left, .horaires.right {
+
+    .horaires.left,
+    .horaires.right {
         transform: none;
         opacity: 1;
         border: none;
@@ -976,4 +990,180 @@ h1:hover::after {
     }
 }
 
-/* ************************** Section pour les avis **************************************** */
+/* ************************** Styles de la section des avis **************************************** */
+/* Section principale */
+.avisUtilisateurs_section {
+    background-color: #000000db; 
+    color: #ffffff;
+    padding: 30px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.1);
+}
+
+/* Logo */
+.avisUtilisateurs_logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #FFD700; 
+}
+
+/* Titre principal */
+.avisUtilisateurs_titre{
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Formulaire */
+.avisUtilisateurs_formulaire {
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: rgba(255, 238, 0, 0.474); 
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2.text-avis{
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFD700; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+/* Personnalisation du scroll */
+.avisUtilisateurs_formulaire::-webkit-scrollbar {
+    width: 8px;
+}
+
+.avisUtilisateurs_formulaire::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.avisUtilisateurs_formulaire::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.avisUtilisateurs_formulaire::-webkit-scrollbar-thumb:hover {
+    background-color: #FFC107; 
+}
+
+.avisUtilisateurs_formulaire h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.avisUtilisateurs_formulaire .form-control {
+    font-size: 12px;
+    padding: 6px;
+}
+
+.avisUtilisateurs_formulaire .avisUtilisateurs_etoiles-container {
+    font-size: 12px;
+    gap: 4px;
+}
+
+.avisUtilisateurs_formulaire .btn-warning {
+    font-size: 10px;
+    padding: 6px 10px;
+    margin-top: 8px;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+    .avisUtilisateurs_formulaire {
+        width: 90%;
+        padding: 5px;
+        height: 200px;
+    }
+
+    .avisUtilisateurs_formulaire .form-control {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .avisUtilisateurs_formulaire .btn-warning {
+        font-size: 8px;
+        padding: 5px 8px;
+    }
+}
+
+/* Section des commentaires */
+.avisUtilisateurs_carousel-item {
+    padding: 80px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.avisUtilisateurs_comment-box {
+    text-align: center;
+}
+
+.avisUtilisateurs_comment-box .lead {
+    font-style: italic;
+    color: #666;
+}
+
+.avisUtilisateurs_comment-box .avisUtilisateurs_etoiles {
+    font-size: 14px;
+    color: #FFD700; 
+    
+}
+
+/* Pour le titre des commentaires */
+.avisUtilisateurs_comment-box h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Ajustement des étoiles dans les commentaires */
+.avisUtilisateurs_etoiles-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.avisUtilisateurs_etoile {
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: none;
+}
+
+.avisUtilisateurs_etoile.filled {
+    color: #FFD700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

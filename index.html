@@ -15,9 +15,7 @@
 </head>
 
 <body>
-    
-
-    <!-- Navigation -->
+ <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand text-white" href="#carousel">
@@ -415,16 +413,49 @@
   
 
 <!-- **************************Section avis****************************************** -->
+<section class="avisUtilisateurs_section text-center mt-5">
+    <div>
+        <img src="favicon/avis.png" alt="Logo" class="img-fluid rounded-circle avisUtilisateurs_logo">
+    </div>
+    <h2 class="avisUtilisateurs_titre my-4">FAST-FOOD LE BON GOÛT</h2>
+    <div id="avisUtilisateurs_carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="avisUtilisateurs_carouselCommentaires">
+            <!-- *************** ici les commentaires vont être ajoutés dynamiquement ************ -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#avisUtilisateurs_carousel" data-bs-slide="prev">
+            <img src="favicon/chevron-pointant-vers-la-gauche.png" alt="Précédent" style="width: 30px; height: 30px;">
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#avisUtilisateurs_carousel" data-bs-slide="next">
+            <img src="favicon/chevron-droit.png" alt="Suivant" style="width: 30px; height: 30px;">
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </div>
+        <!--******** Formulaire d'avis ********-->
+    <h2 class="text-avis mt-5">Laissez votre avis !</h2>
+    <div class="avisUtilisateurs_formulaire py-4 ">
+        <form id="avisUtilisateurs_form">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="avisUtilisateurs_nom" placeholder="Votre nom" required>
+            </div>
+            <div class="mb-3">
+                <label for="avisUtilisateurs_note" class="form-label text-white">Note</label>
+                <div class="avisUtilisateurs_etoiles-container">
+                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="1"></i>
+                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="2"></i>
+                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="3"></i>
+                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="4"></i>
+                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="5"></i>
+                </div>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" id="avisUtilisateurs_commentaire" rows="3" placeholder="Votre commentaire (facultatif)"></textarea>
+            </div>
 
-
-  <section id="horaireOuverture" ></section>
-
-
-
-
-
-
-
+            <button type="submit" class="btn btn-warning w-50">Envoyer</button>
+        </form>
+    </div>
+</section>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
