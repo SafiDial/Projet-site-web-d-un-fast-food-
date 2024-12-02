@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +15,19 @@
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="../css/contact.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand text-white" href="../index.html">
+            <a class="navbar-brand text-white" href="#carousel">
                 LE BON GOUT
                 <div class="navbar-brand-subtitle">Restauration Rapide</div>
             </a>
 
-            <!-- Bouton Menu Burger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                 <img src="../favicon/barres.png" alt="Menu" width="30" height="30">
             </button>
-
 
             <!-- Liens visibles sur grand écran -->
             <div class="collapse navbar-collapse justify-content-end">
@@ -44,26 +44,27 @@
     </nav>
 
     <!-- Menu Offcanvas -->
-    <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" role="navigation" aria-hidden="true">
+    <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" aria-hidden="true">
         <div class="offcanvas-header">
             <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" aria-controls="offcanvasMenu"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html" aria-label="Accéder à l'accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu" aria-label="Voir le menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="reservation.html" aria-label="Faire une réservation">Réservations</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="apropos.html" aria-label="En savoir plus à propos de nous">À propos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="galerie.html" aria-label="Voir la galerie">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html" aria-label="Contactez-nous">Contact</a></li>
             </ul>
         </div>
     </div>
-    <div class="offcanvas-overlay"></div>
+    <!-- Overlay pour fermer le menu lorsqu'on clique dessus -->
+    <div class="offcanvas-overlay" aria-hidden="true"></div>
     </head>
 
-    <body>
+    <!--********************************** Acceuil **********************************-->
         <div class="titre_contact_container py-5">
             <header class="text-center mb-5">
                 <h1 class="display-4">Contactez-nous</h1>
@@ -71,10 +72,7 @@
                 <a href="Menu-commmande.html" class="btn btn-secondary mt-4 ms-3">Commander</a>
             </header>
         </div>
-
-
         <div id="map"></div>
-
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             var mymap = L.map('map').setView([48.8566, 2.3522], 13);
@@ -86,10 +84,7 @@
                 .bindPopup('Le BON GOUT est ici !')
                 .openPopup();
         </script>
-
-
         </head>
-
         <body>
             <section class="contact-section">
                 <div class="contact-row">
@@ -124,7 +119,6 @@
                 <div class="divider-horizontal"></div>
                 </div>
             </section>
-
             <section class="py-5 text-center " id="contact">
                 <div class="container">
                     <h2 class="text-uppercase fw-bold mb-4">Il suffit de laisser un message !</h2>
@@ -161,53 +155,46 @@
                         <div class="col-lg-3 d-none d-lg-block">
                             <img src="../css/images/imaded.jpg" alt="Image droite" class="img-fluid rounded-circle">
                         </div>
-
-
                     </div>
                 </div>
             </section>
-
-
-
-
-             
-  <!--*************************************** Section pour le footer ***************************-->
-    
-  <!--*************************************** Section pour le footer ***************************-->
-  <footer class="footer">
-    <div class="container text-center text-md-start">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
-        </div>
-          <div class="col-md-6 col-lg-4">
-          <h5 class="footer-title">Fast-Food Le Bon Goût</h5>
-          <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander maintenant !</p>
-          <a href="Menu-commmande.html" class="btn btn-warning mb-5">Commander</a> <!-- Lien du bouton à ajuster -->
-        </div>
-          <div class="col-md-12 col-lg-4">
-          <h5 class="footer-title_icone">Suivez-nous</h5>
-          <div class="social-icons">
-            <a href="#" class="social-icon">
-              <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="../favicon/instagram (1).png" alt="Instagram" class="social-icon-img">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bas text-center"> <br><br>
-        <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
-      </div>
-  </footer>
+            <!--*************************************** Section pour le footer ***************************-->
+            <footer class="footer">
+                <div class="container text-center text-md-start">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <h5 class="footer-title">Fast-Food Le Bon Goût</h5>
+                            <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander
+                                maintenant !</p>
+                            <a href="Menu-commmande.html" class="btn btn-warning mb-5">Commander</a>
+                            <!-- Lien du bouton à ajuster -->
+                        </div>
+                        <div class="col-md-12 col-lg-4">
+                            <h5 class="footer-title_icone">Suivez-nous</h5>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon">
+                                    <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <img src="../favicon/instagram (1).png" alt="Instagram" class="social-icon-img">
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bas text-center"> <br><br>
+                    <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
+                </div>
+            </footer>
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

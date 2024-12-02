@@ -17,6 +17,10 @@ body {
     padding: 16px 32px;
     transition: background-color 0.3s ease;
 }
+.navbar.scrolled {
+    background-color: rgba(211, 47, 47, 0.518); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
 
 .navbar-brand,
 .nav-link {
@@ -40,10 +44,6 @@ body {
     transform: scale(1.05);
 }
 
-.navbar-brand:hover .navbar-brand-subtitle {
-    color: #f0ad4e;
-}
-
 .navbar-toggler {
     border: none;
     background-color: #FFD700;
@@ -56,7 +56,8 @@ body {
     color: #4A4A4A;
 }
 
-/* Style pour l'Offcanvas (menu latéral) */
+/* ****************************** Menu Offcanvas **************************************** */
+
 .offcanvas {
     position: fixed;
     top: 0;
@@ -78,7 +79,7 @@ body {
     background-color: rgba(211, 47, 47, 0.8); 
 }
 
-/* Style pour l'overlay */
+/* Overlay avec transition fluide */
 .offcanvas-overlay {
     content: "";
     position: fixed;
@@ -89,10 +90,12 @@ body {
     background-color: rgba(0, 0, 0, 0.7); 
     z-index: 1040;
     display: none;
+    transition: opacity 0.3s ease;
 }
 
 .offcanvas.show + .offcanvas-overlay {
     display: block;
+    opacity: 1;
 }
 
 /* Header du menu */
@@ -123,20 +126,25 @@ body {
     font-size: 16px;
     margin-bottom: 16px;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: bold;
     padding: 16px 24px;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
 }
 
+/* Effets hover et focus sur les liens */
 .navbar .nav-link:hover,
-.offcanvas-body .nav-link:hover {
+.offcanvas-body .nav-link:hover,
+.navbar .nav-link:focus,
+.offcanvas-body .nav-link:focus {
     color: #FFD700;
     transform: scale(1.1);
     letter-spacing: 1px;
 }
 
+/* Effets visuels des liens (avant/après) */
+.navbar .nav-link::before,
 .offcanvas-body .nav-link::before {
     content: "";
     position: absolute;
@@ -149,33 +157,17 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.navbar .nav-link:hover::before,
 .offcanvas-body .nav-link:hover::before {
     border-color: #FFD700;
     box-shadow: 0 0 15px #FFD700;
     transform: scale(1.1);
 }
 
-.navbar .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.navbar .nav-link:hover::before {
-    border-color: #FFD700;
-    box-shadow: 0 0 15px #FFD700;
-    transform: scale(1.1);
-}
-
-.navbar .nav-link:hover,
-.offcanvas-body .nav-link:hover {
-    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* Transitions consolidées */
+.navbar .nav-link,
+.offcanvas-body .nav-link {
+    transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ************************** Responsivité **************************************** */
@@ -206,7 +198,6 @@ body {
 .navbar.fixed-top {
     z-index: 1030;
 }
-
 
 
 

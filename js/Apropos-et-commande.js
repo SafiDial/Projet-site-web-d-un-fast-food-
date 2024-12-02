@@ -1,4 +1,4 @@
-// ************* La transparence au défilement de la barre de navigation *****************/
+// ************* La transparence au défilement de la barre de navigation ****************/
 document.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
@@ -28,12 +28,11 @@ window.addEventListener('resize', function () {
     const offcanvas = document.getElementById('offcanvasMenu');
     const offcanvasBackdrop = document.querySelector('.offcanvas-overlay');
     // Si la fenêtre est plus grande que 992px (taille de bureau) et que le menu est ouvert
-    if (window.innerWidth > 992) {
-        if (offcanvas.classList.contains('show')) {
-            // Ferme le menu
-            offcanvas.classList.remove('show');
-            offcanvasBackdrop.style.display = 'none'; 
-        }
+    if (window.innerWidth > 992 && offcanvas.classList.contains('show')) {
+        // Ferme le menu
+        offcanvas.classList.remove('show');
+        offcanvasBackdrop.style.display = 'none'; 
+        offcanvas.setAttribute('aria-hidden', 'true');
     }
 });
 
@@ -66,7 +65,7 @@ function openOffcanvas() {
 function closeOffcanvas() {
     offcanvas.classList.remove('show'); // Cacher le menu
     offcanvasOverlay.style.display = 'none'; // Cacher l'overlay
-    offcanvas.setAttribute('aria-hidden', 'true'); // Rendre le menu inaccessibile
+    offcanvas.setAttribute('aria-hidden', 'true'); // Rendre le menu inaccessible
 }
 
 // Ouvrir le menu quand un bouton ayant [data-bs-toggle="offcanvas"] est cliqué
@@ -86,7 +85,6 @@ document.addEventListener('keydown', function (event) {
         closeOffcanvas();
     }
 });
-
 
 // **************** Pour les images dans a propos.html ********************//
 var images = {
