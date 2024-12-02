@@ -164,19 +164,19 @@
             <div class="download-menu commande">
                 <button class="btn-download-main" onclick="toggleDownloadOptions()">Télécharger le Menu</button>
                 <div class="download-options" style="display: none;">
-                    <a href="menu.pdf" download aria-label="Télécharger le menu en PDF">PDF</a>
-                    <a href="menu-image.jpg" download aria-label="Télécharger le menu en image">Image</a>
+                    <a href="menu.pdf" download>PDF</a>
+                    <a href="menu-image.jpg" download>Image</a>
                 </div>
                 <a href="Menu-de-navigation/Menu-commmande.html" class="btn-commander">Commander</a>
             </div>
             <!-- Navigation entre catégories pour petits écrans -->
-            <div class="category-nav d-block d-sm-none" aria-label="Navigation des catégories de menu">
-                <span class="prev-category" aria-label="Catégorie précédente">
+            <div class="category-nav d-block d-sm-none" role="navigation">
+                <button class="prev-category" aria-label="Catégorie précédente">
                     <span class="material-symbols-outlined">arrow_back</span>
-                </span>
-                <span class="next-category" aria-label="Catégorie suivante">
+                </button>
+                <button class="next-category" aria-label="Catégorie suivante">
                     <span class="material-symbols-outlined">arrow_forward</span>
-                </span>
+                </button>
             </div>
             <!-- Titre de catégorie pour petits écrans -->
             <div class="active-category-title d-block d-sm-none">
@@ -189,7 +189,6 @@
                 <span class="category" data-category="mer">PRODUITS DE LA MER</span>
                 <span class="category" data-category="desserts">DESSERTS</span>
             </div>
-        </div>
         </div>
         <div class="menu-content">
             <img src="css/images/menu33.webp" class="menu-image-left img-fluid"
