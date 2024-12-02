@@ -223,7 +223,7 @@ body {
     border-radius: 10px;
 }
 
-.carousel-caption h5 {
+.carousel-caption h2 {
     font-size: 32px;
     font-weight: 700;
 }
@@ -894,7 +894,7 @@ h1:hover::after {
     transform: scaleX(1);
 }
 
-.horaires h3 {
+.horaires h2 {
     color: #e74c3c;
     margin-bottom: 15px;
     font-family: 'Arial', sans-serif;
@@ -944,7 +944,7 @@ h1:hover::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.content h3 {
+.content h2 {
     color: #e74c3c;
     margin-bottom: 15px;
     font-family: 'Arial', sans-serif;
@@ -1315,8 +1315,6 @@ h2.text-avis {
     background-size: 40px 40px;
     /* Taille des cercles */
 }
-
-
 
 .footer-title,
 .footer-title_icone {
