@@ -750,11 +750,12 @@ figcaption {
 .tray-item:hover .tray-image {
     transform: scale(1.1);
 }
-.view-more-btn {
+
+.view-more-btne {
     margin-top: 30px;
     padding: 10px 30px;
     font-size: 18px;
-    background-color: #961108; 
+    background-color: #A01308; 
     color: white; 
     border: none;
     border-radius: 5px;
@@ -763,8 +764,8 @@ figcaption {
     text-decoration: none;
 }
 
-.view-more-btn:hover {
-    background-color: #961108; 
+.view-more-btne:hover {
+    background-color: #000000; 
     color: #ffffff; 
 }
 
@@ -819,7 +820,7 @@ figcaption {
         margin-bottom: 8px;
     }
 
-    .view-more-btn {
+    .view-more-btne {
         font-size: 14px;
         padding: 8px 16px;
     }
