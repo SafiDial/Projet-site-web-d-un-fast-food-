@@ -47,16 +47,23 @@
     <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" aria-hidden="true">
         <div class="offcanvas-header">
             <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Fermer"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html" aria-label="Accéder à l'accueil">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu" aria-label="Voir le menu">Menu</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="reservation.html" aria-label="Faire une réservation">Réservations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="apropos.html" aria-label="En savoir plus à propos de nous">À propos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="galerie.html" aria-label="Voir la galerie">Galerie</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html" aria-label="Contactez-nous">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html"
+                        aria-label="Accéder à l'accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu"
+                        aria-label="Voir le menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="reservation.html"
+                        aria-label="Faire une réservation">Réservations</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="apropos.html"
+                        aria-label="En savoir plus à propos de nous">À propos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="galerie.html"
+                        aria-label="Voir la galerie">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html"
+                        aria-label="Contactez-nous">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -65,141 +72,143 @@
     </head>
 
     <!--********************************** Acceuil **********************************-->
-        <div class="titre_contact_container py-5">
-            <header class="text-center mb-5">
-                <h1 class="display-4">Contactez-nous</h1>
-                <a href="#contact" class="btn btn-secondary mt-4">Nous contacter</a>
-                <a href="Menu-commmande.html" class="btn btn-secondary mt-4 ms-3">Commander</a>
-            </header>
-        </div>
-        <div id="map"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            var mymap = L.map('map').setView([48.8566, 2.3522], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
-            }).addTo(mymap);
+    <div class="titre_contact_container py-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4">Contactez-nous</h1>
+            <a href="#contact" class="btn btn-secondary mt-4">Nous contacter</a>
+            <a href="Menu-commmande.html" class="btn btn-secondary mt-4 ms-3">Commander</a>
+        </header>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var mymap = L.map('map').setView([48.8566, 2.3522], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mymap);
 
-            L.marker([48.8566, 2.3522]).addTo(mymap)
-                .bindPopup('Le BON GOUT est ici !')
-                .openPopup();
-        </script>
-        </head>
-        <body>
-            <section class="contact-section">
-                <div class="contact-row">
-                    <div class="contact-column">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <h5>Phone</h5>
-                            <p>+(406) 555-0120</p>
-                        </div>
-                    </div>
-                    <div class="divider-vertical d-none d-md-block"></div>
-                    <div class="contact-column">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Address</h5>
-                            <p>4517 Washington Ave.<br>Manchester, Kentucky 39495, USA</p>
-                        </div>
-                    </div>
-                    <div class="divider-vertical d-none d-md-block"></div>
-                    <div class="contact-column">
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <h5>Open Time</h5>
-                            <p>
-                                Mon - Fri: 9.00am - 22.00pm<br>
-                                Saturday: 11.00 - 23.00<br>
-                                Sunday: Closed
-                            </p>
-                        </div>
+        L.marker([48.8566, 2.3522]).addTo(mymap)
+            .bindPopup('Le BON GOUT est ici !')
+            .openPopup();
+    </script>
+        <section class="contact-section">
+            <div class="contact-row">
+                <div class="contact-column">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h5>Phone</h5>
+                        <p>+(406) 555-0120</p>
                     </div>
                 </div>
-                <div class="divider-horizontal"></div>
-                </div>
-            </section>
-            <section class="py-5 text-center " id="contact">
-                <div class="container">
-                    <h2 class="text-uppercase fw-bold mb-4">Il suffit de laisser un message !</h2>
-                    <p class=" mb-5 centered-text">
-                        Appelez-nous ou passez nous voir à tout moment chez <strong>Le Bon Goût</strong>.
-                        Nous nous efforçons de répondre à toutes les demandes dans les 24 heures les jours ouvrables.
-                        Notre équipe sera ravie de répondre à vos questions concernant nos délicieux menus.
-                    </p>
-
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-3 d-none d-lg-block">
-                            <img src="../css/images/imagF.jpg" alt="Image gauche" class="img-fluid rounded-circle">
-                        </div>
-
-                        <div class="col-lg-6 col-md-8">
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="name" placeholder="Votre nom">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="Votre email">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="telephone"
-                                        placeholder="Votre numéro de téléphone">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" id="message" rows="9"
-                                        placeholder="Écrivez votre message"></textarea>
-                                </div>
-                                <button type="submit" class="btn-contact mt-3">Envoyer</button>
-                            </form>
-                        </div>
-                        <div class="col-lg-3 d-none d-lg-block">
-                            <img src="../css/images/imaded.jpg" alt="Image droite" class="img-fluid rounded-circle">
-                        </div>
+                <div class="divider-vertical d-none d-md-block"></div>
+                <div class="contact-column">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Address</h5>
+                        <p>4517 Washington Ave.<br>Manchester, Kentucky 39495, USA</p>
                     </div>
                 </div>
-            </section>
-            <!--*************************************** Section pour le footer ***************************-->
-            <footer class="footer">
-                <div class="container text-center text-md-start">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <h5 class="footer-title">Fast-Food Le Bon Goût</h5>
-                            <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander
-                                maintenant !</p>
-                            <a href="Menu-commmande.html" class="btn btn-warning mb-5">Commander</a>
-                            <!-- Lien du bouton à ajuster -->
-                        </div>
-                        <div class="col-md-12 col-lg-4">
-                            <h5 class="footer-title_icone">Suivez-nous</h5>
-                            <div class="social-icons">
-                                <a href="#" class="social-icon">
-                                    <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <img src="../favicon/instagram (1).png" alt="Instagram" class="social-icon-img">
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
-                                </a>
+                <div class="divider-vertical d-none d-md-block"></div>
+                <div class="contact-column">
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h5>Open Time</h5>
+                        <p>
+                            Mon - Fri: 9.00am - 22.00pm<br>
+                            Saturday: 11.00 - 23.00<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-horizontal"></div>
+            </div>
+        </section>
+
+        <section class="py-5 text-center" id="contact">
+            <div class="container">
+                <h2 class="text-uppercase fw-bold mb-4">Il suffit de laisser un message !</h2>
+                <p class="mb-5 centered-text">
+                    Appelez-nous ou passez nous voir à tout moment chez <strong>Le Bon Goût</strong>.
+                    Nous nous efforçons de répondre à toutes les demandes dans les 24 heures les jours ouvrables.
+                    Notre équipe sera ravie de répondre à vos questions concernant nos délicieux menus.
+                </p>
+
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <img src="../css/images/imagF.jpg" alt="Image gauche" class="img-fluid rounded-circle">
+                    </div>
+
+                    <div class="col-lg-6 col-md-8">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Votre nom</label>
+                                <input type="text" class="form-control" id="name" placeholder="Votre nom">
                             </div>
-                        </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Votre email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Votre email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">Votre numéro de téléphone</label>
+                                <input type="text" class="form-control" id="telephone"
+                                    placeholder="Votre numéro de téléphone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Écrivez votre message</label>
+                                <textarea class="form-control" id="message" rows="9"
+                                    placeholder="Écrivez votre message"></textarea>
+                            </div>
+                            <button type="submit" class="btn-contact mt-3">Envoyer</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <img src="../css/images/imaded.jpg" alt="Image droite" class="img-fluid rounded-circle">
                     </div>
                 </div>
-                <div class="bas text-center"> <br><br>
-                    <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
+            </div>
+        </section>
+
+        <!--*************************************** Section pour le footer ***************************-->
+        <footer class="footer">
+            <div class="container text-center text-md-start">
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
                 </div>
-            </footer>
+                  <div class="col-md-6 col-lg-4">
+                  <h3 class="footer-title">Fast-Food Le Bon Goût</h3>
+                  <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander maintenant !</p>
+                  <a href="Menu-commmande.html#c2" class="btn btn-warning mb-5">Commander</a> 
+                </div>
+                  <div class="col-md-12 col-lg-4">
+                  <h3 class="footer-title_icone">Suivez-nous</h3>
+                  <div class="social-icons">
+                    <a href="#" class="social-icon">
+                      <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="../favicon/instagram-1.png" alt="Instagram" class="social-icon-img">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bas text-center"> <br><br>
+                <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
+              </div>
+          </footer>
 
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="../js/Apropos-et-commande.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/Apropos-et-commande.js"></script>
 
-        </body>
+    </body>
 
 </html>
