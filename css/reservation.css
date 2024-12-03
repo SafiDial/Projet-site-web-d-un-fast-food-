@@ -216,6 +216,11 @@ body {
     line-height: 1.2;
     margin-bottom: 20px;
     text-transform: uppercase;
+    background-color: #0000006c;
+    max-width: 800px; 
+    margin: 80px auto 0; 
+    padding: 20px;
+
 }
 
 .titre_reserv_container p {
@@ -238,7 +243,7 @@ body {
 }
 
 .btn-secondary {
-    background-color: #ff8400;
+    background-color: #AE1409;
     border: none;
     color: white;
     border: none;
