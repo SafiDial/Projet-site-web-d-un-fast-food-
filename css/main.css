@@ -979,6 +979,7 @@ h1:hover::after {
 }
 
 /* ************************** Styles de la section des avis **************************************** */
+
 /* Section principale */
 .avisUtilisateurs_section {
     background-color: #000000db;
@@ -1156,6 +1157,21 @@ h2.text-avis {
     outline: 2px solid #fff;
     outline-offset: 2px;
 }
+
+@media (max-width: 576px) {
+    .avisUtilisateurs_etoile {
+        font-size: 12px; 
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
