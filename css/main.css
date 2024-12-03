@@ -481,6 +481,7 @@ body {
     text-align: center;
 }
 
+
 .btn-download-main:hover,
 .btn-commander:hover {
     background-color: #FFD700;
@@ -1128,19 +1129,37 @@ h2.text-avis {
 .avisUtilisateurs_etoiles-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
     gap: 10px;
 }
 
 .avisUtilisateurs_etoile {
-    color: #ffffff;
-    font-size: 20px;
+    background: none;
+    border: none;
     cursor: pointer;
-    transition: none;
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s ease;
+    margin: 0;
 }
 
 .avisUtilisateurs_etoile.filled {
     color: #FFD700;
 }
+
+.avisUtilisateurs_etoile:hover,
+.avisUtilisateurs_etoile[aria-pressed="true"] {
+    color: #ffd700;
+}
+
+.avisUtilisateurs_etoile:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 
 
 /********************** Style pour la section de commande maintenant ****************/

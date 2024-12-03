@@ -418,14 +418,24 @@
                 <input type="text" class="form-control" id="avisUtilisateurs_nom" placeholder="Votre nom" required>
             </div>
             <div class="mb-3">
-                <p class="form-label text-white">Note :</p>               
+                <label for="avisUtilisateurs_note" class="form-label text-white">Note :</label>
                 <input type="hidden" id="avisUtilisateurs_note" name="avisUtilisateurs_note">
-                <div class="avisUtilisateurs_etoiles-container">
-                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="1" aria-label="Note 1 étoile"></i>
-                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="2" aria-label="Note 2 étoiles"></i>
-                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="3" aria-label="Note 3 étoiles"></i>
-                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="4" aria-label="Note 4 étoiles"></i>
-                    <i class="fas fa-star avisUtilisateurs_etoile" data-note="5" aria-label="Note 5 étoiles"></i>
+                <div class="avisUtilisateurs_etoiles-container" role="radiogroup" aria-labelledby="avisUtilisateurs_note">
+                    <button type="button" class="avisUtilisateurs_etoile" data-note="1" aria-pressed="false" aria-label="Note 1 étoile">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button type="button" class="avisUtilisateurs_etoile" data-note="2" aria-pressed="false" aria-label="Note 2 étoiles">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button type="button" class="avisUtilisateurs_etoile" data-note="3" aria-pressed="false" aria-label="Note 3 étoiles">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button type="button" class="avisUtilisateurs_etoile" data-note="4" aria-pressed="false" aria-label="Note 4 étoiles">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button type="button" class="avisUtilisateurs_etoile" data-note="5" aria-pressed="false" aria-label="Note 5 étoiles">
+                        <i class="fas fa-star"></i>
+                    </button>
                 </div>
             </div>
             <div class="mb-3">
