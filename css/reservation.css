@@ -410,7 +410,17 @@ select.form-select:focus {
     box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
 }
 
-
+label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+  }
+  
 
 
 /* --- BOUTON RÉSERVER --- */
