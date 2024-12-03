@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="../css/galerie.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand text-white" href="#carousel">
+            <a class="navbar-brand text-white" href="../index.html#carousel">
                 LE BON GOUT
                 <div class="navbar-brand-subtitle">Restauration Rapide</div>
             </a>
@@ -38,16 +39,23 @@
     <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" aria-hidden="true">
         <div class="offcanvas-header">
             <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Fermer"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html" aria-label="Accéder à l'accueil">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu" aria-label="Voir le menu">Menu</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="reservation.html" aria-label="Faire une réservation">Réservations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="apropos.html" aria-label="En savoir plus à propos de nous">À propos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="galerie.html" aria-label="Voir la galerie">Galerie</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html" aria-label="Contactez-nous">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html"
+                        aria-label="Accéder à l'accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu"
+                        aria-label="Voir le menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="reservation.html"
+                        aria-label="Faire une réservation">Réservations</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="apropos.html"
+                        aria-label="En savoir plus à propos de nous">À propos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="galerie.html"
+                        aria-label="Voir la galerie">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html"
+                        aria-label="Contactez-nous">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -62,133 +70,132 @@
             <a href="Menu-commmande.html" class="btncomande mt-4">commander</a>
         </header>
     </div>
-   <!-- Section de la galerie -->
-        <section class="my-5 ">
-            <div class="container">
-                <h1 class="text-center mb-4">Notre Galerie</h1>
-                <div class="text-center mb-4">
-                    <button class="btnfiltre " data-filter="all">Tout afficher</button>
-                    <button class="btnfiltre " data-filter="boisson">Boissons</button>
-                    <button class="btnfiltre " data-filter="pizza">Pizzas</button>
-                    <button class="btnfiltre " data-filter="burger">Burgers</button>
+    <!-- Section de la galerie -->
+    <section class="my-5 ">
+        <div class="container">
+            <h1 class="text-center mb-4">Notre Galerie</h1>
+            <div class="text-center mb-4">
+                <button class="btnfiltre " data-filter="all">Tout afficher</button>
+                <button class="btnfiltre " data-filter="boisson">Boissons</button>
+                <button class="btnfiltre " data-filter="pizza">Pizzas</button>
+                <button class="btnfiltre " data-filter="burger">Burgers</button>
+            </div>
+            <!-- Galerie d'images -->
+            <div class="row gallery">
+                <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
+                    <img src="../css/images/bois1.jpg" alt="Boisson 1">
+                    <div class="item-title">Boisson Exotique</div>
+                    <div class="item-description">Une boisson fraîche et tropicale parfaite pour l'été.</div>
                 </div>
-                <!-- Galerie d'images -->
-                <div class="row gallery">
-                    <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
-                        <img src="../css/images/bois1.jpg" alt="Boisson 1">
-                        <div class="item-title">Boisson Exotique</div>
-                        <div class="item-description">Une boisson fraîche et tropicale parfaite pour l'été.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
-                        <img src="../css/images/fanta.jpg" alt="Boisson 2">
-                        <div class="item-title">Cocktail Fruité</div>
-                        <div class="item-description">Un mélange pétillant de saveurs fruitées.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
-                        <img src="../css/images/piza.jpg" alt="Pizza 1">
-                        <div class="item-title">Pizza Margherita</div>
-                        <div class="item-description">Une pizza classique avec des ingrédients frais.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
-                        <img src="../css/images/pizza2.jpg" alt="Pizza 2">
-                        <div class="item-title">Pizza Pepperoni</div>
-                        <div class="item-description">Un favori épicé avec des tranches généreuses de pepperoni.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
-                        <img src="../css/images/carou22.avif" alt="Burger 1">
-                        <div class="item-title">Burger Classique</div>
-                        <div class="item-description">Un burger savoureux avec des ingrédients de qualité.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
-                        <img src="../css/images/carous1.avif" alt="Burger 2">
-                        <div class="item-title">Burger Gourmet</div>
-                        <div class="item-description">Une expérience culinaire avec des saveurs raffinées.</div>
-                    </div>
+                <div class="col-lg-4 col-md-6 col-12 filter boisson gallery-item">
+                    <img src="../css/images/fanta.jpg" alt="Boisson 2">
+                    <div class="item-title">Cocktail Fruité</div>
+                    <div class="item-description">Un mélange pétillant de saveurs fruitées.</div>
                 </div>
+                <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
+                    <img src="../css/images/piza.jpg" alt="Pizza 1">
+                    <div class="item-title">Pizza Margherita</div>
+                    <div class="item-description">Une pizza classique avec des ingrédients frais.</div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 filter pizza gallery-item">
+                    <img src="../css/images/pizza2.jpg" alt="Pizza 2">
+                    <div class="item-title">Pizza Pepperoni</div>
+                    <div class="item-description">Un favori épicé avec des tranches généreuses de pepperoni.</div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
+                    <img src="../css/images/carou22.avif" alt="Burger 1">
+                    <div class="item-title">Burger Classique</div>
+                    <div class="item-description">Un burger savoureux avec des ingrédients de qualité.</div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 filter burger gallery-item">
+                    <img src="../css/images/carous1.avif" alt="Burger 2">
+                    <div class="item-title">Burger Gourmet</div>
+                    <div class="item-description">Une expérience culinaire avec des saveurs raffinées.</div>
+                </div>
+            </div>
+    </section>
 
-        </section>
+    <!--**************************** Carrousel des promotions **********************-->
 
-
-
-        <!--**************************** Carrousel des promotions **********************-->
-
-<section id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-10 position-relative">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../css/images/PROMO.jpg" class="d-block w-100" alt="Promo 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Promo Burger</h5>
-                            <p>Profitez de 20% de réduction sur tous les burgers!</p>
+    <section id="promotionCarousel" class="carousel slide my-5" data-bs-ride="carousel"
+        aria-label="Promotions en cours">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-10 position-relative">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../css/images/PROMO.jpg" class="d-block w-100"
+                                alt="Image promotionnelle de réduction de 20% sur les burgers">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4>Promo Burger</h4>
+                                <p>Profitez de 20% de réduction sur tous les burgers!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../css/images/pizzapromo2.png" class="d-block w-100"
+                                alt="Image d'un menu combo avec frites et boisson">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4>Menu Combo</h4>
+                                <p>Obtenez un menu combo avec frites et boisson.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="../css/images/pizzapromo2.png" class="d-block w-100" alt="Promo 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Menu Combo</h5>
-                            <p>Obtenez un menu combo avec frites et boisson.</p>
-                        </div>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#promotionCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#promotionCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Suivant</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#promotionCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Précédent</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#promotionCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Suivant</span>
-                </button>
             </div>
         </div>
-    </div>
-</section>
-      
+    </section>
 
-  <!--*************************************** Section pour le footer ***************************-->
-  <footer class="footer">
-    <div class="container text-center text-md-start">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
+    <!--*************************************** Section pour le footer ***************************-->
+    <footer class="footer">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="footer-title">Fast-Food Le Bon Goût</h5>
+                    <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander
+                        maintenant !</p>
+                    <a href="Menu-commmande.html#f" class="btn btn-warning mb-5">Commander</a>
+                    <!-- Lien du bouton à ajuster -->
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <h5 class="footer-title_icone">Suivez-nous</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="../favicon/instagram-1.png" alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-          <div class="col-md-6 col-lg-4">
-          <h5 class="footer-title">Fast-Food Le Bon Goût</h5>
-          <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander maintenant !</p>
-          <a href="Menu-commmande.html" class="btn btn-warning mb-5">Commander</a> <!-- Lien du bouton à ajuster -->
+        <div class="bas text-center"> <br><br>
+            <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
         </div>
-          <div class="col-md-12 col-lg-4">
-          <h5 class="footer-title_icone">Suivez-nous</h5>
-          <div class="social-icons">
-            <a href="#" class="social-icon">
-              <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="../favicon/instagram (1).png" alt="Instagram" class="social-icon-img">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bas text-center"> <br><br>
-        <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
-      </div>
-  </footer>
+    </footer>
 
-
-
-
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  <script src="../js/galerie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="../js/galerie.js"></script>
 </body>
+
 </html>
