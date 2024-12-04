@@ -48,7 +48,7 @@
     <!-- Menu Offcanvas -->
     <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" aria-hidden="true">
         <div class="offcanvas-header">
-            <h5 id="offcanvasMenuLabel" class="text-white">Menu</h5>
+            <h1 id="offcanvasMenuLabel" class="text-white">Menu</h2>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                 aria-label="Fermer"></button>
         </div>
@@ -128,24 +128,25 @@
 
     <section class="about-section py-5">
         <div class="container about-container">
-            <div class="row g-4"> <!-- gap (espacement entre colonnes) -->
+            <div class="row g-4"> 
                 <div class="col-12 col-md-6 about-left d-flex flex-column align-items-center p-3">
                     <figure class="about-image text-center">
-                        <img src="css/images/aprop11.avif" alt="Image illustrant l'ambiance du restaurant"
-                            class="w-100">
+                        <img src="css/images/aprop11.avif" alt="Image illustrant l'ambiance du restaurant" class="img-fluid">
                     </figure>
                     <address class="address-box text-center mt-3">
-                        <img src="favicon/adress.png" alt="Icon" class="address-icon">
+                        <img src="favicon/adress.png" alt="Icône de l'adresse" class="address-icon">
                         <strong>Adresse</strong><br>
                         86 Boulevard Paul Barre,<br>
                         78580 Maule, France
                     </address>
                 </div>
+    
+                <!-- Colonne droite: contenu à propos -->
                 <div class="col-12 col-md-6 about-content p-3">
                     <p class="small-title">À propos de <strong>LE BON GOÛT</strong></p>
                     <p class="line"></p>
                     <h2 class="main-title">DÉCOUVREZ L'ESSENCE DE <strong>BON GOÛT</strong></h2>
-
+    
                     <p class="description">
                         LE BON GOÛT est un établissement qui se spécialise dans la restauration rapide de qualité,
                         offrant une expérience culinaire authentique inspirée des recettes européennes.
@@ -160,6 +161,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- ************************** Contenu de la section du menu ****************************************** -->
     <section id="menu" class="menu-section">
@@ -170,7 +172,6 @@
                 Explorez notre menu
                 <span class="line"></span>
             </h2>
-
             <!-- Téléchargement du menu -->
             <div class="download-menu commande">
                 <button class="btn-download-main" onclick="toggleDownloadOptions()">Télécharger le Menu</button>
@@ -181,8 +182,6 @@
                 <a href="Menu-de-navigation/Menu-commmande.html#pf" class="btn-commander"
                     aria-label="Commander">Commander</a>
             </div>
-
-
             <!-- Navigation entre catégories pour petits écrans -->
             <div class="category-nav d-block d-sm-none" role="navigation">
                 <button class="prev-category" aria-label="Catégorie précédente">
@@ -192,12 +191,10 @@
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
             </div>
-
             <!-- Titre de catégorie pour petits écrans -->
             <div class="active-category-title d-block d-sm-none">
                 <h2 id="category-title">MENU SPÉCIAL</h2>
             </div>
-
             <!-- Sections des catégories de menu pour grands et moyens écrans -->
             <div class="menu-categories d-none d-sm-flex d-md-flex justify-content-center" role="region"
                 aria-labelledby="category-title">
@@ -207,12 +204,10 @@
                 <span class="category" data-category="desserts">DESSERTS</span>
             </div>
         </div>
-
         <div class="menu-content">
             <!-- Image à gauche du menu -->
             <img src="css/images/menu33.webp" class="menu-image-left img-fluid"
                 alt="Illustration d'un plat méditerranéen">
-
             <!-- Menu Spécial -->
             <div class="menu-items" id="special-menu">
                 <h3 class="menu-item" data-name="Burger Méditerranéen" data-price="12€"
@@ -233,7 +228,6 @@
                 </h3>
                 <p>(Wrap garni de poulet grillé, légumes croquants et sauce au yaourt)</p>
             </div>
-
             <!-- Menu Boissons -->
             <div class="menu-items hidden" id="boissons-menu">
                 <h3 class="menu-item" data-name="Thé Glacé Maison" data-price="3€"
@@ -254,7 +248,6 @@
                 </h3>
                 <p>(Frais et naturel)</p>
             </div>
-
             <!-- Menu Produits de la Mer -->
             <div class="menu-items hidden" id="mer-menu">
                 <h3 class="menu-item" data-name="Saumon Grillé" data-price="15€"
@@ -275,7 +268,6 @@
                 </h3>
                 <p>(Calamars en beignet servis avec une sauce piquante)</p>
             </div>
-
             <!-- Menu Desserts -->
             <div class="menu-items hidden" id="desserts-menu">
                 <h3 class="menu-item" data-name="Fondant au Chocolat" data-price="6€"
@@ -300,8 +292,6 @@
                 alt="Dessert de cheesecake crémeux avec base croquante">
         </div>
     </section>
-
-
     <!-- **************************Galerie_image****************************************** -->
     <section class="py-5">
         <div class="container text-center">
@@ -325,7 +315,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Tray Gallery 1 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="tray-gallery">
@@ -392,7 +381,7 @@
                     <p>Jours Fériés : Fermé</p>
                 </div>                
             </div>
-                        <div class="col-12 col-md-4 horaires center" onclick="toggleSection(this)">
+                <div class="col-12 col-md-4 horaires center" onclick="toggleSection(this)">
                 <div class="content">
                     <h3>Petit-Déjeuner 
                         <img src="favicon/cliquez-sur.png" alt="Icône" class="cliquable-icon">
@@ -403,7 +392,7 @@
                     <p>Jours Fériés : Fermé</p>
                 </div>
             </div>
-                        <div class="col-12 col-md-4 horaires right">
+                <div class="col-12 col-md-4 horaires right">
                 <div class="content">
                     <h3>Service de Déjeuner et Dîner</h3>
                     <p>Lundi – Vendredi : 11h30 – 22h00</p>
@@ -414,10 +403,9 @@
             </div>
         </div>
     </section>
-
-
-
+    
     <!-- **************************Section avis****************************************** -->
+
     <section class="avisUtilisateurs_section text-center mt-5">
         <div>
             <img src="favicon/avis.png" alt="Logo Avis Utilisateurs"
@@ -484,7 +472,7 @@
     </section>
 
 
-    <!--************************************************* Section "specialitesImages"******************** -->
+    <!--************************************************* Section nos specialite du moment "specialitesImages" ******************** -->
     <section id="specialitesImages">
         <div class="container">
             <h2>Nos Spécialités du Moment</h2>
@@ -492,66 +480,48 @@
                 <!-- Burger Gourmet -->
                 <div class="col">
                     <div class="specialite-image-container">
-                        <img src="css/images/M1.jpg" alt="Burger Gourmet">
+                        <img src="css/images/M1.jpg" alt="Burger Gourmet" class="img-fluid">
                         <div class="specialite-description">Burger Gourmet</div>
                         <div class="specialite-hover-description">
-                            <p>Un burger juteux, avec du fromage fondu, des légumes frais et notre sauce spéciale
-                                maison.
-                                Le goût authentique du fast-food de qualité.</p>
-                            <a href="Menu-de-navigation/Menu-commmande.html#burger-gourmet" class="btn-specialite"
-                                aria-label="Commander le Burger Gourmet maintenant">Commander Maintenant</a>
+                            <p>Un burger juteux, avec du fromage fondu, des légumes frais et notre sauce spéciale maison. Le goût authentique du fast-food de qualité.</p>
+                            <a href="Menu-de-navigation/Menu-commmande.html#burger-gourmet" class="btn-specialite" aria-label="Commander le Burger Gourmet maintenant">Commander Maintenant</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Frites Croustillantes -->
-                <div class="col">
+                    <div class="col">
                     <div class="specialite-image-container">
-                        <img src="css/images/fritte_croust.jpg" alt="Frites Croustillantes">
+                        <img src="css/images/fritte_croust.jpg" alt="Frites Croustillantes" class="img-fluid">
                         <div class="specialite-description">Frites Croustillantes</div>
                         <div class="specialite-hover-description">
-                            <p>Des frites dorées à souhait, croustillantes à l'extérieur et fondantes à l'intérieur.
-                                L'accompagnement parfait pour tous nos plats.</p>
-                            <a href="Menu-de-navigation/Menu-commmande.html#frites-croustillantes"
-                                class="btn-specialite"
-                                aria-label="Commander les Frites Croustillantes maintenant">Commander Maintenant</a>
+                            <p>Des frites dorées à souhait, croustillantes à l'extérieur et fondantes à l'intérieur. L'accompagnement parfait pour tous nos plats.</p>
+                            <a href="Menu-de-navigation/Menu-commmande.html#frites-croustillantes" class="btn-specialite" aria-label="Commander les Frites Croustillantes maintenant">Commander Maintenant</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Pizza Spéciale -->
-                <div class="col">
+                    <div class="col">
                     <div class="specialite-image-container">
-                        <img src="css/images/pizza123.jpg" alt="Pizza Spéciale">
+                        <img src="css/images/pizza2.jpg" alt="Pizza Spéciale" class="img-fluid">
                         <div class="specialite-description">Pizza Spéciale</div>
                         <div class="specialite-hover-description">
-                            <p>Une pizza gourmande avec une pâte fine et moelleuse, recouverte de tomates fraîches,
-                                de fromage fondant et de notre sauce maison.</p>
-                            <a href="Menu-de-navigation/Menu-commmande.html#pizza-speciale" class="btn-specialite"
-                                aria-label="Commander la Pizza Spéciale maintenant">Commander Maintenant</a>
+                            <p>Une pizza gourmande avec une pâte fine et moelleuse, recouverte de tomates fraîches, de fromage fondant et de notre sauce maison.</p>
+                            <a href="Menu-de-navigation/Menu-commmande.html#pizza-speciale" class="btn-specialite" aria-label="Commander la Pizza Spéciale maintenant">Commander Maintenant</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Poulet Grillé -->
-                <div class="col">
+                    <div class="col">
                     <div class="specialite-image-container">
-                        <img src="css/images/POUL2.jpg" alt="Poulet Grillé">
+                        <img src="css/images/M13.jpg" alt="Poulet Grillé" class="img-fluid">
                         <div class="specialite-description">Poulet Grillé</div>
                         <div class="specialite-hover-description">
-                            <p>Un poulet juteux, parfaitement grillé et servi avec une sauce maison spéciale. Accompagné
-                                de frites
-                                croustillantes et d'une boisson au choix. L'option rapide et délicieuse pour satisfaire
-                                votre faim.</p>
-                            <a href="Menu-de-navigation/Menu-commmande.html#poulet-grille" class="btn-specialite"
-                                aria-label="Commander le Poulet Grillé maintenant">Commander Maintenant</a>
+                            <p>Un poulet juteux, parfaitement grillé et servi avec une sauce maison spéciale. Accompagné de frites croustillantes et d'une boisson au choix. L'option rapide et délicieuse pour satisfaire votre faim.</p>
+                            <a href="Menu-de-navigation/Menu-commmande.html#poulet-grille" class="btn-specialite" aria-label="Commander le Poulet Grillé maintenant">Commander Maintenant</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
 
     <!--*************************************** Section pour le footer ***************************-->
 
@@ -563,7 +533,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <h3 class="footer-title">Fast-Food Le Bon Goût</h3> <!-- Remplacer h5 par h3 -->
+                    <h3 class="footer-title">Fast-Food Le Bon Goût</h3> 
                     <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander
                         maintenant !</p>
                     <a href="Menu-de-navigation/Menu-commmande.html" class="btn btn-warning"
@@ -571,7 +541,7 @@
                 </div>
 
                 <div class="col-md-12 col-lg-4">
-                    <h3 class="footer-title_icone">Suivez-nous</h3> <!-- Remplacer h5 par h3 -->
+                    <h3 class="footer-title_icone">Suivez-nous</h3> 
                     <div class="social-icons">
                         <a href="#" class="social-icon">
                             <img src="favicon/facebook.png" alt="Facebook" class="social-icon-img">
@@ -589,7 +559,6 @@
                 </div>
             </div>
         </div>
-
         <div class="bas text-center">
             <br>
             <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
