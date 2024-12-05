@@ -364,9 +364,6 @@ body {
     transition: color 0.3s, text-decoration 0.3s;
 }
 
-
-
-
 .category:hover {
     color: #BEC100;
     text-decoration: underline;
@@ -649,7 +646,6 @@ body {
     color: #eed612;
     transition: color 0.3s, transform 0.3s;
 }
-
 
 .menu-items p {
     font-size: 14px;
