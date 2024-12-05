@@ -266,17 +266,14 @@ body {
 }
 
 /* ************************** Section À propos **************************************** */
-
 .about-section .line {
-
     background: #ffc400;
-
 }
 
 .btn-more {
     background-color: #ffc400;
     color: rgb(0, 0, 0);
-    transform: scale(1.05);
+    transform: scale(1.03); 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border: none;
     padding: 8px 16px;
@@ -327,6 +324,21 @@ body {
 .address-icon {
     border: 2px solid #333;  
     border-radius: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .about-section .line {
+        height: 2px;
+    }
+
+    .btn-more {
+        max-width: 200px;  
+    }
 }
 
 
