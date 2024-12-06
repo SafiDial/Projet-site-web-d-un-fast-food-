@@ -982,7 +982,6 @@ h1:hover::after {
 
 /* ************************** Styles de la section des avis **************************************** */
 
-/* Section principale */
 .avisUtilisateurs_section {
     background-color: #000000;
     color: #ffffff;
@@ -991,7 +990,6 @@ h1:hover::after {
     box-shadow: 0 4px 10px rgba(255, 0, 0, 0.1);
 }
 
-/* Logo */
 .avisUtilisateurs_logo {
     width: 120px;
     height: 120px;
@@ -999,7 +997,6 @@ h1:hover::after {
     border: 4px solid #FFD700;
 }
 
-/* Titre principal */
 .avisUtilisateurs_titre {
     font-size: 36px;
     font-weight: bold;
@@ -1126,7 +1123,6 @@ h2.text-avis {
     text-transform: uppercase;
 }
 
-/* Ajustement des étoiles dans les commentaires */
 .retour_les_espaces_etre_les_etoiles_.avisUtilisateurs_etoiles-container {
     display: flex;
     justify-content: center;
@@ -1165,7 +1161,6 @@ h2.text-avis {
         font-size: 12px; 
     }
 }
-
 
 
 /********************** Style Section nos specialite du moment "specialitesImages" ****************/

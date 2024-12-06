@@ -1,230 +1,249 @@
+<!DOCTYPE html>
+
 <head>
   <meta charset="UTF-8">
+  <html lang="fr">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Réservez vos places facilement en ligne.">
   <title>Réservation</title>
   <link rel="icon" type="image/x-icon" href="../favicon/LOGO1.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/reservation.css">
 </head>
+
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-          <a class="navbar-brand text-white" href="../index.html">
-              LE BON GOUT
-              <div class="navbar-brand-subtitle">Restauration Rapide</div>
-          </a>
+    <div class="container">
+      <a class="navbar-brand text-white" href="../index.html">
+        LE BON GOUT
+        <div class="navbar-brand-subtitle">Restauration Rapide</div>
+      </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-              <img src="../favicon/barres.png" alt="Menu" width="30" height="30">
-          </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+        <img src="../favicon/barres.png" alt="Menu" width="30" height="30">
+      </button>
 
-          <!-- Liens visibles sur grand écran -->
-          <div class="collapse navbar-collapse justify-content-end">
-              <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link text-white" href="../index.html#carousel">Accueil</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-              </ul>
-          </div>
+      <!-- Liens visibles sur grand écran -->
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="../index.html#carousel">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="reservation.html">Réservations</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="apropos.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="galerie.html">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
       </div>
+    </div>
   </nav>
 
   <!-- Menu Offcanvas -->
   <div class="offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" aria-hidden="true">
-      <div class="offcanvas-header">
-        <h2 id="offcanvasMenuLabel" class="text-white">Menu</h2>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
-      </div>
-      <div class="offcanvas-body">
-          <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link text-white" href="../index.html" aria-label="Accéder à l'accueil">Accueil</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu" aria-label="Voir le menu">Menu</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="reservation.html" aria-label="Faire une réservation">Réservations</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="apropos.html" aria-label="En savoir plus à propos de nous">À propos</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="galerie.html" aria-label="Voir la galerie">Galerie</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="contact.html" aria-label="Contactez-nous">Contact</a></li>
-          </ul>
-      </div>
+    <div class="offcanvas-header">
+      <h2 id="offcanvasMenuLabel" class="text-white">Menu</h2>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html"
+            aria-label="Accéder à l'accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html#menu" aria-label="Voir le menu">Menu</a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white" href="reservation.html"
+            aria-label="Faire une réservation">Réservations</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="apropos.html"
+            aria-label="En savoir plus à propos de nous">À propos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="galerie.html" aria-label="Voir la galerie">Galerie</a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html" aria-label="Contactez-nous">Contact</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="offcanvas-overlay" aria-hidden="true"></div>
 
-  <!--********************************* Acceuil ***********************-->
+  <!--*********************************** ACCEUIL ****************************-->
+
   <div class="titre_reserv_container py-5" style="margin-top: 80px;">
     <header class="text-center mb-5" id="menu">
-        <h1 class="display-4">Réservation</h1>
-        <p >Besoin d'informations pour réserver ? Écrivez-nous ou contactez-nous pour toute question !</p>
-        <a href="#reservation" class="btn btn-secondary  mt-4">Réserver</a>
-        <a href="Menu-commmande.html" class="btn btn-secondary mt-4 ms-3">Commander</a>
+      <h1 class="display-4">Réservation</h1>
+      <p>Besoin d'informations pour réserver ? Écrivez-nous ou contactez-nous pour toute question !</p>
+      <a href="#reservation" class="btn btn-secondary  mt-4">Réserver</a>
+      <a href="Menu-commmande.html" class="btn btn-secondary mt-4 ms-3">Commander</a>
 
     </header>
-</div>
-
-   <main>
-            <section class="container mt-5">
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <article class="section">
-                            <h2 class="titre mb-4">Avantages de la réservation d'une table</h2>
-                            <ul class="list-group">
-                                <li >Soyez prioritaire et évitez l'attente</li>
-                                <li >Le restaurant garantit des places assises</li>
-                                <li >Après 3 réservations, vous bénéficiez de 10% de réduction sur le repas</li>
-                                <li >Recevez une boisson gratuite à chaque réservation</li>
-                            </ul>
-                        </article>
-                    </div>
-                        <div class="col-md-6">
-                        <article class="section">
-                            <h2 class="titre mb-4">Les Règles de réservation des tables</h2>
-                            <ul class="list-group">
-                                <li >Annulez votre réservation au moins 2 heures à l'avance si vous ne pouvez pas venir</li>
-                                <li >Après 4 absences non justifiées, vous ne pourrez plus réserver</li>
-                                <li >Veuillez nous appeler pour toute modification du nombre de personnes ou d'autres exigences</li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-    
-
-    <section class="reservation-section" id="reservation">
-      <div class="reservation-form-container">
-        <div class="section-title d-flex align-items-center justify-content-center">
-          <span class="line"></span>
-          <span class="title-text">RÉSERVATION EN LIGNE</span>
-          <span class="line"></span>
+  </div>
+  <main>
+    <h1 class="visually-hidden">Réservations au restaurant</h1>
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <article class="section">
+            <header>
+              <h2 class="titre mb-4">Avantages de la réservation d'une table</h2>
+            </header>
+            <ul class="list-group">
+              <li class="list-group-item">Soyez prioritaire et évitez l'attente</li>
+              <li class="list-group-item">Le restaurant garantit des places assises</li>
+              <li class="list-group-item">Après 3 réservations, vous bénéficiez de 10% de réduction sur le repas</li>
+              <li class="list-group-item">Recevez une boisson gratuite à chaque réservation</li>
+            </ul>
+          </article>
         </div>
-        <div class="main-title">
-          <h1>LE BON GOÛT</h1>
-        </div>
-        <div class="description">
-          <p>Après réservation, nous contacterons le client pour confirmation. Merci d'indiquer votre nom et numéro de téléphone.</p>
-        </div>
-        <div class="form-container">
-          <form>
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="name" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
-              </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col-md-4">
-                <label for="hour" class="form-label">Heure</label>
-                <select class="form-select" id="hour" required>
-                  <option value="" disabled selected>Choisir l'heure</option>
-                  <option value="12:00">12:00</option>
-                  <option value="13:00">13:00</option>
-                  <option value="15:00">15:00</option>
-                  <option value="16:00">16:00</option>
-                  <option value="17:00">17:00</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="people" class="form-label">Nombre de personnes</label>
-                <input type="number" class="form-control" id="people" min="1" max="7" placeholder="Nombre de personnes" required>
-              </div>
-              <div class="col-md-4">
-                <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date" required>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-reserve">Réserver une table</button>
-          </form>
+        <div class="col-md-6">
+          <article class="section">
+            <header>
+              <h2 class="titre mb-4">Les Règles de réservation des tables</h2>
+            </header>
+            <ul class="list-group">
+              <li class="list-group-item">Annulez votre réservation au moins 2 heures à l'avance si vous ne pouvez pas
+                venir</li>
+              <li class="list-group-item">Après 4 absences non justifiées, vous ne pourrez plus réserver</li>
+              <li class="list-group-item">Veuillez nous appeler pour toute modification du nombre de personnes ou
+                d'autres exigences</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
-    
-      
-    <section class="container my-5 py-5">
-      <div class="row text-center">
-          <div class="col-md-4">
-              <img src="../css/images/M13.jpg" class="img-fluid" alt="Fastfood Le Bon Goût Paris">
-              <h2>LE BON GOÛT PARIS</h2> <!-- Utilisation de h2 pour cette section -->
-              <p>Venez savourer des burgers de qualité, préparés avec des ingrédients frais et locaux.</p>
-              <p>123 Rue de la Gourmandise, 75001 Paris, France</p>
-              <p>00 33 1 45 67 89 10</p> 
-              <p>contact@le-bon-gout.fr</p>
-          </div>
-          <div class="col-md-4">
-              <img src="../css/images/M10.jpg!d" class="img-fluid" alt="Fastfood Le Bon Goût Lyon">
-              <h2>LE BON GOÛT LYON</h2> <!-- Utilisation de h2 pour cette section -->
-              <p>Découvrez notre spécialité. Profitez aussi de nos options végétariennes et sans gluten.</p>
-              <p>45 Rue de la Croix-Rousse, 69004 Lyon, France</p>
-              <p>00 33 4 72 34 56 78</p> 
-              <p>contact@le-bon-gout.fr</p>
-          </div>
-          <div class="col-md-4">
-              <img src="../css/images/M1.jpg" class="img-fluid" alt="Fastfood Le Bon Goût Marseille">
-              <h2>LE BON GOÛT MARSEILLE</h2> <!-- Utilisation de h2 pour cette section -->
-              <p>Pour une pause gourmande en plein cœur de la cité phocéenne, venez déguster nos meilleurs plats.</p>
-              <p>89 Boulevard de la Liberté, 13001 Marseille, France</p>
-              <p>00 33 4 91 23 45 67</p> 
-              <p>contact@le-bon-gout.fr</p>
-          </div>
-      </div>
-  </section>
- 
+  </main>
 
-    
+  <!--************************ FORMULAIRE DE RESERVATION ********************************-->
+
+  <section class="reservation-section" id="reservation">
+    <div class="reservation-form-container">
+      <div class="section-title d-flex align-items-center justify-content-center">
+        <span class="line"></span>
+        <span class="title-text">RÉSERVATION EN LIGNE</span>
+        <span class="line"></span>
+      </div>
+      <div class="main-title">
+        <h2>LE BON GOÛT</h2>
+      </div>
+      <div class="description">
+        <p>Après réservation, nous contacterons le client pour confirmation. Merci d'indiquer votre nom et numéro de
+          téléphone.</p>
+      </div>
+      <div class="form-container">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required
+                aria-label="Entrez votre nom">
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required
+                aria-label="Entrez votre email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="hour" class="form-label">Heure</label>
+              <select class="form-select" id="hour" required aria-label="Choisir l'heure">
+                <option value="" disabled selected>Choisir l'heure</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="people" class="form-label">Nombre de personnes</label>
+              <input type="number" class="form-control" id="people" min="1" max="7" placeholder="Nombre de personnes"
+                required aria-label="Nombre de personnes">
+            </div>
+            <div class="col-md-4">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date" required
+                aria-label="Sélectionner la date de réservation">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-reserve">Réserver ma table</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--**************** LE BON GOÛT PARIS,LE BON GOÛT LYON,LE BON GOÛT MARSEILLE ************-->
+
+  <section class="container my-5 py-5">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="../css/images/M13.jpg" class="img-fluid" alt="Fastfood Le Bon Goût Paris">
+        <h2>LE BON GOÛT PARIS</h2>
+        <p>Venez savourer des burgers de qualité, préparés avec des ingrédients frais et locaux.</p>
+        <p>123 Rue de la Gourmandise, 75001 Paris, France</p>
+        <p>00 33 1 45 67 89 10</p>
+        <p>contact@le-bon-gout.fr</p>
+      </div>
+      <div class="col-md-4">
+        <img src="../css/images/M10.jpg!d" class="img-fluid" alt="Fastfood Le Bon Goût Lyon">
+        <h2>LE BON GOÛT LYON</h2>
+        <p>Découvrez notre spécialité. Profitez aussi de nos options végétariennes et sans gluten.</p>
+        <p>45 Rue de la Croix-Rousse, 69004 Lyon, France</p>
+        <p>00 33 4 72 34 56 78</p>
+        <p>contact@le-bon-gout.fr</p>
+      </div>
+      <div class="col-md-4">
+        <img src="../css/images/M1.jpg" class="img-fluid" alt="Fastfood Le Bon Goût Marseille">
+        <h2>LE BON GOÛT MARSEILLE</h2>
+        <p>Pour une pause gourmande en plein cœur de la cité phocéenne, venez déguster nos meilleurs plats.</p>
+        <p>89 Boulevard de la Liberté, 13001 Marseille, France</p>
+        <p>00 33 4 91 23 45 67</p>
+        <p>contact@le-bon-gout.fr</p>
+      </div>
+    </div>
+  </section>
+
+
+
   <!--*************************************** Section pour le footer ***************************-->
+
   <footer class="footer">
     <div class="container text-center text-md-start">
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <h3 class="footer-title">Fast-Food Le Bon Goût</h3>
-                <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander maintenant !</p>
-                <a href="Menu-commmande.html#c1" class="btn btn-secondary mt-4 ms-3" aria-label="Passer une commande">Commander</a>                          </div>
-            <div class="col-md-12 col-lg-4">
-                <h3 class="footer-title_icone">Suivez-nous</h3>
-                <div class="social-icons" aria-label="Réseaux sociaux">
-                    <a href="#" class="social-icon" aria-label="Facebook">
-                        <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Twitter">
-                        <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Instagram">
-                        <img src="../favicon/instagram-1.png" alt="Instagram" class="social-icon-img">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="YouTube">
-                        <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img">
-                    </a>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <img src="../css/images/livreur.png" alt="Logo Fast-Food" class="footer-logo">
         </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <h3 class="footer-title">Fast-Food Le Bon Goût</h3>
+          <p>Découvrez nos plats délicieux, préparés avec passion. Cliquez ci-dessous pour commander maintenant !</p>
+          <a href="Menu-commmande.html#c1" class="btn btn-secondary mt-4 ms-3">Commander</a>
+        </div>
+        <div class="col-md-12 col-lg-4">
+          <h3 class="footer-title">Suivez-nous</h3>
+          <nav class="social-icons" aria-label="Réseaux sociaux">
+            <a href="#" class="social-icon">
+              <img src="../favicon/facebook.png" alt="Facebook" class="social-icon-img" width="32" height="32">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../favicon/twitter.png" alt="Twitter" class="social-icon-img" width="32" height="32">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../favicon/instagram-1.png" alt="Instagram" class="social-icon-img" width="32" height="32">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../favicon/youtube.png" alt="YouTube" class="social-icon-img" width="32" height="32">
+            </a>
+          </nav>
+        </div>
+      </div>
     </div>
-    <div class="bas text-center">
-        <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
+    <div class="bas text-center"><br>
+      <p>&copy; 2024 Fast-Food Le Bon Goût. Tous droits réservés.</p>
     </div>
-</footer>
+  </footer>
 
 
-
-
-
-   
-<script src="../js/Apropos-et-commande.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="../js/Apropos-et-commande.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
-
-
-
