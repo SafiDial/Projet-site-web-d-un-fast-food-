@@ -262,6 +262,9 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.btn-secondary:focus {
+    outline: 3px solid #ff6600;
+}
 
 
 /* Section principale */
@@ -306,10 +309,6 @@ ul.list-group li::before {
     top: 50%;
     transform: translateY(-50%);
 }
-
-
-
-
 
 @media (max-width: 768px) {
     .section {
