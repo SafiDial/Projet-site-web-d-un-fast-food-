@@ -299,5 +299,4 @@ document.addEventListener('DOMContentLoaded', () => {
     chargerAvis();
 });
 
-// **************** Pour les images dans a propos.html ********************//
 
