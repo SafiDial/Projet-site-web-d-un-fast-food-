@@ -201,7 +201,6 @@ body {
 
 
 /* ************************** Carrousel **************************************** */
-
 .carousel-container {
     padding-top: 80px;
 }
@@ -218,7 +217,7 @@ body {
     text-align: center;
     width: 80%; 
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6); /* Assure une bonne visibilité du texte */
     border-radius: 10px;
 }
 
@@ -229,16 +228,6 @@ body {
 
 .carousel-caption p {
     font-size: 19px;
-}
-
-
-.carousel-caption .btn {
-    font-size: 18px;
-}
-
-.carousel-item img {
-    height: 80vh;
-    object-fit: cover;
 }
 
 .carousel-caption .btn {
@@ -253,11 +242,28 @@ body {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+.carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+}
+
 .carousel-caption .btn:hover {
     background-color: #ff3b00; 
     transform: scale(1.1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+}
 
+.carousel-caption .btn:focus,
+.carousel-caption a:focus {
+    outline: 3px solid #ff5733;
+    outline-offset: 2px;
+    box-shadow: 0 0 5px #ff5733;
+}
+
+.carousel-indicators button:focus {
+    outline: 3px solid #ff5733;
+    outline-offset: 2px;
+    box-shadow: 0 0 5px #ff5733;
 }
 
 @media (max-width: 767px) {
@@ -266,6 +272,7 @@ body {
         padding: 8px 16px;
     }
 }
+
 
 /* ************************** Section À propos **************************************** */
 .about-section .line {
