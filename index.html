@@ -109,27 +109,26 @@
         </div>
     </section>
     <!-- ************************** Contenu de la section À propos ****************************************** -->
-
-    <section class="about-section py-5">
+   
+    <section class="about-section py-5" aria-labelledby="about-title">
         <div class="container about-container">
             <div class="row g-4"> 
-                <div class="col-12 col-md-6 about-left d-flex flex-column align-items-center p-3">
+                <div class="col-12 col-md-6 order-2 order-md-1 about-left d-flex flex-column align-items-center p-3">
                     <figure class="about-image text-center">
                         <img src="css/images/aprop11.avif" alt="Image illustrant l'ambiance du restaurant" class="img-fluid">
                     </figure>
                     <address class="address-box text-center mt-3">
-                        <img src="favicon/adress.png" alt="Icône de l'adresse" class="address-icon">
+                        <img src="favicon/adress.png" alt="" class="address-icon" role="presentation">
                         <strong>Adresse</strong><br>
-                        86 Boulevard Paul Barre,<br>
-                        78580 Maule, France
+                        <p>86 Boulevard Paul Barre,<br> 78580 Maule, France</p>
                     </address>
                 </div>
-    
-                <div class="col-12 col-md-6 about-content p-3">
+        
+                <div class="col-12 col-md-6 order-1 order-md-2 about-content p-3">
                     <p class="small-title">À propos de <strong>LE BON GOÛT</strong></p>
                     <p class="line"></p>
-                    <h2 class="main-title">DÉCOUVREZ L'ESSENCE DE <strong>BON GOÛT</strong></h2>
-    
+                    <h2 id="about-title" class="main-title">DÉCOUVREZ L'ESSENCE DE <strong>BON GOÛT</strong></h2>
+        
                     <p class="description">
                         LE BON GOÛT est un établissement qui se spécialise dans la restauration rapide de qualité,
                         offrant une expérience culinaire authentique inspirée des recettes européennes.
@@ -139,12 +138,11 @@
                         Depuis notre ouverture, nous avons pour mission de proposer des repas rapides mais raffinés,
                         parfaits pour ceux qui recherchent une option savoureuse et nourrissante sur le pouce.
                     </p>
-                    <a href="Menu-de-navigation/apropos.html" class="btn-more mt-4">En savoir plus</a>
+                    <a href="Menu-de-navigation/apropos.html" class="btn-more mt-4" aria-label="En savoir plus sur Le Bon Goût">En savoir plus</a>
                 </div>
             </div>
         </div>
     </section>
-    
 
     <!-- ************************** Contenu de la section du menu ****************************************** -->
     <section id="menu" class="menu-section">
@@ -176,13 +174,13 @@
                 <h2 id="category-title">MENU SPÉCIAL</h2>
             </div>
             <!-- Sections des catégories de menu pour grands et moyens écrans -->
-            <div class="menu-categories d-none d-sm-flex d-md-flex justify-content-center" role="region"
-                aria-labelledby="category-title">
-                <span class="category active" data-category="special">MENU SPÉCIAL</span>
-                <span class="category" data-category="boissons">BOISSONS</span>
-                <span class="category" data-category="mer">PRODUITS DE LA MER</span>
-                <span class="category" data-category="desserts">DESSERTS</span>
-            </div>
+            <div class="menu-categories d-none d-sm-flex d-md-flex justify-content-center" role="region" aria-labelledby="category-title">
+                <span class="category active" data-category="special" tabindex="0" role="button" aria-pressed="true">MENU SPÉCIAL</span>
+                <span class="category" data-category="boissons" tabindex="0" role="button" aria-pressed="false">BOISSONS</span>
+                <span class="category" data-category="mer" tabindex="0" role="button" aria-pressed="false">PRODUITS DE LA MER</span>
+                <span class="category" data-category="desserts" tabindex="0" role="button" aria-pressed="false">DESSERTS</span>
+            </div>            
+            
         </div>
         <div class="menu-content">
             <img src="css/images/menu33.webp" class="menu-image-left img-fluid"
@@ -359,17 +357,17 @@
                     <p>Jours Fériés : Fermé</p>
                 </div>                
             </div>
-                <div class="col-12 col-md-4 horaires center" onclick="toggleSection(this)">
+            <div class="col-12 col-md-4 horaires center" role="button" tabindex="0" onclick="toggleSection(this)" onkeydown="handleKeydown(event, this)">
                 <div class="content">
                     <h3>Petit-Déjeuner 
-                        <img src="favicon/cliquez-sur.png" alt="Icône" class="cliquable-icon">
+                        <img src="favicon/cliquez-sur.png" alt="Icône indiquant que vous pouvez cliquer" class="cliquable-icon">
                     </h3>
                     <p>Lundi – Vendredi : 7h00 – 11h30</p>
                     <p>Samedi : 8h00 – 11h30</p>
                     <p>Dimanche : 8h00 – 11h30</p>
                     <p>Jours Fériés : Fermé</p>
                 </div>
-            </div>
+            </div>            
                 <div class="col-12 col-md-4 horaires right">
                 <div class="content">
                     <h3>Service de Déjeuner et Dîner</h3>

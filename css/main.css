@@ -63,7 +63,6 @@ body {
     top: 0;
     right: 0;
     height: 90%;
-    width: 250px;
     max-height: 100%;
     transform: translateX(100%);
     background-color: #D32F2F;
@@ -278,8 +277,6 @@ body {
     border: none;
     padding: 8px 16px;
     transition: all 0.3s ease;
-    width: auto;
-    max-width: 250px;
     text-decoration: none;
 }
 
@@ -302,7 +299,6 @@ body {
 }
 
 .address-icon {
-    width: 24px;
     height: 24px;
     margin-right: 10px;
     vertical-align: middle;
@@ -324,11 +320,6 @@ body {
 .address-icon {
     border: 2px solid #333;  
     border-radius: 50%;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
 }
 
 @media (max-width: 768px) {
@@ -830,6 +821,7 @@ figcaption {
 
 /* ************************** Section Horaire d'ouverture **************************************** */
 
+
 #horaireOuverture h1 {
     font-size: 30px;
     font-weight: bold;
@@ -871,13 +863,16 @@ h1:hover::after {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    margin: 0 10px; 
 }
 
 .horaires.center {
     background-color: #ffffff;
     z-index: 10;
     border: 2px solid #e74c3c;
+   
 }
+
 
 .horaires.left,
 .horaires.right {
@@ -887,6 +882,27 @@ h1:hover::after {
     transition: opacity 0.5s ease, transform 0.5s ease;
     background-color: #fdfdfd;
     border: 2px solid #f39c12;
+    margin: 0 10px; 
+}
+
+
+.horaires.center.open {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+#horaireOuverture .row {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.horaires.center {
+    flex: 1 1 300px; 
+    margin: 0 10px;
+    max-width: 400px; 
 }
 
 .horaires.open.left,
@@ -979,6 +995,7 @@ h1:hover::after {
         display: none;
     }
 }
+
 
 /* ************************** Styles de la section des avis **************************************** */
 
