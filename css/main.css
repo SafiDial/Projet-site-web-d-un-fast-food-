@@ -11,20 +11,30 @@ body {
 }
 
 /* ************************** Barre de navigation **************************************** */
-
 .navbar {
-    background-color: #D32F2F;
+    background-color: #D32F2F; 
     padding: 16px 32px;
     transition: background-color 0.3s ease;
 }
+
 .navbar.scrolled {
-    background-color: rgba(211, 47, 47, 0.518); 
+    background-color: rgba(211, 47, 47, 0.777); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-brand-subtitle {
+    color: #ffffff; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
+    font-weight: bold; 
+}
+
+
+
 .navbar-brand,
 .nav-link {
-    color: #FFFDD0 !important;
+    color: #FFFDD0 ;
 }
 
 .navbar-brand {
