@@ -18,7 +18,7 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(211, 47, 47, 0.777); 
+    background-color: rgba(211, 47, 47, 0.859); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
@@ -284,7 +284,6 @@ body {
 }
 
 
-
 /* ************************** Section À propos **************************************** */
 .about-section .line {
     background: #ffc400;
@@ -352,26 +351,6 @@ body {
         max-width: 200px;  
     }
 }
-
-.about-section {
-    padding: 20px;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    max-width: 800px;
-    max-height: 533px;
-    transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .about-image img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
 
 
 
@@ -823,21 +802,7 @@ figcaption {
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
-.image-explosion {
-    width: 100%;
-    height: auto;
-    max-width: 716px;
-    max-height: 448px;
-    transition: all 0.3s ease;
-}
 
-@media (max-width: 768px) {
-    .image-explosion {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
-}
 @keyframes rotate-clockwise {
     from {
         transform: rotate(0deg);
@@ -1405,21 +1370,7 @@ h2.text-avis {
     }
 }
 
-.shrinkToFit {
-    width: 100%;
-    height: auto;
-    max-width: 672px;
-    max-height: 448px;
-    transition: all 0.3s ease;
-}
 
-@media (max-width: 768px) {
-    .shrinkToFit {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
-}
 
 /********************** Style général pour la section du footer ****************/
 
