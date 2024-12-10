@@ -284,6 +284,7 @@ body {
 }
 
 
+
 /* ************************** Section À propos **************************************** */
 .about-section .line {
     background: #ffc400;
@@ -822,7 +823,21 @@ figcaption {
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
+.image-explosion {
+    width: 100%;
+    height: auto;
+    max-width: 716px;
+    max-height: 448px;
+    transition: all 0.3s ease;
+}
 
+@media (max-width: 768px) {
+    .image-explosion {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
 @keyframes rotate-clockwise {
     from {
         transform: rotate(0deg);
@@ -1390,7 +1405,21 @@ h2.text-avis {
     }
 }
 
+.shrinkToFit {
+    width: 100%;
+    height: auto;
+    max-width: 672px;
+    max-height: 448px;
+    transition: all 0.3s ease;
+}
 
+@media (max-width: 768px) {
+    .shrinkToFit {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
 
 /********************** Style général pour la section du footer ****************/
 
