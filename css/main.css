@@ -352,6 +352,26 @@ body {
     }
 }
 
+.about-section {
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    max-height: 533px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
 
 
 /* ********************************* Menu Items ********************************* */
