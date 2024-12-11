@@ -18,7 +18,7 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(211, 47, 47, 0.859); 
+    background-color: rgba(211, 47, 47, 0.7);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
@@ -29,8 +29,6 @@ body {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
     font-weight: bold; 
 }
-
-
 
 .navbar-brand,
 .nav-link {
